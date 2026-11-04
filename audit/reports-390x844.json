@@ -1,0 +1,145 @@
+[
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 46px",
+    "selector": "a.dcp0:nth-of-type(1) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 46px",
+    "selector": "a.dcp0:nth-of-type(2) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 51px",
+    "selector": "a.dcp0:nth-of-type(3) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 51px",
+    "selector": "a.dcp0:nth-of-type(4) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 51px",
+    "selector": "a.dcp0:nth-of-type(5) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 23px",
+    "selector": "a.dcp0:nth-of-type(6) > span:nth-of-type(2) > span"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(1) > section:nth-of-type(1)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(1) > section:nth-of-type(2)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(1) > section:nth-of-type(3)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(4)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(3) > section:nth-of-type(1)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(3) > section:nth-of-type(2)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/reports.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(3) > section:nth-of-type(3)"
+  }
+]

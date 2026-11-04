@@ -1,0 +1,6 @@
+{
+  "detector": {
+    "ignoreRules": ["nested-cards"],
+    "_why": "Verified false positive (audit 2026-11-04): the 'outer card' is the <main> content canvas (28-32px radius); dashboard tiles sit directly on it. There are no card-in-card stacks."
+  }
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js" as="script">
+<style>html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}</style>
+<link rel="stylesheet" href="./modul-theme.css">
+<script src="./modul-theme.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+  <style>
+    @keyframes hu-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+    [data-hu-input]::placeholder{color:var(--text-subtle)}
+    [data-hu-scroll]{scrollbar-width:thin}
+      @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
+  </style>
+</helmet>
+<div data-hu-pop="anchor" style="position:relative;display:flex;align-items:center;gap:16px;flex:1;min-width:0;font-family:var(--font-sans)">
+  <span aria-hidden="true" style="margin-right:auto"></span>
+  <button type="button" onClick="{{ openSearch }}" aria-label="{{ searchLabel }}" aria-haspopup="dialog" style="flex:0 1 380px;min-width:52px;height:60px;box-sizing:border-box;display:flex;align-items:center;gap:12px;padding:0 18px 0 8px;margin-right:-8px;border:0;border-radius:999px;background:var(--surface-card);box-shadow:var(--shadow-xs);font-family:inherit;cursor:text;text-align:left;transition:background var(--dur-fast)" style-hover="background:var(--surface-card)">
+    <span style="width:44px;height:44px;flex-shrink:0;border-radius:999px;background:var(--surface-inset);color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="search" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+    </span>
+    <span style="flex:1;min-width:0;font-size:15px;color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Search projects, clients, tasks…</span>
+    <span style="flex-shrink:0;padding:3px 8px;border-radius:8px;background:var(--surface-inset);font-size:12px;font-weight:600;color:var(--text-muted);font-variant-numeric:tabular-nums">{{ shortcutKey }}</span>
+  </button>
+  <div role="group" aria-label="{{ themeGroupLabel }}" style="display:inline-flex;flex-shrink:0">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.HeaderGroup" hint-size="112px,60px">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="sun" label="{{ lightLabel }}" active="{{ isLight }}" aria-pressed="{{ isLight }}" on-click="{{ setLight }}" hint-size="44px,44px"></x-import>
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="moon" label="{{ darkLabel }}" active="{{ isDark }}" aria-pressed="{{ isDark }}" on-click="{{ setDark }}" hint-size="44px,44px"></x-import>
+    </x-import>
+  </div>
+  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.HeaderGroup" hint-size="112px,60px">
+    <span style="position:relative;display:inline-flex">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="bell" label="{{ bellLabel }}" active="{{ notifOpen }}" on-click="{{ toggleNotif }}" hint-size="44px,44px"></x-import>
+      <sc-if value="{{ hasUnread }}" hint-placeholder-val="{{ false }}">
+        <span aria-hidden="true" style="position:absolute;top:5px;right:3px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:999px;background:var(--accent);color:#fff;font-size:10px;line-height:17px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums;box-shadow:0 0 0 2px var(--surface-card);pointer-events:none">{{ unreadLabel }}</span>
+      </sc-if>
+    </span>
+  </x-import>
+
+  <sc-if value="{{ hasNote }}" hint-placeholder-val="{{ false }}">
+    <div role="status" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:150;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--surface-inverse);color:#fff;box-shadow:var(--shadow-pop);font-size:var(--text-sm);font-weight:500;white-space:nowrap">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="info" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+      <span>{{ note }}</span>
+    </div>
+  </sc-if>
+  <sc-if value="{{ notifOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-label="Notifications" data-hu-pop="notif" style="position:absolute;right:0;top:72px;z-index:80;width:min(400px, calc(100vw - 32px));background:var(--surface-card);border-radius:var(--radius-lg, 18px);box-shadow:var(--shadow-pop);display:flex;flex-direction:column;overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 16px 12px 20px">
+        <div style="display:flex;align-items:baseline;gap:8px;min-width:0">
+          <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Notifications</span>
+          <span style="font-size:var(--text-sm);color:var(--text-muted);font-variant-numeric:tabular-nums">{{ unreadText }}</span>
+        </div>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" icon="check" disabled="{{ noUnread }}" on-click="{{ markAll }}" hint-size="130px,36px">Mark all as read</x-import>
+      </div>
+      <div data-hu-scroll="1" style="max-height:min(440px, 60vh);overflow-y:auto;padding:0 8px 8px;border-top:1px solid var(--border-subtle)">
+        <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+          <div aria-busy="true" aria-label="Loading notifications" style="display:flex;flex-direction:column;gap:4px;padding-top:8px">
+            <sc-for list="{{ skeleton }}" as="sk" hint-placeholder-count="4">
+              <div style="display:flex;gap:12px;align-items:center;padding:12px">
+                <div style="width:36px;height:36px;border-radius:999px;background:var(--surface-muted);animation:hu-pulse 1.4s ease-in-out infinite"></div>
+                <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+                  <div style="height:10px;width:70%;border-radius:99px;background:var(--limestone-200)"></div>
+                  <div style="height:8px;width:45%;border-radius:99px;background:var(--surface-muted)"></div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:36px 20px;text-align:center">
+            <span style="font-size:var(--text-body);font-weight:600;color:var(--text-strong)">Notifications didn’t load</span>
+            <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ errorText }}</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ retry }}" hint-size="100px,36px">Try again</x-import>
+          </div>
+        </sc-if>
+        <sc-if value="{{ popEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:40px 20px;text-align:center">
+            <span style="width:44px;height:44px;border-radius:999px;background:var(--surface-muted);color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="bell" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+            </span>
+            <span style="font-size:var(--text-body);font-weight:600;color:var(--text-strong)">You’re up to date</span>
+            <span style="font-size:var(--text-sm);color:var(--text-muted)">Nothing needs your attention right now.</span>
+          </div>
+        </sc-if>
+        <sc-for list="{{ popRows }}" as="n" hint-placeholder-count="0">
+          <sc-if value="{{ n.isHead }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:14px 12px 6px;font-size:var(--text-xs);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)">{{ n.label }}</div>
+          </sc-if>
+          <sc-if value="{{ n.isItem }}" hint-placeholder-val="{{ false }}">
+            <div style="position:relative;display:flex;align-items:flex-start;border-radius:14px;background:{{ n.bg }}" style-hover="background:var(--surface-inset)">
+              <button type="button" onClick="{{ n.open }}" aria-label="{{ n.aria }}" style="flex:1;min-width:0;display:flex;align-items:flex-start;gap:12px;padding:12px 40px 12px 12px;border:0;background:transparent;border-radius:14px;font-family:inherit;text-align:left;cursor:pointer">
+                <span style="width:36px;height:36px;flex-shrink:0;border-radius:999px;background:{{ n.iconBg }};color:{{ n.iconFg }};display:inline-flex;align-items:center;justify-content:center">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ n.icon }}" size="{{ 17 }}" hint-size="17px,17px"></x-import>
+                </span>
+                <span style="display:flex;flex-direction:column;gap:2px;min-width:0;flex:1">
+                  <span style="font-size:var(--text-table);line-height:var(--lh-table);font-weight:{{ n.weight }};color:{{ n.titleColor }};text-wrap:pretty">{{ n.title }}</span>
+                  <span style="font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ n.desc }}</span>
+                  <span style="font-size:var(--text-xs);line-height:var(--lh-xs);color:var(--text-subtle);margin-top:2px">{{ n.time }}</span>
+                </span>
+              </button>
+              <sc-if value="{{ n.unread }}" hint-placeholder-val="{{ false }}">
+                <button type="button" onClick="{{ n.markRead }}" aria-label="Mark as read" title="Mark as read" style="position:absolute;top:10px;right:8px;width:28px;height:28px;border:0;border-radius:999px;background:transparent;display:inline-flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--surface-muted)">
+                  <span style="width:8px;height:8px;border-radius:99px;background:var(--accent)"></span>
+                </button>
+              </sc-if>
+            </div>
+          </sc-if>
+        </sc-for>
+      </div>
+      <div style="padding:8px;border-top:1px solid var(--border-subtle)">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" full-width="{{ true }}" icon-right="arrow-right" on-click="{{ openDrawer }}" hint-size="100%,36px">View all notifications</x-import>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-hu-pop="drawer" onMouseDown="{{ scrimDown }}" style="position:fixed;inset:0;z-index:120;background:rgba(28,28,26,.28);display:flex;justify-content:flex-end">
+      <aside role="dialog" aria-modal="true" aria-label="All notifications" onMouseDown="{{ stop }}" style="width:min(480px, 100vw);height:100%;box-sizing:border-box;background:var(--surface-card);box-shadow:var(--shadow-pop);display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:24px 24px 12px">
+          <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+            <span style="font-size:var(--text-title);line-height:var(--lh-title);font-weight:var(--weight-heading);color:var(--text-strong)">Notifications</span>
+            <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ drawerSub }}</span>
+          </div>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" variant="soft" label="Close notifications" on-click="{{ closeDrawer }}" hint-size="44px,44px"></x-import>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:0 24px 12px">
+          <div style="overflow-x:auto;scrollbar-width:none;max-width:100%">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.SegmentedControl" size="sm" options="{{ filterOpts }}" value="{{ filter }}" on-change="{{ setFilter }}" hint-size="360px,40px"></x-import>
+          </div>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" icon="check" disabled="{{ noUnread }}" on-click="{{ markAll }}" hint-size="130px,36px">Mark all as read</x-import>
+        </div>
+        <div data-hu-scroll="1" style="flex:1;overflow-y:auto;padding:0 16px 24px;border-top:1px solid var(--border-subtle)">
+          <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:24px 8px;font-size:var(--text-sm);color:var(--text-muted)">Loading notifications…</div>
+          </sc-if>
+          <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+            <div role="alert" style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:24px 8px">
+              <span style="font-size:var(--text-body);font-weight:600;color:var(--text-strong)">Notifications didn’t load</span>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ retry }}" hint-size="100px,36px">Try again</x-import>
+            </div>
+          </sc-if>
+          <sc-if value="{{ drawerEmpty }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:40px 8px;text-align:center;font-size:var(--text-sm);color:var(--text-muted)">{{ drawerEmptyText }}</div>
+          </sc-if>
+          <sc-for list="{{ drawerRows }}" as="n" hint-placeholder-count="0">
+            <sc-if value="{{ n.isHead }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:16px 12px 6px;font-size:var(--text-xs);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)">{{ n.label }}</div>
+            </sc-if>
+            <sc-if value="{{ n.isItem }}" hint-placeholder-val="{{ false }}">
+              <div style="position:relative;display:flex;align-items:flex-start;border-radius:14px;background:{{ n.bg }}" style-hover="background:var(--surface-inset)">
+                <button type="button" onClick="{{ n.open }}" aria-label="{{ n.aria }}" style="flex:1;min-width:0;display:flex;align-items:flex-start;gap:12px;padding:12px 40px 12px 12px;border:0;background:transparent;border-radius:14px;font-family:inherit;text-align:left;cursor:pointer">
+                  <span style="width:36px;height:36px;flex-shrink:0;border-radius:999px;background:{{ n.iconBg }};color:{{ n.iconFg }};display:inline-flex;align-items:center;justify-content:center">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ n.icon }}" size="{{ 17 }}" hint-size="17px,17px"></x-import>
+                  </span>
+                  <span style="display:flex;flex-direction:column;gap:2px;min-width:0;flex:1">
+                    <span style="font-size:var(--text-table);line-height:var(--lh-table);font-weight:{{ n.weight }};color:{{ n.titleColor }};text-wrap:pretty">{{ n.title }}</span>
+                    <span style="font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-muted)">{{ n.desc }}</span>
+                    <span style="font-size:var(--text-xs);line-height:var(--lh-xs);color:var(--text-subtle);margin-top:2px">{{ n.time }}</span>
+                  </span>
+                </button>
+                <sc-if value="{{ n.unread }}" hint-placeholder-val="{{ false }}">
+                  <button type="button" onClick="{{ n.markRead }}" aria-label="Mark as read" title="Mark as read" style="position:absolute;top:10px;right:8px;width:28px;height:28px;border:0;border-radius:999px;background:transparent;display:inline-flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--surface-muted)">
+                    <span style="width:8px;height:8px;border-radius:99px;background:var(--accent)"></span>
+                  </button>
+                </sc-if>
+                <sc-if value="{{ n.read }}" hint-placeholder-val="{{ false }}">
+                  <button type="button" onClick="{{ n.markUnread }}" aria-label="Mark as unread" title="Mark as unread" style="position:absolute;top:10px;right:8px;width:28px;height:28px;border:0;border-radius:999px;background:transparent;display:inline-flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--surface-muted)">
+                    <span style="width:8px;height:8px;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--limestone-400, #c4bfb5)"></span>
+                  </button>
+                </sc-if>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </aside>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-hu-pop="search" onMouseDown="{{ scrimDown }}" style="position:fixed;inset:0;z-index:140;background:rgba(28,28,26,.28);display:flex;justify-content:center;align-items:flex-start;padding:12vh 16px 16px;box-sizing:border-box">
+      <div role="dialog" aria-modal="true" aria-label="Search MODUL" onMouseDown="{{ stop }}" style="width:min(640px, 100%);max-height:76vh;background:var(--surface-card);border-radius:24px;box-shadow:var(--shadow-pop);display:flex;flex-direction:column;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;height:64px;padding:0 16px 0 22px;flex-shrink:0">
+          <span style="color:var(--text-muted);display:inline-flex">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="search" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+          </span>
+          <input data-hu-input="1" ref="{{ inputRef }}" type="text" role="combobox" aria-expanded="{{ true }}" aria-controls="hu-results" aria-activedescendant="{{ activeId }}" aria-label="Search projects, clients, tasks, documents and approvals" placeholder="Search projects, clients, tasks, documents…" value="{{ q }}" onChange="{{ onQ }}" onKeyDown="{{ onKey }}" autocomplete="off" spellcheck="false" style="flex:1;min-width:0;height:100%;border:0;outline:none;background:transparent;font-family:inherit;font-size:var(--text-body-lg);font-weight:500;color:var(--text-strong)">
+          <sc-if value="{{ hasQ }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="sm" label="Clear search" on-click="{{ clearQ }}" hint-size="32px,32px"></x-import>
+          </sc-if>
+          <button type="button" onClick="{{ closeSearch }}" aria-label="Close search" style="height:26px;padding:0 8px;border:1px solid var(--border-subtle);border-radius:8px;background:var(--surface-inset);font-family:inherit;font-size:var(--text-xs);font-weight:600;color:var(--text-muted);cursor:pointer">Esc</button>
+        </div>
+        <div id="hu-results" role="listbox" aria-label="Results" data-hu-scroll="1" ref="{{ listRef }}" style="flex:1;overflow-y:auto;padding:4px 8px 8px;border-top:1px solid var(--border-subtle);min-height:0">
+          <sc-if value="{{ sLoading }}" hint-placeholder-val="{{ false }}">
+            <div aria-busy="true" style="display:flex;flex-direction:column;gap:2px;padding-top:8px">
+              <sc-for list="{{ skeleton }}" as="sk" hint-placeholder-count="4">
+                <div style="display:flex;gap:12px;align-items:center;padding:10px 12px">
+                  <div style="width:36px;height:36px;border-radius:10px;background:var(--surface-muted);animation:hu-pulse 1.4s ease-in-out infinite"></div>
+                  <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+                    <div style="height:10px;width:55%;border-radius:99px;background:var(--limestone-200)"></div>
+                    <div style="height:8px;width:35%;border-radius:99px;background:var(--surface-muted)"></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sError }}" hint-placeholder-val="{{ false }}">
+            <div role="alert" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:40px 20px;text-align:center">
+              <span style="font-size:var(--text-body);font-weight:600;color:var(--text-strong)">Search isn’t available</span>
+              <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ errorText }}</span>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ retry }}" hint-size="100px,36px">Try again</x-import>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sNone }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:44px 20px;text-align:center">
+              <span style="font-size:var(--text-body);font-weight:600;color:var(--text-strong)">{{ noneTitle }}</span>
+              <span style="font-size:var(--text-sm);color:var(--text-muted)">Try a project code, a client name or part of a file name.</span>
+            </div>
+          </sc-if>
+          <sc-for list="{{ sRows }}" as="r" hint-placeholder-count="0">
+            <sc-if value="{{ r.isHead }}" hint-placeholder-val="{{ false }}">
+              <div role="presentation" style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 12px 4px;font-size:var(--text-xs);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)">
+                <span>{{ r.label }}</span>
+                <span style="letter-spacing:0;text-transform:none;font-weight:500;font-variant-numeric:tabular-nums">{{ r.count }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ r.isItem }}" hint-placeholder-val="{{ false }}">
+              <div id="{{ r.domId }}" role="option" aria-selected="{{ r.active }}" data-ix="{{ r.ix }}" onClick="{{ r.go }}" onMouseMove="{{ r.hover }}" style="display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 12px;border-radius:14px;background:{{ r.bg }};cursor:pointer">
+                <span style="width:36px;height:36px;flex-shrink:0;border-radius:10px;background:{{ r.iconBg }};color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ r.icon }}" size="{{ 17 }}" hint-size="17px,17px"></x-import>
+                </span>
+                <span style="display:flex;flex-direction:column;gap:1px;min-width:0;flex:1">
+                  <span style="font-size:var(--text-table);line-height:var(--lh-table);color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><sc-for list="{{ r.parts }}" as="p" hint-placeholder-count="1"><span style="font-weight:{{ p.w }};background:{{ p.bg }};border-radius:3px">{{ p.t }}</span></sc-for></span>
+                  <span style="font-size:var(--text-xs);line-height:var(--lh-xs);color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.sub }}</span>
+                </span>
+                <sc-if value="{{ r.hasStatus }}" hint-placeholder-val="{{ false }}">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ r.tone }}" hint-size="90px,24px">{{ r.status }}</x-import>
+                </sc-if>
+                <sc-if value="{{ r.active }}" hint-placeholder-val="{{ false }}">
+                  <span style="color:var(--text-muted);display:inline-flex">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="arrow-right" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                  </span>
+                </sc-if>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 20px;border-top:1px solid var(--border-subtle);background:var(--surface-inset);font-size:var(--text-xs);color:var(--text-muted);flex-shrink:0">
+          <span>{{ footNote }}</span>
+          <span style="display:flex;gap:14px">
+            <span>↑ ↓ to move</span>
+            <span>Enter to open</span>
+            <span>{{ shortcut }} to toggle</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = (() => { let data = null, read = [];
+    try { const c = sessionStorage.getItem('modul.index.v1'); if (c) data = JSON.parse(c); } catch (e) {}
+    try { read = JSON.parse(localStorage.getItem('modul.notifications.read.v1') || '[]'); } catch (e) {}
+    return { status: data ? 'ready' : 'loading', err: '', data, read, notifOpen: false, drawerOpen: false, filter: 'all', searchOpen: false, q: '', dq: '', active: 0 }; })();
+  inputRef = el => { this._input = el; };
+  listRef = el => { this._list = el; };
+
+  componentDidMount() {
+    this._mod = import((window.__resources && window.__resources.modul_index_js) || new URL('modul-index.js', location.href).href);
+    if (!this.state.data) { const idle = window.requestIdleCallback || (fn => setTimeout(fn, 400)); idle(() => this.load(), { timeout: 1500 }); }
+    this._keys = e => {
+      if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) { e.preventDefault(); e.stopPropagation(); return this.state.searchOpen ? this.closeSearch() : this.openSearch(); }
+      if (e.key === 'Escape') { const s = this.state;
+        if (s.searchOpen) { e.stopPropagation(); return this.closeSearch(); }
+        if (s.drawerOpen) { e.stopPropagation(); return this.setState({ drawerOpen: false }); }
+        if (s.notifOpen) { e.stopPropagation(); return this.closeNotif(); } }
+    };
+    this._down = e => { if (this.state.notifOpen && !e.target.closest('[data-hu-pop]')) this.setState({ notifOpen: false }); };
+    this._storage = e => { if (e.key === 'modul.settings.v1') this.forceUpdate(); if (e.key && e.key.indexOf('modul.notifications') === 0) this._mod.then(m => this.setState({ read: Array.from(m.readSet()) })); };
+    window.addEventListener('keydown', this._keys, true);
+    this._os = () => this.openSearch(); window.addEventListener('modul:search', this._os);
+    document.addEventListener('mousedown', this._down);
+    window.addEventListener('storage', this._storage);
+    this._set = () => this.forceUpdate(); window.addEventListener('modul:settings', this._set); window.addEventListener('modul:theme', this._set);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this._keys, true); window.removeEventListener('modul:search', this._os); document.removeEventListener('mousedown', this._down); window.removeEventListener('storage', this._storage);
+    window.removeEventListener('modul:settings', this._set); window.removeEventListener('modul:theme', this._set);
+    clearTimeout(this._deb);
+  }
+  componentDidUpdate() {
+    const so = this.state.searchOpen, pso = this._pSO, pa = this._pAct; this._pSO = so; this._pAct = this.state.active;
+    if (so && !pso) setTimeout(() => this._input && this._input.focus(), 0);
+    if (this.state.active !== pa && this._list) { const el = this._list.querySelector('[data-ix="' + this.state.active + '"]');
+      if (el) { const L = this._list, top = el.offsetTop, bot = top + el.offsetHeight; if (top < L.scrollTop + 8) L.scrollTop = top - 36; else if (bot > L.scrollTop + L.clientHeight) L.scrollTop = bot - L.clientHeight + 8; } }
+  }
+  load() {
+    this.setState({ status: 'loading', err: '' });
+    this._mod.then(m => m.loadModul()).then(data => this.setState({ status: 'ready', data }))
+      .catch(e => this.setState({ status: 'error', err: 'The workspace records couldn’t be read. ' + (e && e.message ? '(' + e.message + ')' : '') }));
+  }
+  persist(read) { this.setState({ read }); this._mod.then(m => m.writeSet(new Set(read))); }
+  markRead(id) { if (!this.state.read.includes(id)) this.persist(this.state.read.concat(id)); }
+  markUnread(id) { this.persist(this.state.read.filter(x => x !== id)); }
+  openSearch() { this.setState({ searchOpen: true, notifOpen: false, drawerOpen: false, active: 0 }); setTimeout(() => this._input && this._input.focus(), 30); }
+  closeSearch() { clearTimeout(this._deb); this.setState({ searchOpen: false, q: '', dq: '', active: 0 }); }
+  closeNotif() { this.setState({ notifOpen: false }); }
+  go(href) {
+    this.setState({ searchOpen: false, notifOpen: false, drawerOpen: false, q: '', dq: '', active: 0 });
+    const u = new URL(href, location.href);
+    if (decodeURIComponent(u.pathname) === decodeURIComponent(location.pathname)) {
+      if (location.hash === u.hash) window.dispatchEvent(new HashChangeEvent('hashchange')); else location.hash = u.hash;
+    } else location.href = u.href;
+  }
+
+  renderVals() {
+    const s = this.state; const data = s.data; const ready = s.status === 'ready';
+    const mac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+    const shortcut = mac ? '⌘K' : 'Ctrl K';
+    const TONE = { negative: ['var(--status-negative-bg)', 'var(--status-negative)'], warning: ['var(--status-warning-bg)', 'var(--status-warning)'], positive: ['var(--status-positive-bg)', 'var(--status-positive)'], neutral: ['var(--surface-muted)', 'var(--text-strong)'] };
+    let NP = {}; try { NP = (JSON.parse(localStorage.getItem('modul.settings.v1') || '{}').notifications) || {}; } catch (e) {}
+    const group = id => /^ap-(overdue|due)/.test(id) ? 'deadlines' : /^ap-/.test(id) ? 'approvals' : /^task-/.test(id) ? 'tasks' : /^doc-/.test(id) ? 'documents' : 'projects';
+    const notes = ready ? data.notes.filter(n => NP[group(n.id)] !== false) : [];
+    const showCount = NP.badge !== false;
+    const isRead = id => s.read.includes(id);
+    const unread = notes.filter(n => !isRead(n.id)).length;
+    const rel = d => { const p = x => { const [y, m, dd] = x.split('-').map(Number); return new Date(y, m - 1, dd); }; const n = Math.round((p(d) - new Date(2026, 9, 19)) / 864e5);
+      if (n === 0) return 'Today'; if (n === -1) return 'Yesterday'; if (n < 0 && n > -7) return -n + ' days ago'; const M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; const dt = p(d); return dt.getDate() + ' ' + M[dt.getMonth()]; };
+    const KIND = { approval: 'Approval', task: 'Task', document: 'Document', project: 'Project' };
+    const row = n => { const r = isRead(n.id); const t = TONE[n.tone] || TONE.neutral;
+      return { isItem: true, isHead: false, unread: !r, read: r, title: n.title, desc: n.desc, time: KIND[n.kind] + ' · ' + rel(n.date), icon: n.icon, iconBg: r ? 'var(--surface-muted)' : t[0], iconFg: r ? 'var(--text-muted)' : t[1],
+        weight: r ? 500 : 600, titleColor: r ? 'var(--text-body)' : 'var(--text-strong)', bg: 'transparent', aria: (r ? '' : 'Unread. ') + n.title + '. ' + n.desc,
+        open: () => { this.markRead(n.id); this.go(n.href); }, markRead: () => this.markRead(n.id), markUnread: () => this.markUnread(n.id) }; };
+    const sectioned = list => { const a = list.filter(n => n.urgent), b = list.filter(n => !n.urgent); const out = [];
+      if (a.length) out.push({ isHead: true, isItem: false, label: 'Needs action' }, ...a.map(row)); if (b.length) out.push({ isHead: true, isItem: false, label: 'Updates' }, ...b.map(row)); return out; };
+    const popList = notes.filter(n => !isRead(n.id) || n.urgent).slice(0, 8);
+    const F = s.filter;
+    const dList = notes.filter(n => F === 'all' ? true : F === 'unread' ? !isRead(n.id) : n.kind === F);
+
+    let sRows = [], flat = [];
+    const dq = s.dq.trim();
+    if (ready && s.searchOpen) {
+      const GROUPS = [['project', 'Projects'], ['client', 'Clients'], ['task', 'Tasks'], ['document', 'Documents'], ['approval', 'Approvals'], ['member', 'Team']];
+      if (!dq) {
+        const pages = [['Overview', 'Overview Dashboard.dc.html', 'layout-grid'], ['Projects', 'Projects.dc.html', 'folder-kanban'], ['Clients', 'Clients.dc.html', 'building-2'], ['Approvals', 'Approvals.dc.html', 'stamp'], ['Tasks & Team', 'Tasks.dc.html', 'list-todo'], ['Documents', 'Documents.dc.html', 'files'], ['Reports', 'Reports.dc.html', 'chart-column']];
+        sRows.push({ isHead: true, label: 'Go to', count: '' });
+        pages.forEach(([t, h, ic]) => { const ix = flat.length; flat.push(h); sRows.push({ isItem: true, ix, title: t, parts: [{ t, w: 500, bg: 'transparent' }], sub: 'Open ' + t, icon: ic, href: h }); });
+      } else {
+        this._modSync = this._modSync || null;
+        const res = this._searchFn ? this._searchFn(data.items, dq) : [];
+        GROUPS.forEach(([type, label]) => { const hits = res.filter(r => r.it.type === type); if (!hits.length) return;
+          sRows.push({ isHead: true, label, count: hits.length > 5 ? '5 of ' + hits.length : String(hits.length) });
+          hits.slice(0, 5).forEach(h => { const it = h.it; const ix = flat.length; flat.push(it.href);
+            const parts = h.at >= 0 && h.len ? [{ t: it.title.slice(0, h.at), w: 500, bg: 'transparent' }, { t: it.title.slice(h.at, h.at + h.len), w: 700, bg: 'var(--sage-50, #eef2ec)' }, { t: it.title.slice(h.at + h.len), w: 500, bg: 'transparent' }].filter(p => p.t) : [{ t: it.title, w: 500, bg: 'transparent' }];
+            sRows.push({ isItem: true, ix, title: it.title, parts, sub: it.sub, icon: it.icon, status: it.status, tone: it.tone, hasStatus: !!it.status, href: it.href }); }); });
+      }
+      const act = Math.min(s.active, Math.max(0, flat.length - 1));
+      sRows = sRows.map((r, i) => r.isItem ? { ...r, isHead: false, domId: 'hu-opt-' + r.ix, active: r.ix === act, bg: r.ix === act ? 'var(--surface-muted)' : 'transparent', iconBg: r.ix === act ? 'var(--surface-card)' : 'var(--surface-muted)', go: () => this.go(r.href), hover: () => { if (this.state.active !== r.ix) this.setState({ active: r.ix }); } } : { ...r, isItem: false });
+    }
+    if (!this._searchFn && this._mod) this._mod.then(m => { if (!this._searchFn) { this._searchFn = m.search; if (this.state.dq) this.forceUpdate(); } });
+    this._flat = flat;
+    const total = ready ? data.items.length : 0;
+
+    return {
+      hasNote: !!s.note, note: s.note || '',
+      ...(() => { const MT = window.ModulTheme; const dark = !!MT && MT.get() === 'dark';
+        return { isDark: dark, isLight: !dark, themeGroupLabel: 'Theme: ' + (dark ? 'dark' : 'light'),
+          lightLabel: dark ? 'Switch to light theme' : 'Light theme (current)', darkLabel: dark ? 'Dark theme (current)' : 'Switch to dark theme',
+          setLight: () => MT && MT.set('light'), setDark: () => MT && MT.set('dark') }; })(),
+      searchLabel: 'Search (' + shortcut + ')', shortcutKey: shortcut, bellLabel: unread ? 'Notifications, ' + unread + ' unread' : 'Notifications',
+      hasUnread: unread > 0 && showCount, unreadLabel: unread > 9 ? '9+' : String(unread), unreadText: ready ? (unread ? unread + ' unread' : 'All read') : '', noUnread: unread === 0,
+      notifOpen: s.notifOpen, toggleNotif: () => this.setState(x => ({ notifOpen: !x.notifOpen })),
+      markAll: () => this.persist(Array.from(new Set(s.read.concat(notes.map(n => n.id))))),
+      isLoading: s.status === 'loading', isError: s.status === 'error', errorText: s.err, retry: () => this.load(),
+      skeleton: [1, 2, 3, 4], popEmpty: ready && popList.length === 0, popRows: ready ? sectioned(popList) : [],
+      openDrawer: () => this.setState({ drawerOpen: true, notifOpen: false }), closeDrawer: () => this.setState({ drawerOpen: false }), drawerOpen: s.drawerOpen,
+      drawerSub: ready ? notes.length + ' in the last two weeks · ' + (unread ? unread + ' unread' : 'all read') : '',
+      filterOpts: [{ value: 'all', label: 'All' }, { value: 'unread', label: 'Unread' + (unread ? ' · ' + unread : '') }, { value: 'approval', label: 'Approvals' }, { value: 'task', label: 'Tasks' }, { value: 'document', label: 'Documents' }, { value: 'project', label: 'Projects' }],
+      filter: F, setFilter: v => this.setState({ filter: v }),
+      drawerRows: ready ? sectioned(dList) : [], drawerEmpty: ready && dList.length === 0, drawerEmptyText: F === 'unread' ? 'No unread notifications.' : 'No notifications of this type.',
+      scrimDown: e => { if (e.target === e.currentTarget) { if (this.state.searchOpen) this.closeSearch(); else this.setState({ drawerOpen: false }); } }, stop: e => e.stopPropagation(),
+      searchOpen: s.searchOpen, openSearch: () => this.openSearch(), closeSearch: () => this.closeSearch(),
+      inputRef: this.inputRef, listRef: this.listRef, q: s.q, hasQ: !!s.q,
+      onQ: e => { const v = e.target.value; this.setState({ q: v, active: 0 }); clearTimeout(this._deb); this._deb = setTimeout(() => this.setState({ dq: v, active: 0 }), 120); },
+      clearQ: () => { clearTimeout(this._deb); this.setState({ q: '', dq: '', active: 0 }); this._input && this._input.focus(); },
+      onKey: e => { const n = this._flat.length;
+        if (e.key === 'ArrowDown') { e.preventDefault(); if (n) this.setState(x => ({ active: (Math.min(x.active, n - 1) + 1) % n })); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); if (n) this.setState(x => ({ active: (Math.min(x.active, n - 1) - 1 + n) % n })); }
+        else if (e.key === 'Enter') { e.preventDefault(); const h = this._flat[Math.min(this.state.active, n - 1)]; if (h) this.go(h); } },
+      activeId: flat.length ? 'hu-opt-' + Math.min(s.active, flat.length - 1) : undefined,
+      sLoading: s.searchOpen && s.status === 'loading', sError: s.searchOpen && s.status === 'error',
+      sNone: ready && !!dq && sRows.length === 0, noneTitle: 'No results for “' + dq + '”', sRows,
+      footNote: ready ? 'Searching ' + total + ' records in this workspace' : 'Preparing search…', shortcut,
+    };
+  }
+}
+</script>
+</body>
+</html>

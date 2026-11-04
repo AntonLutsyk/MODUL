@@ -1,0 +1,37 @@
+:root{
+--font-sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+--font-numeric:"Manrope",ui-sans-serif,system-ui,sans-serif;
+
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+
+/* Semantic weights */
+--weight-heading:600;  /* page, section and card headings */
+--weight-figure:600;   /* KPI and metric values */
+--weight-ui:500;       /* nav, buttons, labels */
+--weight-strong:600;   /* primary record names, active states */
+
+/* Scale */
+--text-display:34px;  --lh-display:42px;  --tracking-display:-0.022em; /* page title */
+--text-figure-xl:56px;--lh-figure-xl:60px;/* hero metric */
+--text-figure-lg:30px;--lh-figure-lg:38px;/* KPI value */
+--text-figure-md:22px;--lh-figure-md:28px;/* compact metric */
+--text-title:22px;    --lh-title:30px;    /* section heading */
+--text-heading:16px;  --lh-heading:22px;  /* card heading */
+--text-lead:15px;     --lh-lead:22px;     /* page subtitle */
+--text-body-lg:15px;  --lh-body-lg:22px;  /* list titles */
+--text-body:14px;     --lh-body:21px;     /* primary body */
+--text-ui:14px;       --lh-ui:20px;       /* nav, buttons */
+--text-table:14px;    --lh-table:20px;    /* table primary */
+--text-sm:13px;       --lh-sm:19px;       /* supporting text */
+--text-xs:12px;       --lh-xs:16px;       /* metadata, captions */
+--text-2xs:11px;      --lh-2xs:14px;      /* eyebrow */
+--tracking-tight:-0.012em;
+--tracking-figure:-0.02em;
+--tracking-normal:0;
+--tracking-eyebrow:0.08em;
+}
+@media (max-width:1100px){:root{--text-display:30px;--lh-display:38px;--text-figure-lg:26px;--lh-figure-lg:34px;--text-title:20px;--lh-title:28px}}
+@media (max-width:720px){:root{--text-display:26px;--lh-display:34px;--text-title:18px;--lh-title:26px}}

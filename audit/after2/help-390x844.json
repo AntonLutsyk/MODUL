@@ -1,0 +1,46 @@
+[
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/help.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "main > div:nth-of-type(2)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/help.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/help.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "aside > div:nth-of-type(1)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/help.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "aside > div:nth-of-type(2)"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/tasks.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(2) > div > section:nth-of-type(1)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/tasks.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(2)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/tasks.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(3)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/tasks.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(4)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/tasks.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(2) > section"
+  }
+]

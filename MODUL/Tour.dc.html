@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+</helmet>
+<sc-if value="{{ isWelcome }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:300;background:rgba(27,30,39,.42);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;font-family:var(--font-sans)">
+    <div role="dialog" aria-modal="true" aria-labelledby="tour-w-title" style="width:min(460px,100%);background:var(--surface-card);border-radius:28px;box-shadow:var(--shadow-pop);padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <img src="assets/modul-logo-v4.png" alt="MODUL" data-logo="light" style="height:26px;width:auto;display:block">
+        <img src="assets/modul-logo-v4-dark.png" alt="MODUL" data-logo="dark" style="height:26px;width:auto;display:block">
+        <span style="font-size:12px;font-weight:600;color:var(--text-subtle)">{{ welcomeLength }}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span id="tour-w-title" style="font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.02em;color:var(--text-strong)">{{ welcomeTitle }}</span>
+        <span style="font-size:15px;line-height:22px;color:var(--text-muted);text-wrap:pretty">A short walk through your studio workspace: where things live, what needs you today and how to start new work.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <sc-for list="{{ outline }}" as="o" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:16px;background:var(--surface-inset)">
+            <span style="width:32px;height:32px;flex-shrink:0;border-radius:10px;background:var(--surface-card);box-shadow:var(--shadow-xs);color:var(--nav-active-icon, var(--accent));display:inline-flex;align-items:center;justify-content:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ o.icon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+            </span>
+            <span style="font-size:14px;line-height:20px;font-weight:500;color:var(--text-strong)">{{ o.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="ghost" on-click="{{ skip }}" hint-size="120px,44px">Skip for now</x-import>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" icon-right="arrow-right" on-click="{{ next }}" hint-size="160px,44px">Start the tour</x-import>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isStep }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ swallow }}" style="position:fixed;inset:0;z-index:300;font-family:var(--font-sans)">
+    <div aria-hidden="true" style="position:fixed;left:{{ spot.x }}px;top:{{ spot.y }}px;width:{{ spot.w }}px;height:{{ spot.h }}px;border-radius:{{ spot.r }}px;box-shadow:0 0 0 2px rgba(255,255,255,.9),0 0 0 9999px rgba(27,30,39,.46);transition:left 280ms cubic-bezier(.2,0,0,1),top 280ms cubic-bezier(.2,0,0,1),width 280ms cubic-bezier(.2,0,0,1),height 280ms cubic-bezier(.2,0,0,1);pointer-events:none"></div>
+    <div role="dialog" aria-modal="true" aria-labelledby="tour-s-title" aria-describedby="tour-s-body" style="position:fixed;left:{{ pop.x }}px;top:{{ pop.y }}px;width:{{ pop.w }}px;box-sizing:border-box;background:var(--surface-card);border-radius:24px;box-shadow:var(--shadow-pop);padding:20px 20px 16px;display:flex;flex-direction:column;gap:14px;transition:left 280ms cubic-bezier(.2,0,0,1),top 280ms cubic-bezier(.2,0,0,1)">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <span style="display:inline-flex;align-items:center;gap:8px">
+          <span style="width:30px;height:30px;border-radius:10px;background:var(--nav-active-bg, var(--accent-soft));color:var(--nav-active-icon, var(--accent));display:inline-flex;align-items:center;justify-content:center">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ cur.icon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+          </span>
+          <span style="font-size:12px;font-weight:600;color:var(--text-subtle);font-variant-numeric:tabular-nums">{{ counter }}</span>
+        </span>
+        <button type="button" onClick="{{ skip }}" style="border:0;background:transparent;padding:4px 6px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer" style-hover="background:var(--surface-hover)">Skip tour</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span id="tour-s-title" style="font-size:18px;line-height:24px;font-weight:600;letter-spacing:-0.01em;color:var(--text-strong)">{{ cur.title }}</span>
+        <span id="tour-s-body" style="font-size:14px;line-height:21px;color:var(--text-muted);text-wrap:pretty">{{ cur.body }}</span>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div aria-hidden="true" style="display:flex;gap:4px">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="9">
+            <span style="width:{{ d.w }}px;height:6px;border-radius:999px;background:{{ d.bg }};transition:width 180ms cubic-bezier(.2,0,0,1)"></span>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:6px">
+          <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="secondary" on-click="{{ back }}" hint-size="70px,36px">Back</x-import>
+          </sc-if>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" on-click="{{ next }}" hint-size="80px,36px">{{ nextLabel }}</x-import>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+  <div role="status" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:300;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--surface-card);box-shadow:var(--shadow-pop);font-family:var(--font-sans);font-size:14px;font-weight:500;color:var(--text-strong);white-space:nowrap">
+    <span style="display:inline-flex;color:var(--nav-active-icon, var(--accent))"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-check" size="{{ 18 }}" hint-size="18px,18px"></x-import></span>
+    <span>{{ doneNote }}</span>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  KEY = 'modul.tour.v3';
+  STEPS = [
+    { sel: '[data-tour="nav"]', icon: 'layout-grid', title: 'Every module lives here', body: 'The sidebar is your map of MODUL. Let’s go through each item in a few words.' },
+    { sel: '[data-tour="nav-overview"]', icon: 'layout-grid', title: 'Overview', body: 'This page. Your studio’s day in one place: fees, decisions waiting on you, recent activity and live projects.' },
+    { sel: '[data-tour="nav-projects"]', icon: 'folder-kanban', title: 'Projects', body: 'Every commission with its phase, manager, deadline and fee spent. The green counter is the number of active projects.' },
+    { sel: '[data-tour="nav-clients"]', icon: 'users', title: 'Clients', body: 'Clients and their companies, contacts and the projects you run for them.' },
+    { sel: '[data-tour="nav-approvals"]', icon: 'stamp', title: 'Approvals', body: 'Drawings and samples sent for client sign-off. The orange counter shows how many are still pending.' },
+    { sel: '[data-tour="nav-tasks"]', icon: 'list-todo', title: 'Tasks & Team', body: 'Who is working on what this week, with deliverables and due dates for each person.' },
+    { sel: '[data-tour="nav-documents"]', icon: 'file-text', title: 'Documents', body: 'Drawing sets, contracts and finish schedules for every project, with versions kept in order.' },
+    { sel: '[data-tour="nav-reports"]', icon: 'chart-column', title: 'Reports', body: 'Fees, invoicing and team utilisation over time, for the studio or a single project.' },
+    { sel: '[data-tour="nav-settings"]', icon: 'settings', title: 'Settings', body: 'Your profile, studio details, notifications and appearance, including the sidebar layout.' },
+    { sel: '[data-tour="nav-help"]', icon: 'circle-help', title: 'Help', body: 'Short answers on how MODUL works, and this tour whenever you want to see it again.' },
+    { sel: 'header', icon: 'search', title: 'Find anything in seconds', body: 'Search projects, clients and tasks, or press Ctrl K from any page. On the right: light or dark theme, and your notifications.' },
+    { sel: '[data-tour="actions"]', icon: 'plus', title: 'Start new work from here', body: 'Create a project or send drawings to a client for sign-off. Studio team shows who is working on what.' },
+    { sel: '[data-tour="fee"]', icon: 'chart-column', title: 'Your fee position', body: 'Contracted fees for the period, and how many projects are on budget, close to the limit or over fee. Each row opens the matching projects.' },
+    { sel: '[data-tour="stats"]', icon: 'layers', title: 'The week at a glance', body: 'The four numbers that matter most this week. Open any card to see the full list behind it.' },
+    { sel: '[data-tour="decisions"]', icon: 'stamp', title: 'Sign-offs holding up work', body: 'Overdue approvals come first. Open one to chase the client or update its status.' },
+    { sel: '[data-tour="activity"]', icon: 'upload', title: 'What changed recently', body: 'Drawing uploads, client messages, invoices and site visits, newest first. Faces and project photos tell you who and where at a glance.' },
+    { sel: '[data-tour="projects"]', icon: 'folder-kanban', title: 'Active projects', body: 'Phase, team, next milestone and fee spent for every live project. Use At risk to see only the ones that need attention.' },
+    { sel: '[data-tour="profile"]', icon: 'settings', title: 'Your profile and settings', body: 'Your name and photo, with a shortcut to profile settings. You can replay this tour any time from Help or the Take the tour button.' },
+  ];
+  state = { step: -2, rect: null, vw: 1440, vh: 900, done: false };
+  componentDidMount() {
+    let seen = null; try { seen = localStorage.getItem(this.KEY); } catch (e) {}
+    const forced = /(^|[#&])tour\b/.test(location.hash);
+    this._fit = () => this.setState({ vw: window.innerWidth, vh: window.innerHeight }, () => this.measure());
+    window.addEventListener('resize', this._fit); this._fit();
+    this._sc = () => { if (this.state.step >= 0) { cancelAnimationFrame(this._sr); this._sr = requestAnimationFrame(() => this.measure()); } };
+    document.addEventListener('scroll', this._sc, true);
+    this._key = e => { if (this.state.step < -1) return; if (e.key === 'Escape') { e.preventDefault(); this.finish('skipped'); } else if (e.key === 'ArrowRight' || e.key === 'Enter') { if (e.key === 'ArrowRight') e.preventDefault(); this.go(1); } else if (e.key === 'ArrowLeft' && this.state.step > 0) this.go(-1); };
+    window.addEventListener('keydown', this._key, true);
+    this._start = () => this.setState({ step: -1, done: false });
+    window.addEventListener('modul:tour', this._start);
+    if (forced || !seen) this._t = setTimeout(() => { if (forced) history.replaceState(null, '', location.pathname + location.search); this._start(); }, forced ? 300 : 900);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._fit); window.removeEventListener('keydown', this._key, true); window.removeEventListener('modul:tour', this._start); document.removeEventListener('scroll', this._sc, true); clearTimeout(this._t); clearTimeout(this._d); cancelAnimationFrame(this._raf); }
+  finish(how) { try { localStorage.setItem(this.KEY, how); } catch (e) {} this.setState({ step: -2, rect: null, done: how === 'done' }); if (how === 'done') { clearTimeout(this._d); this._d = setTimeout(() => this.setState({ done: false }), 3200); } }
+  go(d) {
+    const n = this.state.step + d;
+    if (n >= this.STEPS.length) return this.finish('done');
+    if (n < 0) return this.setState({ step: -1, rect: null });
+    this.setState({ step: n }, () => this.reveal());
+  }
+  reveal() {
+    const st = this.STEPS[this.state.step]; const el = st && document.querySelector(st.sel); if (!el) return this.measure();
+    let box = el.parentElement;
+    while (box && box !== document.body) { const oy = getComputedStyle(box).overflowY; if ((oy === 'auto' || oy === 'scroll') && box.scrollHeight > box.clientHeight + 2) break; box = box.parentElement; }
+    if (box && box !== document.body) {
+      const mr = box.getBoundingClientRect(), r = el.getBoundingClientRect();
+      const room = mr.height - 40; const target = r.height > room ? r.top - mr.top - 24 : r.top - mr.top - (mr.height - r.height) / 2;
+      box.scrollTo({ top: Math.max(0, box.scrollTop + target), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
+    const t0 = performance.now(); const tick = () => { this.measure(); if (performance.now() - t0 < 520) this._raf = requestAnimationFrame(tick); }; cancelAnimationFrame(this._raf); this._raf = requestAnimationFrame(tick);
+  }
+  measure() {
+    if (this.state.step < 0) return; const st = this.STEPS[this.state.step]; const el = st && document.querySelector(st.sel);
+    if (!el) return this.setState({ rect: null });
+    const r = el.getBoundingClientRect(); const p = 8; const vh = window.innerHeight;
+    const y = Math.max(8, r.top - p), b = Math.min(vh - 8, r.bottom + p);
+    const rect = { x: Math.round(r.left - p), y: Math.round(y), w: Math.round(r.width + p * 2), h: Math.round(Math.max(40, b - y)) };
+    const o = this.state.rect; if (!o || o.x !== rect.x || o.y !== rect.y || o.w !== rect.w || o.h !== rect.h) this.setState({ rect });
+  }
+  place(rc) {
+    const vw = this.state.vw, vh = this.state.vh, W = Math.min(352, vw - 32), H = 236, g = 16;
+    if (!rc) return { x: Math.round((vw - W) / 2), y: Math.round((vh - H) / 2), w: W };
+    const clampY = y => Math.max(16, Math.min(vh - H - 16, y)), clampX = x => Math.max(16, Math.min(vw - W - 16, x));
+    if (rc.x + rc.w + g + W <= vw - 16) return { x: rc.x + rc.w + g, y: clampY(rc.y), w: W };
+    if (rc.y + rc.h + g + H <= vh - 8) return { x: clampX(rc.x), y: rc.y + rc.h + g, w: W };
+    if (rc.y - g - H >= 8) return { x: clampX(rc.x), y: rc.y - g - H, w: W };
+    if (rc.x - g - W >= 16) return { x: rc.x - g - W, y: clampY(rc.y), w: W };
+    return { x: clampX(rc.x + rc.w - W - 16), y: clampY(rc.y + rc.h - H - 16), w: W };
+  }
+  renderVals() {
+    const s = this.state, n = this.STEPS.length; const cur = s.step >= 0 ? this.STEPS[s.step] : this.STEPS[0];
+    let name = 'Elena'; try { const p = (JSON.parse(localStorage.getItem('modul.settings.v1') || '{}').profile) || {}; if (p.name) name = p.name.split(' ')[0]; } catch (e) {}
+    const rc = s.rect;
+    return {
+      isWelcome: s.step === -1, isStep: s.step >= 0, isDone: s.done && s.step === -2,
+      welcomeTitle: 'Welcome to MODUL, ' + name, welcomeLength: n + ' short steps · about 3 min',
+      outline: [{ icon: 'layout-grid', label: 'What each sidebar section is for' }, { icon: 'search', label: 'Search, theme and notifications' }, { icon: 'stamp', label: 'What needs your decision today' }, { icon: 'folder-kanban', label: 'How your projects are doing' }],
+      cur, counter: (s.step + 1) + ' of ' + n, canBack: s.step > 0, nextLabel: s.step === n - 1 ? 'Finish' : 'Next',
+      dots: this.STEPS.map((_, i) => ({ w: i === s.step ? 18 : 6, bg: i <= s.step ? 'var(--nav-active-icon, var(--accent))' : 'var(--limestone-200)' })),
+      spot: rc ? { ...rc, r: 22 } : { x: s.vw / 2, y: s.vh / 2, w: 0, h: 0, r: 22 }, pop: this.place(rc),
+      next: () => this.go(1), back: () => this.go(-1), skip: () => this.finish('skipped'),
+      swallow: e => e.stopPropagation(),
+      doneNote: 'You’re all set. Replay the tour any time from Help.',
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+:root{
+/* Ivory — warm canvas */
+--ivory-0:#FFFFFF;
+--ivory-50:#FAF8F4;
+--ivory-100:#F5F2EC;
+--ivory-200:#EEEAE2;
+/* Limestone — fills, dividers, inset tiles */
+--limestone-100:#F3F0EA;
+--limestone-200:#E9E4DA;
+--limestone-300:#DAD3C6;
+--limestone-400:#C3BBAC;
+/* Graphite — ink, active states */
+--graphite-950:#171715;
+--graphite-900:#1F1F1C;
+--graphite-800:#2C2B28;
+--graphite-700:#3D3C38;
+/* Muted gray — supporting text */
+--gray-600:#5F5C56;
+--gray-500:#7E7A72;
+--gray-400:#A39E95;
+--gray-300:#C4BFB6;
+/* Sage — brand accent */
+--sage-700:#4C5A43;
+--sage-600:#5E6E53;
+--sage-500:#748568;
+--sage-400:#93A386;
+--sage-300:#B5C1AA;
+--sage-200:#D4DCCB;
+--sage-100:#E6EBE0;
+--sage-50:#F1F4ED;
+/* Semantic bases */
+--green-600:#3F7A4B;--green-100:#E3EEE2;
+--terracotta-600:#B4533A;--terracotta-100:#F6E5DE;
+--ochre-600:#A87A22;--ochre-100:#F4EBD6;
+--slate-600:#4D6680;--slate-100:#E3E9EF;
+
+/* ---- Semantic aliases ---- */
+--bg-app:var(--ivory-100);
+--bg-frame:var(--ivory-200);
+--surface-card:var(--ivory-0);
+--surface-inset:var(--ivory-50);
+--surface-muted:var(--limestone-100);
+--surface-hover:var(--limestone-100);
+--surface-pressed:var(--limestone-200);
+--surface-inverse:var(--graphite-900);
+--surface-accent:var(--sage-600);
+--surface-accent-soft:var(--sage-50);
+
+--text-strong:var(--graphite-950);
+--text-body:var(--graphite-800);
+--text-muted:var(--gray-600);
+--text-subtle:var(--gray-500);
+--text-placeholder:var(--gray-400);
+--text-inverse:#FFFFFF;
+--text-accent:var(--sage-700);
+--text-on-accent:#FFFFFF;
+
+--border-subtle:var(--limestone-200);
+--border-default:var(--limestone-300);
+--border-strong:var(--limestone-400);
+--border-accent:var(--sage-400);
+--focus-ring:var(--sage-400);
+
+--accent:var(--sage-600);
+--accent-hover:var(--sage-700);
+--accent-soft:var(--sage-100);
+
+--status-positive:var(--green-600);--status-positive-bg:var(--green-100);
+--status-negative:var(--terracotta-600);--status-negative-bg:var(--terracotta-100);
+--status-warning:var(--ochre-600);--status-warning-bg:var(--ochre-100);
+--status-info:var(--slate-600);--status-info-bg:var(--slate-100);
+--status-neutral:var(--gray-600);--status-neutral-bg:var(--limestone-100);
+
+/* Project phase colors (architecture workflow) */
+--phase-concept:var(--slate-600);
+--phase-schematic:var(--sage-600);
+--phase-development:var(--ochre-600);
+--phase-documents:var(--graphite-700);
+--phase-construction:var(--terracotta-600);
+}

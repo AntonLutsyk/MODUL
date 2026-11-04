@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js" as="script">
+<style>html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}</style>
+<link rel="preload" href="SideNav.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="HeaderUtilities.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="modulepreload" href="modul-index.js">
+<link rel="stylesheet" href="./modul-theme.css">
+<script src="./modul-theme.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./modul-theme.css">
+  <script src="./modul-theme.js"></script>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+  <style>
+    html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}
+    a{color:var(--text-accent);text-decoration:none}
+    a:hover{color:var(--sage-700);text-decoration:underline}
+    :root{--sage-700:#3D6047;--sage-600:#4C7656;--sage-500:#67906F;--sage-400:#8DB091;--sage-300:#B3CDB4;--sage-200:#D2E3D1;--sage-100:#E3EFE2;--sage-50:#F0F6EF;--surface-inverse:var(--sage-600);--graphite-700:var(--sage-700);--phase-documents:#3D3C38;--terracotta-600:#A9472D;--ochre-600:#8A5F0E;--gray-500:#6E6A62;--slate-600:#46698C;--bg-app:#F4F4F6;--bg-frame:#E7E7EA;--surface-inset:#F4F4F6;--surface-muted:#EFEFF1;--surface-hover:#EFEFF1;--surface-pressed:#E6E6E9;--border-subtle:#EBEBEE}
+    button:focus-visible,[tabindex]:focus-visible,a:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+    @keyframes atl-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+      @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
+  </style>
+</helmet>
+<div data-frame="" style="height:100vh;box-sizing:border-box;margin:0;padding:0 14px 14px 0;background:var(--surface-shell, var(--surface-card));display:grid;grid-template-columns:{{ shellCols }};grid-template-rows:76px minmax(0,1fr);overflow:hidden">
+  <a href="Overview Dashboard.dc.html" aria-label="MODUL overview" style="grid-column:1;grid-row:1;display:flex;align-items:center;padding:0 24px;box-sizing:border-box;width:var(--nav-w, 256px);min-width:fit-content">
+    <img src="assets/modul-logo-v4.png" alt="MODUL" data-logo="light" style="height:28px;width:auto;max-width:none;display:block">
+    <img src="assets/modul-logo-v4-dark.png" alt="MODUL" data-logo="dark" style="height:28px;width:auto;max-width:none;display:block">
+  </a>
+  <header style="grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:flex-end;gap:16px;min-width:0;padding:0 10px 0 0">
+      <dc-import name="HeaderUtilities" style="flex:1;min-width:0;width:100%" hint-size="100%,60px"></dc-import>
+    </header>
+  <div style="grid-column:1;grid-row:2;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none"><dc-import name="SideNav" active="reports" hint-size="256px,560px"></dc-import></div>
+
+  <main data-screen-label="Reports" style="grid-column:2;grid-row:2;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;overscroll-behavior:contain;background:var(--bg-app);border-radius:28px;padding:28px 28px 40px;box-sizing:border-box;min-width:0;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:4px;margin-bottom:8px">
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+        <h1 style="margin:0;font-size:var(--text-display);line-height:var(--lh-display);font-weight:var(--weight-heading);letter-spacing:var(--tracking-display);color:var(--text-strong)">Reports</h1>
+        <p style="margin:0;font-size:var(--text-lead);line-height:var(--lh-lead);color:var(--text-muted)">How projects and the team are tracking over the period you choose.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" value="{{ range }}" options="{{ rangeOpts }}" on-change="{{ setRange }}" align="right" hint-size="200px,44px"></x-import>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="lg" variant="secondary" icon="download" disabled="{{ exportDisabled }}" on-click="{{ exportCsv }}" hint-size="150px,48px">Export CSV</x-import>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ filterFields }}" as="ff" hint-placeholder-count="4">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" size="sm" value="{{ ff.value }}" options="{{ ff.options }}" on-change="{{ ff.onChange }}" hint-size="170px,36px"></x-import>
+        </sc-for>
+        <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" icon="x" on-click="{{ clearAll }}" hint-size="90px,36px">Clear</x-import>
+        </sc-if>
+      </div>
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted)">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="info" size="{{ 14 }}" hint-size="14px,14px"></x-import>
+        {{ periodNote }}
+      </span>
+    </div>
+
+    <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+      <div aria-busy="true" aria-label="Loading reports" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <sc-for list="{{ skeleton }}" as="sk" hint-placeholder-count="4">
+          <div style="height:124px;border-radius:var(--radius-card);background:var(--surface-card);padding:20px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+            <div style="height:10px;width:50%;border-radius:99px;background:var(--limestone-200)"></div>
+            <div style="height:26px;width:40%;border-radius:8px;background:var(--limestone-100);animation:atl-pulse 1.4s ease-in-out infinite"></div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+      <section role="alert" style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;gap:12px;padding:56px 24px;text-align:center">
+        <span style="width:52px;height:52px;border-radius:999px;background:var(--status-negative-bg);color:var(--status-negative);display:inline-flex;align-items:center;justify-content:center">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+        </span>
+        <span style="font-size:var(--text-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Reports couldn’t be calculated</span>
+        <span style="font-size:var(--text-body);color:var(--text-muted);max-width:420px">The project data didn’t load. Try again in a moment.</span>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ retry }}" hint-size="96px,36px">Try again</x-import>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+      <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;gap:12px;padding:56px 24px;text-align:center">
+        <span style="width:52px;height:52px;border-radius:999px;background:var(--surface-muted);color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ emptyIcon }}" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+        </span>
+        <span style="font-size:var(--text-heading);font-weight:var(--weight-heading);color:var(--text-strong)">{{ emptyTitle }}</span>
+        <span style="font-size:var(--text-body);color:var(--text-muted);max-width:440px">{{ emptyBody }}</span>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" on-click="{{ emptyAction }}" hint-size="140px,36px">{{ emptyCta }}</x-import>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Card" padding="20px" selected="{{ k.selected }}" on-click="{{ k.onClick }}" hint-size="100%,140px">
+              <div role="button" tabindex="0" aria-label="{{ k.aria }}" onKeyDown="{{ k.onKey }}" style="display:flex;flex-direction:column;gap:8px;border-radius:12px">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+                  <span style="font-size:var(--text-body);font-weight:500;color:var(--text-strong)">{{ k.label }}</span>
+                  <span style="width:36px;height:36px;border-radius:999px;background:var(--surface-muted);color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ k.icon }}" size="{{ 17 }}" hint-size="17px,17px"></x-import>
+                  </span>
+                </div>
+                <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+                  <span style="font-size:var(--text-figure-lg);line-height:var(--lh-figure-lg);font-weight:var(--weight-figure);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;color:{{ k.valueColor }}">{{ k.value }}</span>
+                  <span style="font-size:14px;font-weight:600;color:{{ k.deltaColor }};font-variant-numeric:tabular-nums">{{ k.delta }}</span>
+                  <span style="font-size:14px;color:var(--text-muted)">{{ k.deltaLabel }}</span>
+                </div>
+                <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ k.basis }}</span>
+              </div>
+            </x-import>
+          </sc-for>
+        </div>
+
+        <div style="overflow-x:auto;scrollbar-width:none">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.SegmentedControl" options="{{ tabs }}" value="{{ tab }}" on-change="{{ setTab }}" hint-size="620px,48px"></x-import>
+        </div>
+
+        <sc-if value="{{ tProjects }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:{{ twoCols }};gap:16px;align-items:start">
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:14px;min-width:0">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Projects by status</span>
+                <span style="font-size:14px;color:var(--text-muted)">Select a status to filter the whole report.</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <sc-for list="{{ byStatus }}" as="b" hint-placeholder-count="5">
+                  <button type="button" onClick="{{ b.onClick }}" aria-pressed="{{ b.on }}" aria-label="{{ b.aria }}" style="display:grid;grid-template-columns:96px minmax(0,1fr) 32px;gap:12px;align-items:center;padding:8px 10px;border:0;border-radius:12px;background:{{ b.rowBg }};font-family:inherit;cursor:pointer;text-align:left" style-hover="background:var(--surface-inset)">
+                    <span style="font-size:14px;font-weight:{{ b.weight }};color:var(--text-strong)">{{ b.label }}</span>
+                    <span style="height:12px;border-radius:999px;background:var(--surface-muted);overflow:hidden;display:flex"><span style="width:{{ b.pct }};background:{{ b.fill }};border-radius:999px"></span></span>
+                    <span style="font-size:14px;font-weight:600;color:var(--text-strong);text-align:right;font-variant-numeric:tabular-nums">{{ b.n }}</span>
+                  </button>
+                </sc-for>
+              </div>
+              <div style="height:1px;background:var(--border-subtle)"></div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:16px;font-weight:600;color:var(--text-strong)">Phase of open projects</span>
+                <span style="font-size:13px;color:var(--text-muted)">Projects that are planned, active or on hold.</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <sc-for list="{{ byPhase }}" as="p" hint-placeholder-count="7">
+                  <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 32px;gap:12px;align-items:center;padding:4px 10px">
+                    <span style="font-size:13px;color:var(--text-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.label }}</span>
+                    <span style="height:8px;border-radius:999px;background:var(--surface-muted);overflow:hidden;display:flex"><span style="width:{{ p.pct }};background:var(--sage-400);border-radius:999px"></span></span>
+                    <span style="font-size:13px;font-weight:600;color:var(--text-strong);text-align:right;font-variant-numeric:tabular-nums">{{ p.n }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </section>
+
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:14px;min-width:0">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Projects completed per month</span>
+                <span style="font-size:14px;color:var(--text-muted)">{{ trendNote }}</span>
+              </div>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.BarChart" data="{{ projTrend }}" series="{{ projTrendSeries }}" max="{{ projTrendMax }}" height="{{ 180 }}" ticks="{{ 4 }}" hint-size="100%,240px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:16px;font-weight:600;color:var(--text-strong)">Duration against plan</span>
+                <span style="font-size:13px;color:var(--text-muted)">Projects finished in this period, from start to practical completion.</span>
+              </div>
+              <sc-for list="{{ durations }}" as="du" hint-placeholder-count="2">
+                <a href="Projects.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--surface-inset);color:inherit;text-decoration:none" style-hover="background:var(--surface-muted)">
+                  <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                    <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ du.name }}</span>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ du.meta }}</span>
+                  </span>
+                  <span style="font-size:13px;color:var(--text-muted);font-variant-numeric:tabular-nums;white-space:nowrap">{{ du.plan }}</span>
+                  <span style="font-size:13px;font-weight:600;color:{{ du.color }};font-variant-numeric:tabular-nums;white-space:nowrap">{{ du.diff }}</span>
+                </a>
+              </sc-for>
+              <sc-if value="{{ noDurations }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:14px;color:var(--text-subtle);padding:4px 0">No project finished in this period. Try a longer date range.</span>
+              </sc-if>
+            </section>
+
+            <section style="grid-column:1 / -1;background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:12px;min-width:0">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Deadlines in the next 30 days and overdue</span>
+                  <span style="font-size:14px;color:var(--text-muted)">Open projects only. Projects without a deadline are listed at the end.</span>
+                </div>
+              </div>
+              <div role="table" aria-label="Upcoming and overdue projects" style="display:flex;flex-direction:column;min-width:0">
+                <div role="row" style="display:grid;grid-template-columns:{{ dlCols }};column-gap:14px;align-items:center;height:44px;padding:0 16px;border-radius:var(--radius-tile);background:var(--surface-inset);font-size:var(--text-table);font-weight:500;color:var(--text-muted)">
+                  <span role="columnheader">Project</span><span role="columnheader">Phase</span><sc-if value="{{ showPmCol }}" hint-placeholder-val="{{ true }}"><span role="columnheader">Manager</span></sc-if><span role="columnheader">Deadline</span><span role="columnheader">Status</span>
+                </div>
+                <sc-for list="{{ deadlines }}" as="dl" hint-placeholder-count="6">
+                  <a href="Projects.dc.html" role="row" style="display:grid;grid-template-columns:{{ dlCols }};column-gap:14px;align-items:center;padding:0 16px;min-height:58px;border-bottom:1px solid var(--border-subtle);border-radius:12px;color:inherit;text-decoration:none" style-hover="background:var(--surface-inset)">
+                    <span role="cell" style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                      <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ dl.name }}</span>
+                      <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ dl.client }}</span>
+                    </span>
+                    <span role="cell" style="font-size:13px;color:var(--text-body)">{{ dl.phase }}</span>
+                    <sc-if value="{{ showPmCol }}" hint-placeholder-val="{{ true }}"><span role="cell" style="font-size:13px;color:{{ dl.pmColor }}">{{ dl.pm }}</span></sc-if>
+                    <span role="cell" style="display:flex;flex-direction:column;gap:2px;font-variant-numeric:tabular-nums">
+                      <span style="font-size:14px;color:var(--text-strong)">{{ dl.date }}</span>
+                      <span style="font-size:12px;font-weight:{{ dl.weight }};color:{{ dl.noteColor }}">{{ dl.note }}</span>
+                    </span>
+                    <span role="cell" style="display:flex"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ dl.tone }}" dot="{{ true }}" hint-size="80px,24px">{{ dl.status }}</x-import></span>
+                  </a>
+                </sc-for>
+                <sc-if value="{{ noDeadlines }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:14px;color:var(--text-subtle);padding:16px">Nothing due in the next 30 days and nothing overdue.</span>
+                </sc-if>
+              </div>
+            </section>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ tFinance }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+              <sc-for list="{{ finTiles }}" as="ft" hint-placeholder-count="4">
+                <div style="background:var(--surface-inset);border-radius:var(--radius-tile);padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <span style="font-size:var(--text-table);font-weight:500;color:var(--text-muted)">{{ ft.label }}</span>
+                  <span style="font-size:var(--text-figure-md);line-height:var(--lh-figure-md);font-weight:var(--weight-figure);color:{{ ft.color }};font-variant-numeric:tabular-nums;white-space:nowrap">{{ ft.value }}</span>
+                  <span style="font-size:13px;color:var(--text-subtle)">{{ ft.note }}</span>
+                </div>
+              </sc-for>
+            </section>
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:12px;min-width:0">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Budget against spend</span>
+                  <span style="font-size:14px;color:var(--text-muted)">Estimated fee budget versus fees spent to date. Sorted by share used.</span>
+                </div>
+                <div style="display:flex;gap:16px;font-size:13px;color:var(--text-muted)">
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--surface-inverse)"></span>Spent</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--status-negative)"></span>Over budget</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--surface-muted);border:1px solid var(--border-default)"></span>Remaining</span>
+                </div>
+              </div>
+              <div role="table" aria-label="Budget against spend" style="display:flex;flex-direction:column;min-width:0">
+                <div role="row" style="display:grid;grid-template-columns:{{ finCols }};column-gap:14px;align-items:center;height:44px;padding:0 16px;border-radius:var(--radius-tile);background:var(--surface-inset);font-size:var(--text-table);font-weight:500;color:var(--text-muted)">
+                  <span role="columnheader">Project</span><span role="columnheader" style="text-align:right">Budget (est.)</span><span role="columnheader" style="text-align:right">Spent (actual)</span><sc-if value="{{ showRemainCol }}" hint-placeholder-val="{{ true }}"><span role="columnheader" style="text-align:right">Remaining</span></sc-if><span role="columnheader">Used</span>
+                </div>
+                <sc-for list="{{ budgets }}" as="bu" hint-placeholder-count="8">
+                  <a href="Projects.dc.html" role="row" style="display:grid;grid-template-columns:{{ finCols }};column-gap:14px;align-items:center;padding:0 16px;min-height:58px;border-bottom:1px solid var(--border-subtle);border-radius:12px;color:inherit;text-decoration:none" style-hover="background:var(--surface-inset)">
+                    <span role="cell" style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                      <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ bu.name }}</span>
+                      <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ bu.meta }}</span>
+                    </span>
+                    <span role="cell" style="font-size:14px;color:{{ bu.budgetColor }};text-align:right;font-variant-numeric:tabular-nums">{{ bu.budget }}</span>
+                    <span role="cell" style="font-size:14px;color:var(--text-strong);text-align:right;font-variant-numeric:tabular-nums">{{ bu.spent }}</span>
+                    <sc-if value="{{ showRemainCol }}" hint-placeholder-val="{{ true }}"><span role="cell" style="font-size:14px;font-weight:600;color:{{ bu.remainColor }};text-align:right;font-variant-numeric:tabular-nums">{{ bu.remain }}</span></sc-if>
+                    <span role="cell" style="display:grid;grid-template-columns:minmax(0,1fr) 46px;gap:10px;align-items:center">
+                      <span style="height:10px;border-radius:999px;background:var(--surface-muted);overflow:hidden;display:flex"><span style="width:{{ bu.barPct }};background:{{ bu.barColor }};border-radius:999px"></span></span>
+                      <span style="font-size:13px;font-weight:600;color:{{ bu.pctColor }};text-align:right;font-variant-numeric:tabular-nums">{{ bu.pct }}</span>
+                    </span>
+                  </a>
+                </sc-for>
+                <sc-if value="{{ noBudgets }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:14px;color:var(--text-subtle);padding:16px">None of the filtered projects has a budget yet.</span>
+                </sc-if>
+              </div>
+              <sc-if value="{{ hasNoBudget }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:13px;color:var(--text-muted)">{{ noBudgetNote }}</span>
+              </sc-if>
+            </section>
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:20px 24px;display:flex;align-items:center;gap:16px">
+              <span style="width:44px;height:44px;border-radius:999px;background:var(--surface-muted);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="banknote" size="{{ 19 }}" hint-size="19px,19px"></x-import></span>
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="font-size:16px;font-weight:600;color:var(--text-strong)">Profitability isn’t shown</span>
+                <span style="font-size:14px;color:var(--text-muted)">It needs invoiced fees and staff cost rates. MODUL only records budgets and spend, so a margin figure would be a guess.</span>
+              </div>
+            </section>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ tTeam }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ twoCols }};gap:16px;align-items:start">
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:12px;min-width:0">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Workload by person</span>
+                  <span style="font-size:14px;color:var(--text-muted)">Open tasks right now, and tasks finished in the period.</span>
+                </div>
+                <div style="display:flex;gap:10px;font-size:13px;color:var(--text-muted);flex-wrap:wrap;white-space:nowrap">
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--status-negative)"></span>Overdue</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--surface-inverse)"></span>In progress or review</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:99px;background:var(--limestone-300)"></span>To do</span>
+                </div>
+              </div>
+              <sc-for list="{{ team }}" as="tm" hint-placeholder-count="6">
+                <a href="Tasks.dc.html#team" style="display:grid;grid-template-columns:minmax(130px,170px) minmax(0,1fr) 90px;gap:14px;align-items:center;padding:10px 12px;border-radius:12px;color:inherit;text-decoration:none" style-hover="background:var(--surface-inset)" aria-label="{{ tm.aria }}">
+                  <span style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Avatar" name="{{ tm.name }}" size="sm" hint-size="32px,32px"></x-import>
+                    <span style="display:flex;flex-direction:column;gap:1px;min-width:0">
+                      <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ tm.name }}</span>
+                      <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ tm.openLabel }}</span>
+                    </span>
+                  </span>
+                  <span style="height:14px;border-radius:999px;background:var(--surface-inset);display:flex;overflow:hidden;gap:2px">
+                    <span title="{{ tm.odTip }}" style="width:{{ tm.odPct }};background:var(--status-negative)"></span>
+                    <span title="{{ tm.actTip }}" style="width:{{ tm.actPct }};background:var(--surface-inverse)"></span>
+                    <span title="{{ tm.todoTip }}" style="width:{{ tm.todoPct }};background:var(--limestone-300)"></span>
+                  </span>
+                  <span style="display:flex;flex-direction:column;gap:1px;text-align:right;font-variant-numeric:tabular-nums">
+                    <span style="font-size:14px;font-weight:600;color:var(--text-strong)">{{ tm.done }}</span>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle)">done</span>
+                  </span>
+                </a>
+              </sc-for>
+              <span style="font-size:13px;color:var(--text-muted)">Counts of tasks, not hours. Utilisation needs timesheets, which MODUL doesn’t collect.</span>
+            </section>
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:14px;min-width:0">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Tasks created and completed</span>
+                <span style="font-size:14px;color:var(--text-muted)">{{ trendNote }}</span>
+              </div>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.BarChart" data="{{ taskTrend }}" series="{{ taskTrendSeries }}" max="{{ taskTrendMax }}" height="{{ 200 }}" ticks="{{ 4 }}" hint-size="100%,260px"></x-import>
+              <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+                <sc-for list="{{ taskTiles }}" as="tt" hint-placeholder-count="3">
+                  <a href="Tasks.dc.html" style="background:var(--surface-inset);border-radius:var(--radius-tile);padding:12px 14px;display:flex;flex-direction:column;gap:4px;color:inherit;text-decoration:none" style-hover="background:var(--surface-muted)">
+                    <span style="font-size:13px;color:var(--text-muted)">{{ tt.label }}</span>
+                    <span style="font-size:20px;font-weight:700;color:{{ tt.color }};font-variant-numeric:tabular-nums">{{ tt.value }}</span>
+                  </a>
+                </sc-for>
+              </div>
+            </section>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ tApprovals }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+              <sc-for list="{{ apTiles }}" as="at" hint-placeholder-count="4">
+                <div style="background:var(--surface-inset);border-radius:var(--radius-tile);padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <span style="font-size:var(--text-table);font-weight:500;color:var(--text-muted)">{{ at.label }}</span>
+                  <span style="font-size:var(--text-figure-md);line-height:var(--lh-figure-md);font-weight:var(--weight-figure);color:{{ at.color }};font-variant-numeric:tabular-nums">{{ at.value }}</span>
+                  <span style="font-size:13px;color:var(--text-subtle)">{{ at.note }}</span>
+                </div>
+              </sc-for>
+            </section>
+            <div style="display:grid;grid-template-columns:{{ twoCols }};gap:16px;align-items:start">
+              <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:8px;min-width:0">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Waiting for a decision</span>
+                <span style="font-size:14px;color:var(--text-muted);margin-bottom:4px">Oldest deadline first. Select one to open it in Approvals.</span>
+                <sc-for list="{{ pending }}" as="pd" hint-placeholder-count="5">
+                  <a href="{{ pd.href }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--surface-inset);color:inherit;text-decoration:none" style-hover="background:var(--surface-muted)">
+                    <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                      <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ pd.title }}</span>
+                      <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ pd.meta }}</span>
+                    </span>
+                    <span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-variant-numeric:tabular-nums">
+                      <span style="font-size:13px;color:var(--text-strong)">{{ pd.date }}</span>
+                      <span style="font-size:12px;font-weight:{{ pd.weight }};color:{{ pd.noteColor }}">{{ pd.note }}</span>
+                    </span>
+                  </a>
+                </sc-for>
+                <sc-if value="{{ noPending }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;color:var(--text-subtle)">Nothing is waiting on a reviewer.</span></sc-if>
+              </section>
+              <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:8px;min-width:0">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Turnaround by client</span>
+                <span style="font-size:14px;color:var(--text-muted);margin-bottom:4px">Days from submission to decision, for decisions made in this period.</span>
+                <sc-for list="{{ turnaround }}" as="ta" hint-placeholder-count="4">
+                  <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr) 70px;gap:12px;align-items:center;padding:6px 4px">
+                    <span style="font-size:13px;font-weight:500;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ta.client }}</span>
+                    <span style="height:10px;border-radius:999px;background:var(--surface-muted);overflow:hidden;display:flex"><span style="width:{{ ta.pct }};background:var(--sage-400);border-radius:999px"></span></span>
+                    <span style="font-size:13px;font-weight:600;color:var(--text-strong);text-align:right;font-variant-numeric:tabular-nums">{{ ta.label }}</span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ noTurnaround }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;color:var(--text-subtle)">No decisions were recorded in this period, so there’s nothing to average.</span></sc-if>
+              </section>
+            </div>
+            <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:8px;min-width:0">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px">
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Client follow-ups needing attention</span>
+                  <span style="font-size:14px;color:var(--text-muted)">{{ clientNote }}</span>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px">
+                <sc-for list="{{ follows }}" as="fo" hint-placeholder-count="6">
+                  <a href="{{ fo.href }}" style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:12px;background:var(--surface-inset);color:inherit;text-decoration:none" style-hover="background:var(--surface-muted)">
+                    <span style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+                      <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ fo.client }}</span>
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ fo.tone }}" hint-size="80px,24px">{{ fo.badge }}</x-import>
+                    </span>
+                    <span style="font-size:13px;color:var(--text-body)">{{ fo.desc }}</span>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ fo.meta }}</span>
+                  </a>
+                </sc-for>
+              </div>
+              <sc-if value="{{ noFollows }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;color:var(--text-subtle)">No follow-ups are due in the next 7 days.</span></sc-if>
+            </section>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+    <span style="font-size:var(--text-xs);color:var(--text-subtle)">Sample studio data for this prototype. Figures are calculated from the projects, tasks, approvals and client records in MODUL’s demo workspace and don’t describe a real practice.</span>
+  </main>
+</div>
+
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;right:24px;bottom:24px;z-index:140">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Toast" title="{{ toast.title }}" description="{{ toast.description }}" icon="{{ toast.icon }}" on-close="{{ closeToast }}" hint-size="340px,64px"></x-import>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;dataState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;live&quot;,&quot;loading&quot;,&quot;empty&quot;,&quot;error&quot;],&quot;default&quot;:&quot;live&quot;,&quot;tsType&quot;:&quot;'live'|'loading'|'empty'|'error'&quot;,&quot;section&quot;:&quot;States&quot;}}">
+const TODAY_ISO = '2026-10-19';
+const TODAY = new Date(2026, 9, 19);
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const PHASES = ['Discovery & Brief', 'Concept Design', 'Schematic Design', 'Design Development', 'Construction Documents', 'Construction / Delivery', 'Handover'];
+const STATUSES = ['Planning', 'Active', 'On hold', 'Completed', 'Archived'];
+const TONE = { Planning: 'info', Active: 'accent', 'On hold': 'warning', Completed: 'positive', Archived: 'neutral' };
+const FILL = { Planning: 'var(--limestone-400)', Active: 'var(--sage-500)', 'On hold': 'var(--status-warning)', Completed: 'var(--surface-inverse)', Archived: 'var(--limestone-200)' };
+const TEAM = ['Elena Marsh', 'Jonas Weil', 'Theo Lund', 'Aiko Tan', 'Rui Costa', 'Mia Sand'];
+
+const P = (id, name, client, status, phase, pm, start, deadline, budget, spent, completed) => ({ id, name, client, status, phase, pm, start, deadline, budget, spent, completed: completed || null });
+const PROJECTS = [
+  P('halden', 'Halden Residence', 'Mira Halden', 'Active', 3, 'Elena Marsh', '2025-03-10', '2026-11-14', 300000, 186400),
+  P('kvarn', 'Kvarn Offices, Level 3', 'Kvarn AB', 'Active', 4, 'Jonas Weil', '2024-11-04', '2026-10-16', 310500, 302900),
+  P('lumen', 'Lumen Gallery Annex', 'Lumen Foundation', 'Active', 2, 'Theo Lund', '2025-06-02', '2026-12-02', 218000, 61800),
+  P('brask', 'Brask Townhouse', 'Ida & Karl Brask', 'Active', 3, 'Aiko Tan', '2025-08-18', '2026-10-24', 92000, 79300),
+  P('orsa', 'Orsa Apartments', 'Orsa Living', 'Planning', 0, 'Rui Costa', '2026-09-01', '2027-01-19', 540000, 38900),
+  P('vik', 'Vik Café Interior', 'Vik & Co.', 'Active', 5, 'Theo Lund', '2025-09-15', '2026-10-22', 46000, 50400),
+  P('strand', 'Strand Pavilion', 'Municipality of Lysaker', 'Planning', 1, null, null, null, null, 0),
+  P('fjell', 'Fjell Cabin', 'Henrik Fjell', 'On hold', 2, 'Aiko Tan', '2025-01-20', '2027-03-01', 128000, 22100),
+  P('nordre', 'Nordre Clinic', 'Nordre Health', 'Active', 4, 'Jonas Weil', '2024-09-09', '2026-11-30', 680000, 411000),
+  P('molle', 'Mølle Loft', 'Sara Mølle', 'Completed', 6, 'Elena Marsh', '2025-10-06', '2026-08-28', 64000, 61200, '2026-09-12'),
+  P('ekeberg', 'Ekeberg School Extension', 'Oslo Kommune', 'Planning', 0, 'Rui Costa', '2026-10-01', '2027-06-30', null, 0),
+  P('saga', 'Hotel Saga Lobby', 'Saga Hotels', 'On hold', 3, 'Theo Lund', '2025-04-14', '2026-10-30', 156000, 88000),
+  P('lind', 'Lind Ceramics Workshop', 'Lind Ceramics', 'Completed', 5, 'Aiko Tan', '2025-02-03', '2026-06-12', 72000, 70400, '2026-07-01'),
+  P('tarn', 'Tårn Apartments', 'Tårn Eiendom', 'Active', 1, 'Elena Marsh', '2026-06-15', '2026-12-18', 820000, 96000),
+  P('berg', 'Berg Harbour Kiosk', 'Bergen Havn', 'Archived', 6, 'Rui Costa', '2025-02-10', '2025-11-20', 38000, 37100, '2025-11-28'),
+];
+const T = (project, assignee, status, due, created, completed) => ({ project, assignee, status, due, created, completed: completed || null });
+const TASKS = [
+  T('kvarn', 'Jonas Weil', 'progress', '2026-10-17', '2026-10-17'), T('kvarn', 'Jonas Weil', 'todo', '2026-10-24', '2026-10-17'), T('kvarn', 'Rui Costa', 'todo', '2026-10-28', '2026-10-01'),
+  T('halden', 'Aiko Tan', 'review', '2026-10-20', '2026-10-01'), T('halden', 'Aiko Tan', 'todo', '2026-11-04', '2026-10-01'), T('halden', 'Elena Marsh', 'progress', '2026-10-24', '2026-10-01'),
+  T('lumen', 'Theo Lund', 'progress', '2026-10-22', '2026-10-01'), T('lumen', 'Elena Marsh', 'todo', '2026-10-23', '2026-10-01'), T('brask', 'Aiko Tan', 'done', '2026-10-14', '2026-10-01', '2026-10-13'),
+  T('brask', 'Aiko Tan', 'todo', '2026-10-30', '2026-10-01'), T('nordre', 'Jonas Weil', 'todo', '2026-10-16', '2026-10-01'), T('nordre', 'Rui Costa', 'progress', '2026-10-25', '2026-10-01'),
+  T('nordre', 'Jonas Weil', 'todo', '2026-11-03', '2026-10-01'), T('tarn', 'Elena Marsh', 'progress', '2026-10-26', '2026-10-01'), T('tarn', null, 'todo', '2026-10-31', '2026-10-01'),
+  T('vik', 'Theo Lund', 'done', '2026-10-19', '2026-10-01', '2026-10-19'), T('vik', 'Theo Lund', 'todo', null, '2026-10-01'), T('orsa', 'Rui Costa', 'todo', '2026-10-28', '2026-10-01'),
+  T('orsa', 'Rui Costa', 'review', '2026-10-21', '2026-10-01'), T('orsa', null, 'todo', null, '2026-10-01'), T('molle', 'Elena Marsh', 'done', '2026-09-20', '2026-09-10', '2026-09-19'),
+  T('brask', 'Aiko Tan', 'cancelled', '2026-10-10', '2026-10-01'), T('strand', 'Elena Marsh', 'todo', '2026-10-24', '2026-10-09'), T('ekeberg', 'Rui Costa', 'todo', '2026-10-30', '2026-10-18'),
+  T('nordre', 'Mia Sand', 'done', '2026-10-09', '2026-10-02', '2026-10-08'),
+];
+// Earlier completed tasks from the archive: [month, project, assignee, createdCount, completedCount]
+const ARCHIVE = [
+  ['2026-05', 'lind', 'Aiko Tan', 6, 7], ['2026-05', 'kvarn', 'Jonas Weil', 5, 4], ['2026-05', 'nordre', 'Rui Costa', 4, 3], ['2026-05', 'halden', 'Elena Marsh', 3, 4],
+  ['2026-06', 'lind', 'Aiko Tan', 3, 6], ['2026-06', 'nordre', 'Jonas Weil', 6, 5], ['2026-06', 'molle', 'Elena Marsh', 4, 3], ['2026-06', 'lumen', 'Theo Lund', 5, 3],
+  ['2026-07', 'molle', 'Elena Marsh', 5, 6], ['2026-07', 'kvarn', 'Rui Costa', 4, 4], ['2026-07', 'saga', 'Theo Lund', 3, 2], ['2026-07', 'halden', 'Aiko Tan', 5, 4],
+  ['2026-08', 'nordre', 'Jonas Weil', 7, 6], ['2026-08', 'molle', 'Elena Marsh', 4, 5], ['2026-08', 'vik', 'Theo Lund', 6, 4], ['2026-08', 'brask', 'Aiko Tan', 4, 3], ['2026-08', 'tarn', 'Mia Sand', 2, 2],
+  ['2026-09', 'tarn', 'Elena Marsh', 6, 4], ['2026-09', 'kvarn', 'Jonas Weil', 5, 6], ['2026-09', 'lumen', 'Theo Lund', 4, 5], ['2026-09', 'orsa', 'Rui Costa', 5, 3], ['2026-09', 'halden', 'Aiko Tan', 6, 5], ['2026-09', 'nordre', 'Mia Sand', 3, 3],
+];
+const AP = [
+  { id: 'ap1', title: 'Kitchen elevations', project: 'halden', reviewer: 'Mira Halden', status: 'review', deadline: '2026-10-21', submitted: '2026-10-14', decisions: [['2026-09-22', '2026-09-26', 'changes'], ['2026-09-30', '2026-10-06', 'changes']] },
+  { id: 'ap2', title: 'Lighting schedule', project: 'kvarn', reviewer: 'Lars Kvarn', status: 'review', deadline: '2026-10-12', submitted: '2026-10-02', decisions: [] },
+  { id: 'ap3', title: 'Schematic massing', project: 'lumen', reviewer: 'Karin Holm', status: 'review', deadline: '2026-10-23', submitted: '2026-10-06', decisions: [['2026-09-29', '2026-10-03', 'changes']] },
+  { id: 'ap4', title: 'Dining chair sample', project: 'brask', reviewer: 'Ida Brask', status: 'review', deadline: '2026-10-19', submitted: '2026-10-15', decisions: [] },
+  { id: 'ap5', title: 'Fire strategy drawings', project: 'nordre', reviewer: 'Siri Dahl', status: 'review', deadline: '2026-10-15', submitted: '2026-10-08', decisions: [] },
+  { id: 'ap6', title: 'Ward finish schedule', project: 'nordre', reviewer: 'Siri Dahl', status: 'changes', deadline: '2026-10-25', submitted: '2026-10-13', decisions: [['2026-10-13', '2026-10-16', 'changes']] },
+  { id: 'ap7', title: 'Concept façade options', project: 'tarn', reviewer: 'Erik Tårn', status: 'review', deadline: '2026-10-31', submitted: '2026-10-19', decisions: [] },
+  { id: 'ap8', title: 'Bathroom tile layout', project: 'halden', reviewer: 'Elena Marsh', status: 'review', deadline: '2026-10-24', submitted: '2026-10-17', decisions: [] },
+  { id: 'ap9', title: 'Schematic set', project: 'lumen', reviewer: 'Karin Holm', status: 'approved', deadline: '2026-10-14', decisions: [['2026-10-07', '2026-10-12', 'approved']] },
+  { id: 'ap10', title: 'Stone samples shortlist', project: 'halden', reviewer: 'Mira Halden', status: 'approved', deadline: '2026-10-08', decisions: [['2026-10-02', '2026-10-05', 'approved']] },
+  { id: 'ap11', title: 'Joinery variation 03', project: 'vik', reviewer: 'Nora Vik', status: 'approved', deadline: '2026-10-13', decisions: [['2026-10-09', '2026-10-11', 'approved']] },
+  { id: 'ap12', title: 'Fee proposal, concept stage', project: 'orsa', reviewer: 'Johan Orsa', status: 'rejected', deadline: '2026-10-10', decisions: [['2026-10-01', '2026-10-09', 'rejected']] },
+  { id: 'ap13', title: 'Ground floor layout', project: 'halden', reviewer: 'Mira Halden', status: 'approved', deadline: '2026-06-20', decisions: [['2026-06-12', '2026-06-18', 'approved']] },
+  { id: 'ap14', title: 'Handover pack', project: 'molle', reviewer: 'Sara Mølle', status: 'approved', deadline: '2026-09-18', decisions: [['2026-09-12', '2026-09-14', 'approved']] },
+];
+const FOLLOW = [
+  ['halden', 'Mira Halden', '2026-10-21', 'Get sign-off on kitchen elevations v3', 'Elena Marsh', '2026-10-18'], ['kvarn', 'Kvarn AB', '2026-10-17', 'Send lux calculations for open office', 'Jonas Weil', '2026-10-17'],
+  ['lumen', 'Lumen Foundation', '2026-10-23', 'Present massing options to trustees', 'Theo Lund', '2026-10-12'], ['brask', 'Ida & Karl Brask', '2026-10-19', 'Decision on dining chair sample', 'Aiko Tan', '2026-10-15'],
+  ['orsa', 'Orsa Living', '2026-10-28', 'Share site capacity study', 'Rui Costa', '2026-10-14'], ['lysaker', 'Municipality of Lysaker', '2026-10-24', 'Submit tender clarification questions', 'Elena Marsh', '2026-10-09'],
+  ['fjell', 'Henrik Fjell', '2026-11-01', 'Check in on financing', 'Aiko Tan', '2026-09-02'], ['nordre', 'Nordre Health', '2026-10-20', 'Walk Siri through ward finish schedule', 'Jonas Weil', '2026-10-13'],
+  ['oslo', 'Oslo Kommune', '2026-10-30', 'Send draft space programme', 'Rui Costa', '2026-10-18'], ['saga', 'Saga Hotels', '2026-10-10', 'Call the new operator about the lobby', 'Theo Lund', '2026-09-25'],
+  ['tarn', 'Tårn Eiendom', '2026-10-26', 'Façade review meeting', 'Elena Marsh', '2026-10-19'], ['fold', 'Fold Retail', '2026-10-28', 'Send fee proposal for concept stage', 'Rui Costa', '2026-10-08'],
+];
+const CLIENT_PROJECT = { lysaker: 'strand', oslo: 'ekeberg', fold: null };
+
+const parse = s => { if (!s) return null; const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const days = s => Math.round((parse(s) - TODAY) / 86400000);
+const diffDays = (a, b) => Math.round((parse(b) - parse(a)) / 86400000);
+const fmt = s => { const d = parse(s); if (!d) return ''; return d.getDate() + ' ' + MON[d.getMonth()] + (d.getFullYear() !== 2026 ? ' ' + d.getFullYear() : ''); };
+const eur = n => '€' + Math.round(n).toLocaleString('en-GB');
+const eurK = n => Math.abs(n) >= 100000 ? '€' + Math.round(n / 1000).toLocaleString('en-GB') + 'k' : eur(n);
+const shift = (s, months, dd) => { const d = parse(s); d.setMonth(d.getMonth() + months); d.setDate(d.getDate() + (dd || 0)); return iso(d); };
+
+const RANGES = {
+  '30': { label: 'Last 30 days', from: '2026-09-20', to: TODAY_ISO, pFrom: '2026-08-21', pTo: '2026-09-19', cmp: 'previous 30 days' },
+  qtd: { label: 'This quarter to date', from: '2026-10-01', to: TODAY_ISO, pFrom: '2026-07-01', pTo: '2026-07-19', cmp: 'same point last quarter' },
+  q3: { label: 'Last quarter (Q3)', from: '2026-07-01', to: '2026-09-30', pFrom: '2026-04-01', pTo: '2026-06-30', cmp: 'Q2' },
+  ytd: { label: 'Year to date', from: '2026-01-01', to: TODAY_ISO, pFrom: '2025-01-01', pTo: '2025-10-19', cmp: 'same period last year' },
+  '6m': { label: 'Last 6 months', from: '2026-04-20', to: TODAY_ISO, pFrom: '2025-10-20', pTo: '2026-04-19', cmp: 'previous 6 months' },
+};
+
+class Component extends DCLogic {
+  state = { range: '6m', tab: 'projects', f: { project: '', client: '', pm: '', status: '' }, booting: false, retrying: false, toast: null, vw: typeof window !== 'undefined' ? window.innerWidth - 14 : 1426 };
+
+  componentDidMount() {
+    
+    this._rs = () => { const w = window.innerWidth - 14; if (Math.abs(w - this.state.vw) > 4) this.setState({ vw: w }); };
+    this._rs(); window.addEventListener('resize', this._rs);
+  }
+  componentWillUnmount() { clearTimeout(this._boot); clearTimeout(this._t); window.removeEventListener('resize', this._rs); }
+  toast(title, extra) { this.setState({ toast: { title, icon: 'circle-check', ...extra } }); clearTimeout(this._t); this._t = setTimeout(() => this.setState({ toast: null }), 4500); }
+  setF(p) { this.setState(s => ({ f: { ...s.f, ...p } })); }
+
+  compute() {
+    const s = this.state; const R = RANGES[s.range]; const F = s.f;
+    const inR = (d, a, b) => d && d >= a && d <= b;
+    const projects = PROJECTS.filter(p => (!F.project || p.id === F.project) && (!F.client || p.client === F.client) && (!F.pm || (F.pm === '__none' ? !p.pm : p.pm === F.pm)) && (!F.status || p.status === F.status));
+    const pids = new Set(projects.map(p => p.id));
+    const filtered = !!(F.project || F.client || F.pm || F.status);
+    const tasks = TASKS.filter(t => pids.has(t.project));
+    const archive = ARCHIVE.filter(a => pids.has(a[1]));
+    const aps = AP.filter(a => pids.has(a.project));
+    const follows = FOLLOW.filter(f => { const pid = CLIENT_PROJECT[f[0]] !== undefined ? CLIENT_PROJECT[f[0]] : f[0]; return !filtered || (pid && pids.has(pid)); });
+    return { R, F, projects, tasks, archive, aps, follows, filtered, inR };
+  }
+
+  rows(tab, c) {
+    if (tab === 'finance') return [['Project', 'Client', 'Status', 'Budget (estimated, EUR)', 'Spent to date (actual, EUR)', 'Remaining (EUR)', 'Used %']].concat(c.projects.map(p => [p.name, p.client, p.status, p.budget ?? '', p.spent, p.budget != null ? p.budget - p.spent : '', p.budget ? Math.round(p.spent / p.budget * 100) : '']));
+    if (tab === 'team') return [['Person', 'Open tasks', 'Overdue', 'Completed in period']].concat(TEAM.map(m => { const t = c.tasks.filter(x => x.assignee === m); const open = t.filter(x => ['todo', 'progress', 'review'].includes(x.status));
+      return [m, open.length, open.filter(x => x.due && x.due < TODAY_ISO).length, t.filter(x => c.inR(x.completed, c.R.from, c.R.to)).length + c.archive.filter(a => a[2] === m && a[0] + '-15' >= c.R.from && a[0] + '-15' <= c.R.to).reduce((n, a) => n + a[4], 0)]; }));
+    if (tab === 'approvals') return [['Approval', 'Project', 'Reviewer', 'Status', 'Deadline', 'Days overdue']].concat(c.aps.map(a => [a.title, (PROJECTS.find(p => p.id === a.project) || {}).name, a.reviewer, a.status, a.deadline, ['review', 'changes'].includes(a.status) && a.deadline < TODAY_ISO ? -days(a.deadline) : '']));
+    return [['Project', 'Client', 'Status', 'Phase', 'Manager', 'Start', 'Deadline', 'Completed']].concat(c.projects.map(p => [p.name, p.client, p.status, PHASES[p.phase], p.pm || '', p.start || '', p.deadline || '', p.completed || '']));
+  }
+  exportCsv = () => {
+    const c = this.compute(); const data = this.rows(this.state.tab, c);
+    const csv = data.map(r => r.map(v => { const x = String(v ?? ''); return /[",\n]/.test(x) ? '"' + x.replace(/"/g, '""') + '"' : x; }).join(',')).join('\n');
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'modul-' + this.state.tab + '-' + this.state.range + '.csv'; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    this.toast('CSV downloaded', { description: (data.length - 1) + ' rows from the ' + { projects: 'project', finance: 'budget', team: 'team', approvals: 'approvals' }[this.state.tab] + ' report' });
+  };
+
+  renderVals() {
+    const s = this.state; const c = this.compute(); const { R, F, projects, tasks, archive, aps, inR } = c;
+    const dsProp = s.retrying ? 'loading' : (this.props.dataState ?? 'live');
+    const loading = s.booting || dsProp === 'loading'; const error = dsProp === 'error' && !s.retrying; const emptyWs = dsProp === 'empty';
+    const vw = s.vw + 48; const wide = vw >= 1180; const narrow = vw < 860;
+    const isOpenT = t => ['todo', 'progress', 'review'].includes(t.status);
+
+    // KPIs
+    const active = projects.filter(p => p.status === 'Active');
+    const activeAt = d => projects.filter(p => p.start && p.start <= d && (!p.completed || p.completed > d) && p.status !== 'Planning' && p.status !== 'On hold').length;
+    const prevActive = activeAt(R.pTo);
+    const completed = projects.filter(p => inR(p.completed, R.from, R.to)); const prevCompleted = projects.filter(p => inR(p.completed, R.pFrom, R.pTo));
+    const withBudget = projects.filter(p => p.budget != null && ['Active', 'On hold', 'Planning'].includes(p.status));
+    const onBudget = withBudget.filter(p => p.spent <= p.budget);
+    const overdueT = tasks.filter(t => isOpenT(t) && t.due && t.due < TODAY_ISO);
+    const delta = (a, b, unit) => { const d = a - b; return { delta: (d > 0 ? '+' : d < 0 ? '−' : '±') + Math.abs(d) + (unit || ''), deltaColor: d > 0 ? 'var(--status-positive)' : d < 0 ? 'var(--status-negative)' : 'var(--text-muted)', deltaLabel: 'vs ' + R.cmp }; };
+    const goTab = t => () => this.setState({ tab: t });
+    const kpi = (o) => ({ ...o, aria: o.label + ': ' + o.value + '. ' + o.basis, onKey: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); o.onClick(); } } });
+    const kpis = [
+      kpi({ label: 'Active projects', value: String(active.length), ...delta(active.length, prevActive), basis: 'Status is Active today. Previous figure is estimated from start and completion dates.', icon: 'folder-kanban', valueColor: 'var(--text-strong)', selected: s.tab === 'projects' && F.status === 'Active', onClick: () => this.setState({ tab: 'projects', f: { ...F, status: F.status === 'Active' ? '' : 'Active' } }) }),
+      kpi({ label: 'Projects completed', value: String(completed.length), ...delta(completed.length, prevCompleted.length), basis: 'Practical completion dated within ' + R.label.toLowerCase() + '.', icon: 'circle-check', valueColor: 'var(--text-strong)', selected: false, onClick: goTab('projects') }),
+      kpi({ label: 'Within budget', value: withBudget.length ? onBudget.length + ' of ' + withBudget.length : '—', delta: '', deltaColor: '', deltaLabel: withBudget.length ? Math.round(onBudget.length / withBudget.length * 100) + '% of open projects' : 'No budgets set', basis: 'Spend to date at or under the estimated budget. No history, so no comparison.' + (projects.filter(p => p.budget == null && p.status !== 'Completed' && p.status !== 'Archived').length ? ' ' + projects.filter(p => p.budget == null && p.status !== 'Completed' && p.status !== 'Archived').length + ' without a budget excluded.' : ''), icon: 'banknote', valueColor: 'var(--text-strong)', selected: s.tab === 'finance', onClick: goTab('finance') }),
+      kpi({ label: 'Overdue tasks', value: String(overdueT.length), delta: '', deltaColor: '', deltaLabel: overdueT.filter(t => !t.assignee).length ? overdueT.filter(t => !t.assignee).length + ' unassigned' : 'as of ' + fmt(TODAY_ISO), basis: 'Open tasks past their due date today. Not tied to the date range.', icon: 'circle-alert', valueColor: overdueT.length ? 'var(--status-negative)' : 'var(--text-strong)', selected: s.tab === 'team', onClick: goTab('team') }),
+    ];
+
+    // Projects tab
+    const maxS = Math.max(1, ...STATUSES.map(st => projects.filter(p => p.status === st).length));
+    const allForStatus = PROJECTS.filter(p => (!F.project || p.id === F.project) && (!F.client || p.client === F.client) && (!F.pm || (F.pm === '__none' ? !p.pm : p.pm === F.pm)));
+    const maxAll = Math.max(1, ...STATUSES.map(st => allForStatus.filter(p => p.status === st).length));
+    const byStatus = STATUSES.map(st => { const n = allForStatus.filter(p => p.status === st).length; const on = F.status === st;
+      return { label: st, n: String(n), pct: (n / maxAll * 100) + '%', fill: FILL[st], on, weight: on ? 700 : 500, rowBg: on ? 'var(--sage-50)' : 'transparent', aria: st + ': ' + n + ' projects. ' + (on ? 'Remove filter' : 'Filter by ' + st),
+        onClick: () => this.setF({ status: on ? '' : st }) }; });
+    const openP = projects.filter(p => ['Planning', 'Active', 'On hold'].includes(p.status));
+    const maxPh = Math.max(1, ...PHASES.map((_, i) => openP.filter(p => p.phase === i).length));
+    const byPhase = PHASES.map((ph, i) => { const n = openP.filter(p => p.phase === i).length; return { label: ph, n: String(n), pct: (n / maxPh * 100) + '%' }; });
+    const months = []; { const a = parse(R.from); const b = parse(R.to); const d = new Date(a.getFullYear(), a.getMonth(), 1); while (d <= b) { months.push(iso(d).slice(0, 7)); d.setMonth(d.getMonth() + 1); } }
+    const projTrend = months.map(m => ({ label: MON[+m.slice(5) - 1], a: projects.filter(p => p.completed && p.completed.startsWith(m)).length }));
+    const taskTrend = months.map(m => ({ label: MON[+m.slice(5) - 1], a: tasks.filter(t => t.created && t.created.startsWith(m)).length + archive.filter(x => x[0] === m).reduce((n, x) => n + x[3], 0), b: tasks.filter(t => t.completed && t.completed.startsWith(m)).length + archive.filter(x => x[0] === m).reduce((n, x) => n + x[4], 0) }));
+    const durations = completed.map(p => { const plan = diffDays(p.start, p.deadline), act = diffDays(p.start, p.completed), d = act - plan;
+      return { name: p.name, meta: 'Finished ' + fmt(p.completed) + ' · ' + (p.pm || 'No manager'), plan: Math.round(plan / 30.4) + ' mo planned', diff: d === 0 ? 'On plan' : (d > 0 ? d + ' days late' : (-d) + ' days early'), color: d > 14 ? 'var(--status-negative)' : d > 0 ? 'var(--status-warning)' : 'var(--status-positive)' }; });
+    const dlList = openP.filter(p => !p.deadline || days(p.deadline) <= 30).sort((a, b) => (a.deadline || 'z') < (b.deadline || 'z') ? -1 : 1);
+    const deadlines = dlList.map(p => { const d = p.deadline ? days(p.deadline) : null;
+      return { name: p.name, client: p.client, phase: PHASES[p.phase], pm: p.pm || 'Unassigned', pmColor: p.pm ? 'var(--text-body)' : 'var(--status-negative)', date: p.deadline ? fmt(p.deadline) : 'No deadline',
+        note: d == null ? 'Set one in Projects' : d < 0 ? (-d) + ' days overdue' : d === 0 ? 'Due today' : 'In ' + d + ' days', noteColor: d == null ? 'var(--text-subtle)' : d < 0 ? 'var(--status-negative)' : d <= 7 ? 'var(--status-warning)' : 'var(--text-subtle)', weight: d != null && d <= 7 ? 600 : 400,
+        status: p.status, tone: TONE[p.status] }; });
+
+    // Finance
+    const budgeted = projects.filter(p => p.budget != null);
+    const totB = budgeted.reduce((n, p) => n + p.budget, 0), totS = budgeted.reduce((n, p) => n + p.spent, 0);
+    const over = budgeted.filter(p => p.spent > p.budget);
+    const noBudget = projects.filter(p => p.budget == null);
+    const finTiles = [
+      { label: 'Budgets (estimated)', value: budgeted.length ? eurK(totB) : '—', note: budgeted.length + ' projects with a budget', color: 'var(--text-strong)' },
+      { label: 'Spent to date (actual)', value: budgeted.length ? eurK(totS) : '—', note: totB ? Math.round(totS / totB * 100) + '% of budgets' : 'Nothing to compare', color: 'var(--text-strong)' },
+      { label: 'Remaining', value: budgeted.length ? eurK(totB - totS) : '—', note: 'Budget minus spend', color: 'var(--text-strong)' },
+      { label: 'Over budget', value: String(over.length), note: over.length ? eur(over.reduce((n, p) => n + p.spent - p.budget, 0)) + ' above estimate' : 'None', color: over.length ? 'var(--status-negative)' : 'var(--text-strong)' },
+    ];
+    const budgets = budgeted.slice().sort((a, b) => b.spent / b.budget - a.spent / a.budget).map(p => { const pct = Math.round(p.spent / p.budget * 100); const rem = p.budget - p.spent;
+      return { name: p.name, meta: p.status + ' · ' + PHASES[p.phase], budget: eur(p.budget), budgetColor: 'var(--text-strong)', spent: eur(p.spent), remain: rem < 0 ? '−' + eur(-rem) : eur(rem), remainColor: rem < 0 ? 'var(--status-negative)' : 'var(--text-strong)',
+        barPct: Math.min(100, pct) + '%', barColor: pct > 100 ? 'var(--status-negative)' : 'var(--surface-inverse)', pct: pct + '%', pctColor: pct > 100 ? 'var(--status-negative)' : pct >= 90 ? 'var(--status-warning)' : 'var(--text-strong)' }; });
+
+    // Team
+    const team = TEAM.map(m => { const t = tasks.filter(x => x.assignee === m); const open = t.filter(isOpenT); const od = open.filter(x => x.due && x.due < TODAY_ISO); const act = open.filter(x => !od.includes(x) && x.status !== 'todo'); const todo = open.filter(x => !od.includes(x) && x.status === 'todo');
+      const done = t.filter(x => inR(x.completed, R.from, R.to)).length + archive.filter(a => a[2] === m && months.includes(a[0])).reduce((n, a) => n + a[4], 0);
+      return { name: m, open: open.length, od: od.length, act: act.length, todo: todo.length, done }; });
+    const maxOpen = Math.max(1, ...team.map(x => x.open));
+    const teamOut = team.filter(x => !c.filtered || x.open || x.done).map(x => ({ name: x.name, openLabel: x.open ? x.open + ' open' + (x.od ? ' · ' + x.od + ' overdue' : '') : 'No open tasks', done: String(x.done),
+      odPct: (x.od / maxOpen * 100) + '%', actPct: (x.act / maxOpen * 100) + '%', todoPct: (x.todo / maxOpen * 100) + '%', odTip: x.od + ' overdue', actTip: x.act + ' in progress or review', todoTip: x.todo + ' to do',
+      aria: x.name + ': ' + x.open + ' open tasks, ' + x.od + ' overdue, ' + x.done + ' completed in the period. Open in Tasks & Team.' }));
+    const openTasks = tasks.filter(isOpenT);
+    const taskTiles = [
+      { label: 'Open', value: String(openTasks.length), color: 'var(--text-strong)' },
+      { label: 'Overdue', value: String(overdueT.length), color: overdueT.length ? 'var(--status-negative)' : 'var(--text-strong)' },
+      { label: 'Unassigned', value: String(openTasks.filter(t => !t.assignee).length), color: openTasks.filter(t => !t.assignee).length ? 'var(--status-warning)' : 'var(--text-strong)' },
+    ];
+
+    // Approvals
+    const pendingL = aps.filter(a => a.status === 'review').sort((a, b) => a.deadline < b.deadline ? -1 : 1);
+    const apOverdue = aps.filter(a => ['review', 'changes'].includes(a.status) && a.deadline < TODAY_ISO);
+    const decisions = aps.flatMap(a => a.decisions.map(d => ({ a, sub: d[0], dec: d[1], kind: d[2] }))).filter(d => inR(d.dec, R.from, R.to));
+    const avg = decisions.length ? decisions.reduce((n, d) => n + diffDays(d.sub, d.dec), 0) / decisions.length : null;
+    const prevDec = aps.flatMap(a => a.decisions.map(d => ({ sub: d[0], dec: d[1] }))).filter(d => inR(d.dec, R.pFrom, R.pTo));
+    const prevAvg = prevDec.length ? prevDec.reduce((n, d) => n + diffDays(d.sub, d.dec), 0) / prevDec.length : null;
+    const approvedN = decisions.filter(d => d.kind === 'approved').length;
+    const apTiles = [
+      { label: 'Awaiting decision', value: String(pendingL.length), note: pendingL.filter(a => days(a.deadline) >= 0 && days(a.deadline) <= 3).length + ' due in the next 3 days', color: 'var(--text-strong)' },
+      { label: 'Overdue', value: String(apOverdue.length), note: apOverdue.length ? 'Oldest ' + Math.max(...apOverdue.map(a => -days(a.deadline))) + ' days past deadline' : 'Nothing overdue', color: apOverdue.length ? 'var(--status-negative)' : 'var(--text-strong)' },
+      { label: 'Average turnaround', value: avg == null ? '—' : avg.toFixed(1) + ' days', note: avg == null ? 'No decisions in this period' : decisions.length + ' decisions' + (prevAvg != null ? ' · ' + prevAvg.toFixed(1) + ' days in ' + R.cmp : ''), color: 'var(--text-strong)' },
+      { label: 'Approved', value: String(approvedN), note: decisions.length ? (decisions.length - approvedN) + ' sent back or rejected' : 'In ' + R.label.toLowerCase(), color: 'var(--text-strong)' },
+    ];
+    const pname = id => (PROJECTS.find(p => p.id === id) || {}).name || '';
+    const pending = pendingL.map(a => { const d = days(a.deadline); return { title: a.title, meta: pname(a.project) + ' · ' + a.reviewer + ' · sent ' + fmt(a.submitted), date: fmt(a.deadline), href: 'Approvals.dc.html#approval=' + a.id,
+      note: d < 0 ? (-d) + ' days overdue' : d === 0 ? 'Due today' : 'In ' + d + ' days', noteColor: d < 0 ? 'var(--status-negative)' : d <= 2 ? 'var(--status-warning)' : 'var(--text-subtle)', weight: d <= 2 ? 600 : 400 }; });
+    const byClient = {}; decisions.forEach(d => { const cl = (PROJECTS.find(p => p.id === d.a.project) || {}).client; (byClient[cl] = byClient[cl] || []).push(diffDays(d.sub, d.dec)); });
+    const tRows = Object.keys(byClient).map(k => ({ client: k, avg: byClient[k].reduce((a, b) => a + b, 0) / byClient[k].length, n: byClient[k].length })).sort((a, b) => b.avg - a.avg);
+    const maxT = Math.max(1, ...tRows.map(t => t.avg));
+    const turnaround = tRows.map(t => ({ client: t.client, pct: (t.avg / maxT * 100) + '%', label: t.avg.toFixed(1) + ' d · ' + t.n }));
+    const fl = c.follows.filter(f => days(f[2]) <= 7).sort((a, b) => a[2] < b[2] ? -1 : 1);
+    const follows = fl.map(f => { const d = days(f[2]); return { client: f[1], desc: f[3], meta: 'Due ' + fmt(f[2]) + ' · ' + f[4] + ' · last contact ' + fmt(f[5]), href: 'Clients.dc.html#client=' + f[0],
+      badge: d < 0 ? 'Overdue' : d === 0 ? 'Today' : 'This week', tone: d < 0 ? 'negative' : d === 0 ? 'warning' : 'neutral' }; });
+    const stale = c.follows.filter(f => -days(f[5]) > 30).length;
+
+    const people = Array.from(new Set(PROJECTS.map(p => p.pm).filter(Boolean))).sort();
+    const filterFields = [
+      { value: F.project, options: [{ value: '', label: 'All projects' }].concat(PROJECTS.map(p => ({ value: p.id, label: p.name }))), onChange: v => this.setF({ project: v }) },
+      { value: F.client, options: [{ value: '', label: 'All clients' }].concat(Array.from(new Set(PROJECTS.map(p => p.client))).sort().map(x => ({ value: x, label: x }))), onChange: v => this.setF({ client: v }) },
+      { value: F.pm, options: [{ value: '', label: 'All managers' }].concat(people.map(x => ({ value: x, label: x })), [{ value: '__none', label: 'No manager' }]), onChange: v => this.setF({ pm: v }) },
+      { value: F.status, options: [{ value: '', label: 'All statuses' }].concat(STATUSES.map(x => ({ value: x, label: x }))), onChange: v => this.setF({ status: v }) },
+    ];
+    const noMatch = c.filtered && !projects.length;
+    const ready = !loading && !error && !emptyWs && !noMatch;
+
+    return {
+      nav: [{ value: 'overview', label: 'Overview' }, { value: 'projects', label: 'Projects' }, { value: 'clients', label: 'Clients' }, { value: 'approvals', label: 'Approvals' }, { value: 'tasks', label: 'Tasks & Team' }, { value: 'documents', label: 'Documents' }, { value: 'reports', label: 'Reports' }],
+      rail: [
+        { items: [{ value: 'light', icon: 'sun', label: 'Light theme' }, { value: 'dark', icon: 'moon', label: 'Dark theme' }] },
+        { items: [{ value: 'overview', icon: 'layout-grid', label: 'Overview' }, { value: 'projects', icon: 'folder-kanban', label: 'Projects' }, { value: 'clients', icon: 'building-2', label: 'Clients' }, { value: 'approvals', icon: 'stamp', label: 'Approvals' }, { value: 'tasks', icon: 'list-todo', label: 'Tasks & Team' }, { value: 'documents', icon: 'files', label: 'Documents' }, { value: 'reports', icon: 'chart-column', label: 'Reports' }] },
+        { bottom: true, items: [{ value: 'settings', icon: 'settings', label: 'Settings' }, { value: 'help', icon: 'circle-help', label: 'Help' }, { value: 'out', icon: 'log-out', label: 'Sign out' }] },
+      ],
+      onNav: v => { const go = { overview: 'Overview Dashboard.dc.html', projects: 'Projects.dc.html', clients: 'Clients.dc.html', approvals: 'Approvals.dc.html', tasks: 'Tasks.dc.html', documents: 'Documents.dc.html' }[v];
+        if (go) { location.href = go; return; } if (v === 'light' || v === 'dark') { if (window.ModulTheme) window.ModulTheme.set(v); return; } if (v === 'reports') return;
+        const N = { dark: 'Dark theme', settings: 'Settings', help: 'Help', out: 'Sign out' }; this.toast((N[v] || v) + ' isn’t part of this prototype yet', { icon: 'info' }); },
+      wide, showRail: true, shellCols: 'auto minmax(0,1fr)', frameM: narrow ? 8 : 24, frameM2: narrow ? 16 : 48,
+      twoCols: vw < 1180 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))',
+      dlCols: vw < 1000 ? 'minmax(0,1.6fr) minmax(0,1fr) 110px 100px' : 'minmax(0,1.6fr) minmax(0,1fr) 140px 120px 110px', showPmCol: vw >= 1000,
+      finCols: vw < 1000 ? 'minmax(0,1.5fr) 110px 110px minmax(120px,1fr)' : 'minmax(0,1.5fr) 120px 120px 110px minmax(160px,1fr)', showRemainCol: vw >= 1000,
+      range: s.range, rangeOpts: Object.keys(RANGES).map(k => ({ value: k, label: RANGES[k].label })), setRange: v => this.setState({ range: v }),
+      periodNote: fmt(R.from) + ' – ' + fmt(R.to) + (R.from.slice(0, 4) !== '2026' ? '' : ' 2026') + ', compared with ' + R.cmp + ' (' + fmt(R.pFrom) + ' – ' + fmt(R.pTo) + ')',
+      filterFields, hasFilters: c.filtered, clearAll: () => this.setState({ f: { project: '', client: '', pm: '', status: '' } }),
+      exportDisabled: !ready, exportCsv: this.exportCsv,
+      isLoading: loading, isError: error && !loading, isEmpty: !loading && !error && (emptyWs || noMatch), isReady: ready,
+      emptyIcon: emptyWs ? 'chart-column' : 'search', emptyTitle: emptyWs ? 'Nothing to report yet' : 'No projects match these filters',
+      emptyBody: emptyWs ? 'Reports fill in once the studio adds its first projects.' : 'Every chart here is built from projects. Loosen a filter to see figures again.',
+      emptyCta: emptyWs ? 'Go to Projects' : 'Clear filters', emptyAction: emptyWs ? () => { location.href = 'Projects.dc.html'; } : () => this.setState({ f: { project: '', client: '', pm: '', status: '' } }),
+      retry: () => { this.setState({ retrying: true }); setTimeout(() => this.setState({ retrying: false }), 800); }, skeleton: [1, 2, 3, 4],
+      kpis, tabs: [{ value: 'projects', label: 'Project performance' }, { value: 'finance', label: 'Financial overview' }, { value: 'team', label: 'Team' }, { value: 'approvals', label: 'Approvals & clients' }],
+      tab: s.tab, setTab: v => this.setState({ tab: v }), tProjects: s.tab === 'projects', tFinance: s.tab === 'finance', tTeam: s.tab === 'team', tApprovals: s.tab === 'approvals',
+      byStatus, byPhase, projTrend, projTrendMax: Math.max(3, 3 * Math.ceil(Math.max(0, ...projTrend.map(x => x.a)) / 3)), taskTrendMax: Math.max(3, 3 * Math.ceil(Math.max(0, ...taskTrend.flatMap(x => [x.a, x.b])) / 3)), projTrendSeries: [{ key: 'a', label: 'Projects completed' }],
+      trendNote: months.length === 1 ? 'One month in range. Pick a longer range to see a trend.' : 'By calendar month, ' + R.label.toLowerCase() + '.',
+      durations, noDurations: !durations.length, deadlines, noDeadlines: !deadlines.length,
+      finTiles, budgets, noBudgets: !budgets.length, hasNoBudget: noBudget.length > 0, noBudgetNote: noBudget.length + ' without a budget, left out above: ' + noBudget.map(p => p.name).join(', ') + '.',
+      team: teamOut, taskTrend, taskTrendSeries: [{ key: 'a', label: 'Created' }, { key: 'b', label: 'Completed' }], taskTiles,
+      apTiles, pending, noPending: !pending.length, turnaround, noTurnaround: !turnaround.length, follows, noFollows: !follows.length,
+      clientNote: 'Overdue, due today or due within 7 days.' + (stale ? ' ' + stale + (stale === 1 ? ' client hasn’t' : ' clients haven’t') + ' been contacted in over 30 days.' : ''),
+      toast: s.toast || {}, hasToast: !!s.toast, closeToast: () => this.setState({ toast: null }),
+    };
+  }
+}
+</script>
+</body>
+</html>

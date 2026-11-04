@@ -1,0 +1,24 @@
+{
+  "name": "modul-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "data": "node scripts/build-index.mjs ../MODUL",
+    "pages": "node scripts/compile-dc.mjs ../MODUL src/pages/generated Projects.dc.html Clients.dc.html Approvals.dc.html Tasks.dc.html Documents.dc.html Reports.dc.html Settings.dc.html Help.dc.html \"Sign In.dc.html\"",
+    "thumbs": "node scripts/make-thumbs.mjs"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "parse5": "^7.2.1",
+    "sharp": "^0.33.5",
+    "vite": "5.4.11"
+  }
+}

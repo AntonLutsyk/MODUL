@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js" as="script">
+<style>html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}</style>
+<link rel="stylesheet" href="./modul-theme.css">
+<script src="./modul-theme.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./modul-theme.css">
+  <script src="./modul-theme.js"></script>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+  <style>
+    html,body{margin:0;background:#0E100E !important;font-family:var(--font-sans);color:var(--text-body)}
+    input::placeholder{color:#7C817A}
+    [data-field]:focus-within{border-color:#6DBF78 !important;box-shadow:0 0 0 3px rgba(109,191,120,.22)}
+    :root{--sage-700:#3D6047;--sage-600:#4C7656;--sage-500:#67906F;--sage-400:#8DB091;--sage-300:#B3CDB4;--sage-200:#D2E3D1;--sage-100:#E3EFE2;--sage-50:#F0F6EF;--surface-inverse:var(--sage-600);--graphite-700:var(--sage-700);--phase-documents:#3D3C38;--terracotta-600:#A9472D;--ochre-600:#8A5F0E;--gray-500:#6E6A62;--slate-600:#46698C;--bg-app:#F4F4F6;--surface-inset:#F4F4F6;--surface-muted:#EFEFF1;--border-subtle:#EBEBEE}
+    a{color:var(--text-accent);text-decoration:none}
+    a:hover{color:var(--sage-700);text-decoration:underline}
+  </style>
+</helmet>
+<div style="position:relative;min-height:100vh;overflow:hidden;background:#0E100E;font-family:var(--font-sans);display:flex;align-items:center;justify-content:flex-end;padding:32px clamp(20px, 17vw, 300px) 32px 24px;box-sizing:border-box">
+  <img src="assets/signin-hero.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;display:block">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,12,10,0) 0%, rgba(10,12,10,.08) 38%, rgba(10,12,10,.62) 60%, rgba(10,12,10,.78) 100%)"></div>
+  <form onSubmit="{{ submit }}" novalidate="" style="position:relative;width:min(436px, 100%);box-sizing:border-box;background:rgba(27,28,27,.94);border:1px solid rgba(255,255,255,.12);border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.45);padding:40px 36px 36px;display:flex;flex-direction:column;gap:0">
+    <img src="assets/modul-logo-v4-dark.png" alt="MODUL" style="height:38px;width:auto;align-self:flex-start;display:block;margin-bottom:44px">
+    <h1 style="margin:0 0 12px;font-size:32px;line-height:38px;font-weight:500;letter-spacing:-0.02em;color:#F4F5F1">Sign in</h1>
+    <p style="margin:0 0 30px;font-size:15px;line-height:22px;color:#A9ADA6;text-wrap:pretty">{{ intro }}</p>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <label style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:15px;font-weight:600;color:#F1F2EE">Email</span>
+        <span style="display:flex;align-items:center;gap:12px;height:56px;padding:0 16px;box-sizing:border-box;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid {{ emailBorder }};color:#A9ADA6;transition:border-color var(--dur-fast)" data-field="">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="mail" size="{{ 19 }}" hint-size="19px,19px"></x-import>
+          <input type="email" autocomplete="email" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailBad }}" style="flex:1;min-width:0;height:100%;border:0;outline:none;background:transparent;font-family:inherit;font-size:15px;font-weight:500;color:#F4F5F1">
+        </span>
+        <sc-if value="{{ emailBad }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:13px;color:#FF8A7E">{{ emailErr }}</span></sc-if>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:15px;font-weight:600;color:#F1F2EE">Password</span>
+        <span style="display:flex;align-items:center;gap:12px;height:56px;padding:0 8px 0 16px;box-sizing:border-box;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid {{ pwBorder }};color:#A9ADA6;transition:border-color var(--dur-fast)" data-field="">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="lock" size="{{ 19 }}" hint-size="19px,19px"></x-import>
+          <input type="{{ pwType }}" autocomplete="current-password" value="{{ pw }}" onChange="{{ setPw }}" aria-invalid="{{ pwBad }}" style="flex:1;min-width:0;height:100%;border:0;outline:none;background:transparent;font-family:inherit;font-size:15px;font-weight:500;color:#F4F5F1;letter-spacing:.04em">
+          <button type="button" onClick="{{ togglePw }}" aria-label="{{ pwToggleLabel }}" aria-pressed="{{ pwShown }}" style="width:40px;height:40px;flex-shrink:0;border:0;border-radius:12px;background:transparent;color:{{ eyeColor }};display:inline-flex;align-items:center;justify-content:center;cursor:pointer;position:relative" style-hover="background:rgba(255,255,255,.06)">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="eye" size="{{ 19 }}" hint-size="19px,19px"></x-import>
+            <sc-if value="{{ pwHidden }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position:absolute;width:22px;height:1.6px;border-radius:2px;background:currentColor;transform:rotate(-45deg);box-shadow:0 0 0 1.5px rgba(27,28,27,1)"></span></sc-if>
+          </button>
+        </span>
+        <sc-if value="{{ pwBad }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:13px;color:#FF8A7E">{{ pwErr }}</span></sc-if>
+      </label>
+    </div>
+    <button type="submit" disabled="{{ busy }}" style="margin-top:26px;height:58px;border:0;border-radius:999px;background:#6DBF78;color:#0F1A11;font-family:inherit;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:background var(--dur-fast),transform var(--dur-fast)" style-hover="background:#7FCB89" style-active="transform:scale(.98)" style-focus="outline:none;box-shadow:0 0 0 3px rgba(109,191,120,.4)">
+      <span>{{ btnLabel }}</span>
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="arrow-right" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+    </button>
+  </form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { email: '', pw: '', tried: false, busy: false, signedOut: false, show: false };
+  componentDidMount() {
+    let email = 'elena@marsh-studio.com', signedOut = false;
+    try { const st = JSON.parse(localStorage.getItem('modul.settings.v1') || '{}'); if (st.profile && st.profile.email) email = st.profile.email;
+      const s = JSON.parse(localStorage.getItem('modul.session.v1') || 'null'); signedOut = !!(s && s.signedIn === false); } catch (e) {}
+    this.setState({ email, signedOut });
+  }
+  renderVals() {
+    const s = this.state;
+    const emailErr = s.tried && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email.trim()) ? 'Enter a valid email address.' : undefined;
+    const pwErr = s.tried && !s.pw ? 'Enter your password.' : undefined;
+    return {
+      intro: s.signedOut ? 'You’ve signed out. Sign in again to continue to your studio.' : 'Welcome back. Sign in to continue to your studio.',
+      emailBad: !!emailErr, pwBad: !!pwErr, emailBorder: emailErr ? '#FF8A7E' : 'rgba(255,255,255,.12)', pwBorder: pwErr ? '#FF8A7E' : 'rgba(255,255,255,.12)',
+      pwType: s.show ? 'text' : 'password', pwShown: s.show, pwHidden: !s.show, pwToggleLabel: s.show ? 'Hide password' : 'Show password', eyeColor: s.show ? '#F4F5F1' : '#A9ADA6', togglePw: () => this.setState(x => ({ show: !x.show })),
+      email: s.email, pw: s.pw, emailErr, pwErr, busy: s.busy, btnLabel: s.busy ? 'Signing in…' : 'Sign in',
+      setEmail: e => this.setState({ email: e.target.value }), setPw: e => this.setState({ pw: e.target.value }),
+      submit: e => { e.preventDefault(); this.setState({ tried: true });
+        const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email.trim()) && !!s.pw; if (!ok) return;
+        this.setState({ busy: true });
+        try { localStorage.setItem('modul.session.v1', JSON.stringify({ signedIn: true, email: s.email.trim(), at: new Date().toISOString() })); } catch (x) {}
+        const next = new URLSearchParams(location.search).get('next');
+        location.replace(next && !/^[a-z]+:|^\/\//i.test(next) ? next : 'Overview Dashboard.dc.html'); },
+    };
+  }
+}
+</script>
+</body>
+</html>

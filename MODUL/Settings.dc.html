@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js" as="script">
+<style>html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}</style>
+<link rel="preload" href="SideNav.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="HeaderUtilities.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="modulepreload" href="modul-index.js">
+<link rel="stylesheet" href="./modul-theme.css">
+<script src="./modul-theme.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./modul-theme.css">
+  <script src="./modul-theme.js"></script>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+  <style>
+    html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}
+    a{color:var(--text-accent);text-decoration:none}
+    a:hover{color:var(--sage-700);text-decoration:underline}
+    :root{--sage-700:#3D6047;--sage-600:#4C7656;--sage-500:#67906F;--sage-400:#8DB091;--sage-300:#B3CDB4;--sage-200:#D2E3D1;--sage-100:#E3EFE2;--sage-50:#F0F6EF;--surface-inverse:var(--sage-600);--graphite-700:var(--sage-700);--phase-documents:#3D3C38;--terracotta-600:#A9472D;--ochre-600:#8A5F0E;--gray-500:#6E6A62;--slate-600:#46698C;--bg-app:#F4F4F6;--bg-frame:#E7E7EA;--surface-inset:#F4F4F6;--surface-muted:#EFEFF1;--surface-hover:#EFEFF1;--surface-pressed:#E6E6E9;--border-subtle:#EBEBEE}
+    button:focus-visible,[tabindex]:focus-visible,a:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+  </style>
+</helmet>
+<div data-frame="" style="height:100vh;box-sizing:border-box;margin:0;padding:0 14px 14px 0;background:var(--surface-shell, var(--surface-card));display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:76px minmax(0,1fr);overflow:hidden">
+  <a href="Overview Dashboard.dc.html" aria-label="MODUL overview" style="grid-column:1;grid-row:1;display:flex;align-items:center;padding:0 24px;box-sizing:border-box;width:var(--nav-w, 256px);min-width:fit-content">
+    <img src="assets/modul-logo-v4.png" alt="MODUL" data-logo="light" style="height:28px;width:auto;max-width:none;display:block">
+    <img src="assets/modul-logo-v4-dark.png" alt="MODUL" data-logo="dark" style="height:28px;width:auto;max-width:none;display:block">
+  </a>
+  <header style="grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:flex-end;gap:16px;min-width:0;padding:0 10px 0 0">
+      <dc-import name="HeaderUtilities" style="flex:1;min-width:0;width:100%" hint-size="100%,60px"></dc-import>
+    </header>
+  <div style="grid-column:1;grid-row:2;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none"><dc-import name="SideNav" active="settings" hint-size="256px,560px"></dc-import></div>
+
+  <main data-screen-label="Settings" style="grid-column:2;grid-row:2;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;overscroll-behavior:contain;background:var(--bg-app);border-radius:28px;padding:28px 28px 40px;box-sizing:border-box;min-width:0;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;margin-bottom:8px">
+      <h1 style="margin:0;font-size:var(--text-display);line-height:var(--lh-display);font-weight:var(--weight-heading);letter-spacing:var(--tracking-display);color:var(--text-strong)">Settings</h1>
+      <p style="margin:0;font-size:var(--text-lead);line-height:var(--lh-lead);color:var(--text-muted)">Your profile, studio details and how MODUL works for you.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:{{ bodyCols }};gap:16px;align-items:start">
+      <sc-if value="{{ showSide }}" hint-placeholder-val="{{ true }}">
+        <nav aria-label="Settings sections" style="position:sticky;top:24px;background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:12px;display:flex;flex-direction:column;gap:2px">
+          <sc-for list="{{ sections }}" as="sc" hint-placeholder-count="6">
+            <button type="button" aria-current="{{ sc.current }}" onClick="{{ sc.select }}" style="display:flex;align-items:center;gap:12px;height:44px;padding:0 14px;border:0;border-radius:12px;background:{{ sc.bg }};color:var(--text-strong);font-family:inherit;font-size:var(--text-ui);font-weight:{{ sc.weight }};cursor:pointer;text-align:left;transition:background var(--dur-fast)" style-hover="background:{{ sc.hover }}">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ sc.icon }}" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+              <span style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ sc.label }}</span>
+              <sc-if value="{{ sc.dirty }}" hint-placeholder-val="{{ false }}">
+                <span title="Unsaved changes" style="width:7px;height:7px;border-radius:99px;background:var(--status-warning)"></span>
+              </sc-if>
+            </button>
+          </sc-for>
+        </nav>
+      </sc-if>
+
+      <section aria-labelledby="sec-title" style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);display:flex;flex-direction:column;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding:24px 24px 20px;border-bottom:1px solid var(--border-subtle)">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+            <h2 id="sec-title" style="margin:0;font-size:var(--text-title);line-height:var(--lh-title);font-weight:var(--weight-heading);color:var(--text-strong)">{{ secTitle }}</h2>
+            <p style="margin:0;font-size:var(--text-body);line-height:var(--lh-body);color:var(--text-muted);text-wrap:pretty">{{ secDesc }}</p>
+          </div>
+          <sc-if value="{{ showSelect }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" size="sm" value="{{ section }}" options="{{ sectionOpts }}" on-change="{{ setSection }}" align="right" hint-size="180px,36px"></x-import>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ isProfile }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:24px;padding:24px">
+            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Avatar" name="{{ p.name }}" src="{{ p.avatarSrc }}" size="{{ 72 }}" tone="sage" hint-size="72px,72px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <label style="display:inline-flex">
+                    <input type="file" accept="image/png,image/jpeg,image/webp" onChange="{{ pickAvatar }}" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+                    <span role="button" tabindex="0" onKeyDown="{{ fileKey }}" style="display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 16px;border-radius:999px;border:1px solid var(--border-default, var(--border-subtle));background:var(--surface-card);font-size:13px;font-weight:600;color:var(--text-strong);cursor:pointer" style-hover="background:var(--surface-inset)">
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="upload" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                      <span>Upload photo</span>
+                    </span>
+                  </label>
+                  <sc-if value="{{ p.hasAvatar }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" on-click="{{ removeAvatar }}" hint-size="80px,36px">Remove</x-import>
+                  </sc-if>
+                </div>
+                <span style="font-size:var(--text-xs);color:{{ p.avatarNoteColor }}">{{ p.avatarNote }}</span>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 20px">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Full name" shape="rounded" value="{{ p.name }}" on-change="{{ p.setName }}" error="{{ p.nameErr }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Email" type="email" shape="rounded" value="{{ p.email }}" on-change="{{ p.setEmail }}" error="{{ p.emailErr }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Job title" shape="rounded" value="{{ p.title }}" on-change="{{ p.setTitle }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Phone" type="tel" shape="rounded" placeholder="Optional" value="{{ p.phone }}" on-change="{{ p.setPhone }}" error="{{ p.phoneErr }}" hint-size="100%,72px"></x-import>
+            </div>
+            <p style="margin:0;font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-muted)">Your name and photo appear in the header menu. Records created before a name change keep the name they were created with.</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isStudio }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:24px;padding:24px">
+            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+              <div style="width:120px;height:72px;border-radius:16px;background:var(--surface-inset);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0">
+                <sc-if value="{{ st.hasLogo }}" hint-placeholder-val="{{ false }}">
+                  <div role="img" aria-label="Studio logo" style="width:100%;height:100%;background-position:center;background-size:contain;background-repeat:no-repeat;background-image:{{ st.logoBg }}"></div>
+                </sc-if>
+                <sc-if value="{{ st.noLogo }}" hint-placeholder-val="{{ true }}">
+                  <span style="font-size:var(--text-xs);color:var(--text-subtle)">No logo</span>
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <label style="display:inline-flex">
+                    <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" onChange="{{ pickLogo }}" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+                    <span role="button" tabindex="0" onKeyDown="{{ fileKey }}" style="display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 16px;border-radius:999px;border:1px solid var(--border-default, var(--border-subtle));background:var(--surface-card);font-size:13px;font-weight:600;color:var(--text-strong);cursor:pointer" style-hover="background:var(--surface-inset)">
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="upload" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                      <span>Upload logo</span>
+                    </span>
+                  </label>
+                  <sc-if value="{{ st.hasLogo }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" on-click="{{ removeLogo }}" hint-size="80px,36px">Remove</x-import>
+                  </sc-if>
+                </div>
+                <span style="font-size:var(--text-xs);color:{{ st.logoNoteColor }}">{{ st.logoNote }}</span>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 20px">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Studio name" shape="rounded" value="{{ st.name }}" on-change="{{ st.setName }}" error="{{ st.nameErr }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Organisation number" shape="rounded" placeholder="Optional" value="{{ st.orgNo }}" on-change="{{ st.setOrgNo }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Contact email" type="email" shape="rounded" placeholder="Optional" value="{{ st.email }}" on-change="{{ st.setEmail }}" error="{{ st.emailErr }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Phone" type="tel" shape="rounded" placeholder="Optional" value="{{ st.phone }}" on-change="{{ st.setPhone }}" error="{{ st.phoneErr }}" hint-size="100%,72px"></x-import>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Address</span>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px 20px">
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Street" shape="rounded" value="{{ st.street }}" on-change="{{ st.setStreet }}" hint-size="100%,72px"></x-import>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Postcode" shape="rounded" value="{{ st.postcode }}" on-change="{{ st.setPostcode }}" hint-size="100%,72px"></x-import>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="City" shape="rounded" value="{{ st.city }}" on-change="{{ st.setCity }}" hint-size="100%,72px"></x-import>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Country" shape="rounded" value="{{ st.country }}" on-change="{{ st.setCountry }}" hint-size="100%,72px"></x-import>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isTeam }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px;padding:16px 24px 24px">
+            <div style="display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:16px;background:var(--surface-inset);font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-body)">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="info" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+              <span>Inviting people and changing access need the account service, which isn’t connected in this prototype. The list below shows who works in the studio today.</span>
+            </div>
+            <sc-if value="{{ teamLoading }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:20px 0;font-size:var(--text-sm);color:var(--text-muted)">Loading team…</div>
+            </sc-if>
+            <sc-if value="{{ teamError }}" hint-placeholder-val="{{ false }}">
+              <div role="alert" style="display:flex;align-items:center;gap:12px;padding:12px 0;font-size:var(--text-sm);color:var(--text-muted)">
+                <span>The team list didn’t load.</span>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ loadTeam }}" hint-size="100px,36px">Try again</x-import>
+              </div>
+            </sc-if>
+            <div role="table" aria-label="Team members" style="display:flex;flex-direction:column">
+              <sc-for list="{{ team }}" as="m" hint-placeholder-count="0">
+                <div role="row" style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) auto;gap:16px;align-items:center;min-height:60px;border-bottom:1px solid var(--border-subtle)">
+                  <div role="cell" style="display:flex;align-items:center;gap:12px;min-width:0">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Avatar" name="{{ m.name }}" size="sm" hint-size="32px,32px"></x-import>
+                    <div style="display:flex;flex-direction:column;gap:1px;min-width:0">
+                      <span style="font-size:var(--text-table);font-weight:var(--weight-strong);color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ m.name }}</span>
+                      <span style="font-size:var(--text-xs);color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ m.email }}</span>
+                    </div>
+                  </div>
+                  <span role="cell" style="font-size:var(--text-table);color:var(--text-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ m.role }}</span>
+                  <span role="cell">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ m.tone }}" hint-size="70px,24px">{{ m.access }}</x-import>
+                  </span>
+                </div>
+              </sc-for>
+            </div>
+            <a href="Tasks.dc.html#team" style="font-size:var(--text-sm);font-weight:600;align-self:flex-start">See workload in Tasks &amp; Team</a>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isNotif }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;padding:8px 24px 24px">
+            <span style="padding:16px 0 4px;font-size:var(--text-xs);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)">In MODUL</span>
+            <sc-for list="{{ notifRows }}" as="nr" hint-placeholder-count="6">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:8px 0;border-bottom:1px solid var(--border-subtle)">
+                <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                  <span style="font-size:var(--text-table);font-weight:var(--weight-strong);color:var(--text-strong)">{{ nr.label }}</span>
+                  <span style="font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-muted)">{{ nr.desc }}</span>
+                </div>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Switch" checked="{{ nr.on }}" on-change="{{ nr.toggle }}" hint-size="44px,26px"></x-import>
+              </div>
+            </sc-for>
+            <span style="padding:24px 0 4px;font-size:var(--text-xs);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)">Email</span>
+            <div style="display:flex;gap:10px;align-items:flex-start;padding:14px 16px;margin-top:8px;border-radius:16px;background:var(--surface-inset);font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-body)">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="mail" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+              <span>Email delivery isn’t connected in this prototype, so there are no email preferences to set yet.</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isAppearance }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:28px;padding:24px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Theme</span>
+                <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ themeNote }}</span>
+              </div>
+              <div role="radiogroup" aria-label="Theme" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;max-width:560px">
+                <button type="button" role="radio" aria-checked="{{ th.light.on }}" onClick="{{ th.light.pick }}" style="display:flex;flex-direction:column;gap:10px;padding:12px;border:0;border-radius:16px;background:{{ th.light.bg }};box-shadow:{{ th.light.ring }};font-family:inherit;text-align:left;cursor:pointer;transition:background var(--dur-fast)" style-hover="background:{{ th.light.hover }}">
+                  <div aria-hidden="true" style="width:100%;height:64px;border-radius:10px;background:#F4F4F6;display:flex;gap:6px;padding:8px;box-sizing:border-box;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)">
+                    <div style="width:22%;border-radius:6px;background:#FFFFFF"></div>
+                    <div style="flex:1;border-radius:6px;background:#FFFFFF"></div>
+                  </div>
+                  <span style="display:flex;align-items:center;gap:8px;font-size:var(--text-table);font-weight:600;color:var(--text-strong)">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="sun" size="{{ 16 }}" hint-size="16px,16px"></x-import>Light
+                  </span>
+                </button>
+                <button type="button" role="radio" aria-checked="{{ th.dark.on }}" onClick="{{ th.dark.pick }}" style="display:flex;flex-direction:column;gap:10px;padding:12px;border:0;border-radius:16px;background:{{ th.dark.bg }};box-shadow:{{ th.dark.ring }};font-family:inherit;text-align:left;cursor:pointer;transition:background var(--dur-fast)" style-hover="background:{{ th.dark.hover }}">
+                  <div aria-hidden="true" style="width:100%;height:64px;border-radius:10px;background:#121312;display:flex;gap:6px;padding:8px;box-sizing:border-box;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)">
+                    <div style="width:22%;border-radius:6px;background:#222322"></div>
+                    <div style="flex:1;border-radius:6px;background:#222322"></div>
+                  </div>
+                  <span style="display:flex;align-items:center;gap:8px;font-size:var(--text-table);font-weight:600;color:var(--text-strong)">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="moon" size="{{ 16 }}" hint-size="16px,16px"></x-import>Dark
+                  </span>
+                </button>
+                <button type="button" role="radio" aria-checked="{{ th.system.on }}" onClick="{{ th.system.pick }}" style="display:flex;flex-direction:column;gap:10px;padding:12px;border:0;border-radius:16px;background:{{ th.system.bg }};box-shadow:{{ th.system.ring }};font-family:inherit;text-align:left;cursor:pointer;transition:background var(--dur-fast)" style-hover="background:{{ th.system.hover }}">
+                  <div aria-hidden="true" style="width:100%;height:64px;border-radius:10px;overflow:hidden;display:flex;box-shadow:inset 0 0 0 1px rgba(128,128,128,.14)">
+                    <div style="flex:1;background:#F4F4F6;display:flex;gap:6px;padding:8px 3px 8px 8px;box-sizing:border-box">
+                      <div style="width:30%;border-radius:6px;background:#FFFFFF"></div>
+                      <div style="flex:1;border-radius:6px;background:#FFFFFF"></div>
+                    </div>
+                    <div style="flex:1;background:#121312;display:flex;gap:6px;padding:8px 8px 8px 3px;box-sizing:border-box">
+                      <div style="width:30%;border-radius:6px;background:#222322"></div>
+                      <div style="flex:1;border-radius:6px;background:#222322"></div>
+                    </div>
+                  </div>
+                  <span style="display:flex;align-items:center;gap:8px;font-size:var(--text-table);font-weight:600;color:var(--text-strong)">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="sliders-horizontal" size="{{ 16 }}" hint-size="16px,16px"></x-import>Match system
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Sidebar</span>
+                <span style="font-size:var(--text-sm);color:var(--text-muted)">How the left navigation shows page names.</span>
+              </div>
+              <div role="radiogroup" aria-label="Sidebar" style="display:flex;flex-direction:column;gap:8px;max-width:520px">
+                <sc-for list="{{ sidebarOpts }}" as="so" hint-placeholder-count="3">
+                  <button type="button" role="radio" aria-checked="{{ so.on }}" onClick="{{ so.pick }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:0;border-radius:14px;background:{{ so.bg }};box-shadow:{{ so.ring }};font-family:inherit;text-align:left;cursor:pointer" style-hover="background:{{ so.hover }}">
+                    <span style="width:18px;height:18px;border-radius:99px;box-sizing:border-box;border:{{ so.dotBorder }};background:var(--surface-card);flex-shrink:0"></span>
+                    <span style="display:flex;flex-direction:column;gap:1px">
+                      <span style="font-size:var(--text-table);font-weight:600;color:var(--text-strong)">{{ so.label }}</span>
+                      <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ so.desc }}</span>
+                    </span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isSecurity }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px;padding:24px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 18px;border-radius:16px;background:var(--surface-inset)">
+              <div style="display:flex;align-items:center;gap:14px;min-width:0">
+                <span style="width:44px;height:44px;border-radius:999px;background:var(--surface-card);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--text-strong)">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="smartphone" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+                </span>
+                <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                  <span style="font-size:var(--text-table);font-weight:var(--weight-strong);color:var(--text-strong)">This browser</span>
+                  <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ sessionText }}</span>
+                </div>
+              </div>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="log-out" on-click="{{ signOut }}" hint-size="110px,36px">Sign out</x-import>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:16px;border:1px solid var(--border-subtle);font-size:var(--text-sm);line-height:var(--lh-sm);color:var(--text-body)">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="lock" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+              <span>Passwords and two-step verification belong to the account service, which isn’t connected in this prototype. Sign-in here only starts a session in this browser, so there’s nothing to change yet.</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ hasForm }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px;border-top:1px solid var(--border-subtle)">
+            <span style="font-size:var(--text-sm);color:{{ statusColor }}">{{ statusText }}</span>
+            <div style="display:flex;gap:8px">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" disabled="{{ clean }}" on-click="{{ discard }}" hint-size="80px,36px">Discard</x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" disabled="{{ clean }}" on-click="{{ save }}" hint-size="120px,36px">Save changes</x-import>
+            </div>
+          </div>
+        </sc-if>
+      </section>
+    </div>
+  </main>
+
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+    <div role="status" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:150;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:{{ toastBg }};color:#fff;box-shadow:var(--shadow-pop);font-size:var(--text-sm);font-weight:500;white-space:nowrap">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ toastIcon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+      <span>{{ toastText }}</span>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const KEY = 'modul.settings.v1';
+const DEFAULTS = {
+  profile: { name: 'Elena Marsh', email: 'elena@marsh-studio.com', title: 'Studio director', phone: '', avatar: '' },
+  studio: { name: 'Marsh Studio', orgNo: '', email: '', phone: '', street: '', postcode: '', city: 'Oslo', country: 'Norway', logo: '' },
+  notifications: { approvals: true, deadlines: true, tasks: true, documents: true, projects: true, badge: true },
+  appearance: { sidebar: 'auto' },
+};
+const SECTIONS = [
+  ['profile', 'Profile', 'pen-line', 'How you appear to the studio.'],
+  ['studio', 'Studio', 'house', 'The practice details used across MODUL.'],
+  ['team', 'Team & permissions', 'users', 'Who has access to this workspace.'],
+  ['notifications', 'Notifications', 'bell', 'Choose what shows up under the bell. Changes apply straight away.'],
+  ['appearance', 'Appearance', 'sun', 'Theme and navigation. Changes apply straight away.'],
+  ['security', 'Security', 'lock', 'Your session in this browser.'],
+];
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE = /^\+?[\d\s()-]{6,}$/;
+const load = () => { let s = {}; try { s = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  return { profile: { ...DEFAULTS.profile, ...(s.profile || {}) }, studio: { ...DEFAULTS.studio, ...(s.studio || {}) }, notifications: { ...DEFAULTS.notifications, ...(s.notifications || {}) }, appearance: { ...DEFAULTS.appearance, ...(s.appearance || {}) } }; };
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+
+class Component extends DCLogic {
+  state = (() => { const saved = load(); const h = (typeof location !== 'undefined' ? location.hash.slice(1) : '');
+    return { saved, draft: { profile: { ...saved.profile }, studio: { ...saved.studio } }, tried: {}, section: SECTIONS.some(s => s[0] === h) ? h : 'profile', toast: null, team: null, teamStatus: 'idle', fileErr: {}, vw: typeof window !== 'undefined' ? window.innerWidth : 1440 }; })();
+
+  componentDidMount() {
+    this._th = () => this.forceUpdate(); window.addEventListener('modul:theme', this._th);
+    this._rs = () => this.setState({ vw: window.innerWidth }); window.addEventListener('resize', this._rs); this._rs();
+    this._hash = () => { const h = location.hash.slice(1); if (SECTIONS.some(s => s[0] === h)) this.setState({ section: h }); }; window.addEventListener('hashchange', this._hash);
+    this._unload = e => { if (this.anyDirty()) { e.preventDefault(); e.returnValue = ''; } }; window.addEventListener('beforeunload', this._unload);
+    if (this.state.section === 'team') this.loadTeam();
+  }
+  componentWillUnmount() { window.removeEventListener('modul:theme', this._th); window.removeEventListener('resize', this._rs); window.removeEventListener('hashchange', this._hash); window.removeEventListener('beforeunload', this._unload); clearTimeout(this._tt); }
+  anyDirty() { const s = this.state; return !same(s.draft.profile, s.saved.profile) || !same(s.draft.studio, s.saved.studio); }
+  toast(text, kind) { clearTimeout(this._tt); this.setState({ toast: { text, kind: kind || 'ok' } }); this._tt = setTimeout(() => this.setState({ toast: null }), 2800); }
+  write(next, msg) {
+    try { localStorage.setItem(KEY, JSON.stringify(next)); } catch (e) { this.toast('Couldn’t save. Browser storage is full or blocked.', 'err'); return false; }
+    this.setState({ saved: next }); window.dispatchEvent(new Event('modul:settings')); if (msg) this.toast(msg); return true;
+  }
+  loadTeam() {
+    this.setState({ teamStatus: 'loading' });
+    import(new URL('modul-index.js', location.href).href).then(m => m.loadModul()).then(d => this.setState({ team: d.items.filter(i => i.type === 'member'), teamStatus: 'ready' })).catch(() => this.setState({ teamStatus: 'error' }));
+  }
+  setField(sec, key, val) { this.setState(s => ({ draft: { ...s.draft, [sec]: { ...s.draft[sec], [key]: val } } })); }
+  errors(sec, d) {
+    const e = {};
+    if (sec === 'profile') { if (!d.name.trim()) e.name = 'Enter your name.'; else if (d.name.trim().length > 80) e.name = 'Keep it under 80 characters.';
+      if (!EMAIL.test(d.email.trim())) e.email = 'Enter a valid email address.'; if (d.phone.trim() && !PHONE.test(d.phone.trim())) e.phone = 'Use digits, spaces and an optional +.'; }
+    if (sec === 'studio') { if (!d.name.trim()) e.name = 'Enter the studio name.'; if (d.email.trim() && !EMAIL.test(d.email.trim())) e.email = 'Enter a valid email address.'; if (d.phone.trim() && !PHONE.test(d.phone.trim())) e.phone = 'Use digits, spaces and an optional +.'; }
+    return e;
+  }
+  readImage(e, sec, key, maxKB) {
+    const f = e.target.files && e.target.files[0]; e.target.value = ''; if (!f) return;
+    if (!/^image\/(png|jpeg|webp|svg\+xml)$/.test(f.type)) return this.setState(s => ({ fileErr: { ...s.fileErr, [sec]: 'Use a PNG, JPG or WebP image.' } }));
+    if (f.size > maxKB * 1024) return this.setState(s => ({ fileErr: { ...s.fileErr, [sec]: 'That image is ' + Math.round(f.size / 1024) + ' KB. Keep it under ' + maxKB + ' KB.' } }));
+    const r = new FileReader(); r.onload = () => { this.setField(sec, key, r.result); this.setState(s => ({ fileErr: { ...s.fileErr, [sec]: '' } })); };
+    r.onerror = () => this.setState(s => ({ fileErr: { ...s.fileErr, [sec]: 'The file couldn’t be read.' } })); r.readAsDataURL(f);
+  }
+
+  renderVals() {
+    const s = this.state; const sec = s.section; const narrow = s.vw < 1000; const wide = s.vw >= 1180;
+    const formSec = sec === 'profile' || sec === 'studio';
+    const d = formSec ? s.draft[sec] : null; const dirty = formSec && !same(d, s.saved[sec]);
+    const err = formSec && s.tried[sec] ? this.errors(sec, d) : {};
+    const meta = SECTIONS.find(x => x[0] === sec);
+    const select = id => { if (id === 'team' && !s.team) this.loadTeam(); history.replaceState(null, '', '#' + id); this.setState({ section: id }); };
+    const P = s.draft.profile, ST = s.draft.studio;
+    const set = (sc, k) => e => this.setField(sc, k, e.target.value);
+    const N = s.saved.notifications;
+    const NOTIF = [['approvals', 'Approval decisions', 'Changes requested, sign-offs and new approval activity.'], ['deadlines', 'Approval deadlines', 'Approvals that are overdue or due within three days.'],
+      ['tasks', 'Your tasks', 'New tasks assigned to you, and tasks due soon or overdue.'], ['documents', 'New document versions', 'Files uploaded or revised by others in the last week.'],
+      ['projects', 'Project deadlines', 'Active projects with a deadline in the next 30 days or just missed.'], ['badge', 'Unread count on the bell', 'Show the number of unread notifications in the header.']];
+    const A = s.saved.appearance;
+    const MT = window.ModulTheme; const tPref = MT ? MT.pref() : 'light'; const tNow = MT ? MT.get() : 'light';
+    const thOpt = v => { const on = tPref === v; return { on, bg: on ? 'var(--sage-50)' : 'var(--surface-inset)', hover: on ? 'var(--sage-50)' : 'var(--surface-muted)', ring: on ? 'inset 0 0 0 1.5px var(--sage-400)' : 'none',
+      pick: () => { if (!on && MT) { MT.set(v); this.toast && this.toast(v === 'system' ? 'Theme follows your system' : (v === 'dark' ? 'Dark theme on' : 'Light theme on')); } } }; };
+    const SB = [['auto', 'Automatic', 'Labels on wide screens, icons only on narrow ones.'], ['labels', 'Always show labels', 'Keep page names visible unless the screen is very narrow.'], ['icons', 'Icons only', 'A slim rail. Hover an icon to see its name.']];
+    let sess = null; try { sess = JSON.parse(localStorage.getItem('modul.session.v1') || 'null'); } catch (e) {}
+    const sessionText = sess && sess.at ? 'Signed in as ' + (sess.email || s.saved.profile.email) + ' · since ' + new Date(sess.at).toLocaleString([], { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'Signed in as ' + s.saved.profile.email;
+    const T = s.toast;
+    return {
+      wide, bodyCols: narrow ? 'minmax(0,1fr)' : '240px minmax(0,1fr)', showSide: !narrow, showSelect: narrow,
+      sections: SECTIONS.map(([id, label, icon]) => { const on = id === sec; const dr = (id === 'profile' || id === 'studio') && !same(s.draft[id], s.saved[id]);
+        return { label, icon, current: on ? 'page' : undefined, bg: on ? 'var(--surface-muted)' : 'transparent', hover: on ? 'var(--surface-muted)' : 'var(--surface-inset)', weight: on ? 600 : 500, dirty: dr, select: () => select(id) }; }),
+      sectionOpts: SECTIONS.map(([v, l]) => ({ value: v, label: l })), section: sec, setSection: select,
+      secTitle: meta[1], secDesc: meta[3],
+      isProfile: sec === 'profile', isStudio: sec === 'studio', isTeam: sec === 'team', isNotif: sec === 'notifications', isAppearance: sec === 'appearance', isSecurity: sec === 'security',
+      p: { name: P.name, email: P.email, title: P.title, phone: P.phone, avatarSrc: P.avatar || undefined, hasAvatar: !!P.avatar,
+        avatarNote: s.fileErr.profile || 'PNG, JPG or WebP, up to 600 KB.', avatarNoteColor: s.fileErr.profile ? 'var(--status-negative)' : 'var(--text-muted)',
+        nameErr: err.name, emailErr: err.email, phoneErr: err.phone, setName: set('profile', 'name'), setEmail: set('profile', 'email'), setTitle: set('profile', 'title'), setPhone: set('profile', 'phone') },
+      st: { name: ST.name, orgNo: ST.orgNo, email: ST.email, phone: ST.phone, street: ST.street, postcode: ST.postcode, city: ST.city, country: ST.country, logoBg: ST.logo ? 'url("' + ST.logo + '")' : 'none', hasLogo: !!ST.logo, noLogo: !ST.logo,
+        logoNote: s.fileErr.studio || 'PNG, JPG, WebP or SVG, up to 600 KB.', logoNoteColor: s.fileErr.studio ? 'var(--status-negative)' : 'var(--text-muted)',
+        nameErr: err.name, emailErr: err.email, phoneErr: err.phone, setName: set('studio', 'name'), setOrgNo: set('studio', 'orgNo'), setEmail: set('studio', 'email'), setPhone: set('studio', 'phone'),
+        setStreet: set('studio', 'street'), setPostcode: set('studio', 'postcode'), setCity: set('studio', 'city'), setCountry: set('studio', 'country') },
+      pickAvatar: e => this.readImage(e, 'profile', 'avatar', 600), removeAvatar: () => this.setField('profile', 'avatar', ''),
+      pickLogo: e => this.readImage(e, 'studio', 'logo', 600), removeLogo: () => this.setField('studio', 'logo', ''),
+      fileKey: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); const i = e.currentTarget.parentNode.querySelector('input[type=file]'); i && i.click(); } },
+      teamLoading: s.teamStatus === 'loading', teamError: s.teamStatus === 'error', loadTeam: () => this.loadTeam(),
+      team: (s.team || []).map(m => { const [role, email] = m.sub.split(' · '); const owner = m.title === s.saved.profile.name || m.title === 'Elena Marsh';
+        return { name: m.title, role: role || '', email: email || '', access: owner ? 'Owner' : 'Member', tone: owner ? 'accent' : 'neutral' }; }),
+      notifRows: NOTIF.map(([k, label, desc]) => ({ label, desc, on: N[k] !== false, toggle: v => this.write({ ...s.saved, notifications: { ...N, [k]: v } }, 'Notification preferences saved') })),
+      th: { light: thOpt('light'), dark: thOpt('dark'), system: thOpt('system') },
+      themeNote: tPref === 'system' ? 'Following your system setting, currently ' + tNow + '. Saved in this browser.' : 'Saved in this browser and applied to every page.',
+      sidebarOpts: SB.map(([v, label, desc]) => { const on = A.sidebar === v; return { label, desc, on, bg: on ? 'var(--sage-50, #f1f4ef)' : 'var(--surface-inset)', hover: on ? 'var(--sage-50, #f1f4ef)' : 'var(--surface-muted)',
+        ring: on ? 'inset 0 0 0 1.5px var(--sage-400, #9fb39a)' : 'none', dotBorder: on ? '5px solid var(--surface-inverse)' : '1.5px solid var(--limestone-400, #c4bfb5)',
+        pick: () => { if (!on) this.write({ ...s.saved, appearance: { ...A, sidebar: v } }, 'Sidebar updated'); } }; }),
+      sessionText, signOut: () => window.dispatchEvent(new Event('modul:signout')),
+      hasForm: formSec, clean: !dirty,
+      statusText: Object.keys(err).length ? 'Fix the highlighted fields to save.' : dirty ? 'You have unsaved changes.' : 'All changes saved.',
+      statusColor: Object.keys(err).length ? 'var(--status-negative)' : 'var(--text-muted)',
+      discard: () => this.setState(x => ({ draft: { ...x.draft, [sec]: { ...x.saved[sec] } }, tried: { ...x.tried, [sec]: false }, fileErr: { ...x.fileErr, [sec]: '' } })),
+      save: () => { const e = this.errors(sec, d); if (Object.keys(e).length) { this.setState(x => ({ tried: { ...x.tried, [sec]: true } })); return; }
+        const clean = Object.fromEntries(Object.entries(d).map(([k, v]) => [k, typeof v === 'string' && k !== 'avatar' && k !== 'logo' ? v.trim() : v]));
+        if (this.write({ ...s.saved, [sec]: clean }, sec === 'profile' ? 'Profile saved' : 'Studio details saved')) this.setState(x => ({ draft: { ...x.draft, [sec]: clean }, tried: { ...x.tried, [sec]: false } })); },
+      hasToast: !!T, toastText: T ? T.text : '', toastIcon: T && T.kind === 'err' ? 'circle-alert' : 'circle-check', toastBg: T && T.kind === 'err' ? 'var(--status-negative)' : 'var(--surface-inverse)',
+    };
+  }
+}
+</script>
+</body>
+</html>

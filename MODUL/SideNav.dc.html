@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+</helmet>
+<nav data-tour="nav" aria-label="Modules" style="box-sizing:border-box;width:{{ w }}px;min-height:calc(100vh - 108px);display:flex;flex-direction:column;gap:4px;padding:4px {{ padOut }}px 16px;background:transparent;font-family:var(--font-sans);transition:width var(--dur-base) var(--ease-standard)">
+  
+  <sc-for list="{{ items }}" as="it" hint-placeholder-count="7">
+    <a data-tour="{{ it.tour }}" href="{{ it.href }}" aria-current="{{ it.current }}" title="{{ it.tip }}" style="display:flex;align-items:center;gap:14px;height:48px;flex-shrink:0;padding:0 {{ padX }}px;justify-content:{{ justify }};border-radius:16px;--nav-hover:{{ it.hover }};background:{{ it.bg }};color:{{ it.fg }};text-decoration:none;font-size:16px;line-height:20px;font-weight:{{ it.weight }};transition:background var(--dur-fast)" style-hover="background:var(--nav-hover);text-decoration:none;color:var(--text-strong)">
+      <span style="display:inline-flex;color:{{ it.ic }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ it.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+      </span>
+      <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+        <span style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ it.label }}</span>
+        <sc-if value="{{ it.hasCount }}" hint-placeholder-val="{{ false }}">
+          <span style="min-width:28px;height:24px;padding:0 8px;box-sizing:border-box;border-radius:999px;background:{{ it.countBg }};color:{{ it.countFg }};font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums">{{ it.count }}</span>
+        </sc-if>
+        <sc-if value="{{ it.on }}" hint-placeholder-val="{{ false }}">
+          <span style="display:inline-flex;color:var(--text-strong)">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="chevron-right" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+          </span>
+        </sc-if>
+      </sc-if>
+    </a>
+  </sc-for>
+  <div style="height:1px;background:var(--border-subtle);margin:10px {{ padX }}px;flex-shrink:0"></div>
+  <sc-for list="{{ utils }}" as="it" hint-placeholder-count="2">
+    <a data-tour="{{ it.tour }}" href="{{ it.href }}" aria-current="{{ it.current }}" title="{{ it.tip }}" style="display:flex;align-items:center;gap:14px;height:48px;flex-shrink:0;padding:0 {{ padX }}px;justify-content:{{ justify }};border-radius:16px;--nav-hover:{{ it.hover }};background:{{ it.bg }};color:{{ it.fg }};text-decoration:none;font-size:16px;line-height:20px;font-weight:{{ it.weight }};transition:background var(--dur-fast)" style-hover="background:var(--nav-hover);text-decoration:none;color:var(--text-strong)">
+      <span style="display:inline-flex;color:{{ it.ic }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ it.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+      </span>
+      <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+        <span style="flex:1;white-space:nowrap">{{ it.label }}</span>
+        <sc-if value="{{ it.on }}" hint-placeholder-val="{{ false }}">
+          <span style="display:inline-flex;color:var(--text-strong)">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="chevron-right" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+          </span>
+        </sc-if>
+      </sc-if>
+    </a>
+  </sc-for>
+
+  <div style="flex:1;min-height:24px"></div>
+
+  <a data-tour="profile" href="Settings.dc.html#profile" title="{{ profileTip }}" style="display:flex;align-items:center;gap:12px;flex-shrink:0;padding:{{ cardPad }};justify-content:{{ justify }};border-radius:20px;background:var(--surface-inset);color:var(--text-strong);text-decoration:none;transition:background var(--dur-fast)" style-hover="background:var(--surface-hover);text-decoration:none;color:var(--text-strong)">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Avatar" name="{{ me.name }}" src="{{ me.src }}" size="{{ 44 }}" hint-size="44px,44px"></x-import>
+    <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+      <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px">
+        <span style="font-size:15px;line-height:20px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ me.name }}</span>
+        <span style="font-size:13px;line-height:18px;color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ me.role }}</span>
+      </span>
+      <span style="display:inline-flex;color:var(--text-muted)">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="chevron-right" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+      </span>
+    </sc-if>
+  </a>
+  <button type="button" onClick="{{ askSignOut }}" title="{{ outTip }}" aria-haspopup="dialog" style="display:flex;align-items:center;gap:14px;height:52px;flex-shrink:0;margin-top:8px;padding:0 {{ padX }}px;justify-content:{{ justify }};border:0;border-radius:18px;background:var(--surface-inset);color:var(--text-strong);font-family:inherit;font-size:16px;line-height:20px;font-weight:500;cursor:pointer;text-align:left;transition:background var(--dur-fast)" style-hover="background:var(--surface-hover)">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="log-out" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+    <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+      <span style="flex:1;white-space:nowrap">Sign out</span>
+    </sc-if>
+  </button>
+
+  <sc-if value="{{ confirmOpen }}" hint-placeholder-val="{{ false }}">
+    <div onMouseDown="{{ scrimDown }}" style="position:fixed;inset:0;z-index:160;background:rgba(28,28,26,.28);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box">
+      <div role="alertdialog" aria-modal="true" aria-labelledby="so-title" aria-describedby="so-desc" style="width:min(420px, 100%);background:var(--surface-card);border-radius:24px;box-shadow:var(--shadow-pop);padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span id="so-title" style="font-size:var(--text-title);line-height:var(--lh-title);font-weight:var(--weight-heading);color:var(--text-strong)">Sign out?</span>
+          <span id="so-desc" style="font-size:var(--text-body);line-height:var(--lh-body);color:var(--text-muted)">Are you sure you want to sign out of MODUL?</span>
+        </div>
+        <sc-if value="{{ hasErr }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="display:flex;gap:8px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--status-negative-bg);color:var(--status-negative);font-size:var(--text-sm);line-height:var(--lh-sm)">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+            <span>{{ err }}</span>
+          </div>
+        </sc-if>
+        <div style="display:flex;justify-content:flex-end;gap:8px">
+          <span ref="{{ cancelRef }}" style="display:inline-flex">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="outline" disabled="{{ busy }}" on-click="{{ cancel }}" hint-size="90px,44px">Cancel</x-import>
+          </span>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" icon="log-out" disabled="{{ busy }}" on-click="{{ confirm }}" hint-size="120px,44px">{{ confirmLabel }}</x-import>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;overview&quot;,&quot;projects&quot;,&quot;clients&quot;,&quot;approvals&quot;,&quot;tasks&quot;,&quot;documents&quot;,&quot;reports&quot;,&quot;settings&quot;,&quot;help&quot;],&quot;default&quot;:&quot;overview&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { vw: typeof window !== 'undefined' ? window.innerWidth : 1440, pref: 'auto', confirm: false, busy: false, err: '', profile: {} };
+  cancelRef = el => { this._cancel = el; };
+  componentDidMount() {
+    try { const s = JSON.parse(localStorage.getItem('modul.session.v1') || 'null'); if (s && s.signedIn === false) { location.replace('Sign In.dc.html?next=' + encodeURIComponent(location.pathname.split('/').pop() + location.hash)); return; } } catch (e) {}
+    this.readPref();
+    this._rs = () => this.setState({ vw: window.innerWidth }); window.addEventListener('resize', this._rs); this._rs();
+    if (window.ResizeObserver) { this._ro = new ResizeObserver(() => { if (window.innerWidth !== this.state.vw) this._rs(); }); this._ro.observe(document.documentElement); }
+    window.addEventListener('load', this._rs);
+    this._st = e => { if (e.key === 'modul.settings.v1') this.readPref(); };
+    this._pref = () => this.readPref();
+    window.addEventListener('storage', this._st); window.addEventListener('modul:settings', this._pref);
+    this._key = e => { if (e.key === 'Escape' && this.state.confirm && !this.state.busy) { e.stopPropagation(); this.setState({ confirm: false, err: '' }); } };
+    window.addEventListener('keydown', this._key, true);
+    this._so = () => this.setState({ confirm: true, err: '' }); window.addEventListener('modul:signout', this._so);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._rs); window.removeEventListener('load', this._rs); window.removeEventListener('storage', this._st); window.removeEventListener('modul:settings', this._pref); window.removeEventListener('keydown', this._key, true); window.removeEventListener('modul:signout', this._so); this._ro && this._ro.disconnect(); }
+  readPref() { try { const s = JSON.parse(localStorage.getItem('modul.settings.v1') || '{}'); this.setState({ pref: (s.appearance && s.appearance.sidebar) || 'auto', profile: s.profile || {} }); } catch (e) {} }
+  signOut() {
+    this.setState({ busy: true, err: '' });
+    try {
+      Object.keys(sessionStorage).filter(k => k.indexOf('modul.') === 0).forEach(k => sessionStorage.removeItem(k));
+      localStorage.setItem('modul.session.v1', JSON.stringify({ signedIn: false, at: new Date().toISOString() }));
+      location.replace('Sign In.dc.html');
+    } catch (e) { this.setState({ busy: false, err: 'Your session couldn’t be cleared in this browser. Close other MODUL tabs and try again.' }); }
+  }
+  renderVals() {
+    const active = this.props.active || ''; const vw = this.state.vw, pref = this.state.pref;
+    const compact = pref === 'icons' ? true : pref === 'labels' ? vw < 720 : vw < 900;
+    const COUNTS = { projects: [14, 'ok'], approvals: [6, 'alert'] };
+    const link = ([id, label, icon, href]) => { const on = id === active; const c = COUNTS[id];
+      return { label, icon, href, on, tour: 'nav-' + id, current: on ? 'page' : undefined, tip: compact ? label : undefined,
+        bg: on ? 'var(--nav-active-bg)' : 'transparent', hover: on ? 'var(--nav-active-bg)' : 'var(--nav-hover-bg)',
+        fg: on ? 'var(--nav-active-fg)' : 'var(--text-body)', ic: on ? 'var(--nav-active-icon)' : 'var(--text-strong)', weight: on ? 600 : 500,
+        hasCount: !!c && !on, count: c ? c[0] : '', countBg: c && c[1] === 'alert' ? 'var(--nav-alert-bg)' : 'var(--nav-badge-bg)', countFg: c && c[1] === 'alert' ? 'var(--nav-alert-fg)' : 'var(--nav-badge-fg)' }; };
+    const NAV = [['overview', 'Overview', 'layout-grid', 'Overview Dashboard.dc.html'], ['projects', 'Projects', 'folder-kanban', 'Projects.dc.html'], ['clients', 'Clients', 'users', 'Clients.dc.html'],
+      ['approvals', 'Approvals', 'stamp', 'Approvals.dc.html'], ['tasks', 'Tasks & Team', 'list-todo', 'Tasks.dc.html'], ['documents', 'Documents', 'file-text', 'Documents.dc.html'], ['reports', 'Reports', 'chart-column', 'Reports.dc.html']];
+    const W = compact ? 72 : 256;
+    if (typeof document !== 'undefined') document.documentElement.style.setProperty('--nav-w', W + 'px');
+    const p = this.state.profile || {}; const name = p.name || 'Elena Marsh';
+    const mac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform || '');
+    return {
+      w: W, padOut: compact ? 12 : 20, padX: compact ? 0 : 16, justify: compact ? 'center' : 'flex-start', showLabels: !compact,
+      cardPad: compact ? '4px' : '10px 14px 10px 10px',
+      items: NAV.map(link), utils: [['settings', 'Settings', 'settings', 'Settings.dc.html'], ['help', 'Help', 'circle-help', 'Help.dc.html']].map(link),
+      shortcut: mac ? '⌘ K' : 'Ctrl K', searchTip: compact ? 'Search' : undefined,
+      openSearch: () => window.dispatchEvent(new CustomEvent('modul:search')),
+      me: { name, role: p.role || 'Studio owner', src: p.avatar || (window.ModulPeople && window.ModulPeople.photo(name)) },
+      profileTip: compact ? name : undefined,
+      outTip: compact ? 'Sign out' : undefined,
+      askSignOut: () => { this.setState({ confirm: true, err: '' }); setTimeout(() => { const b = this._cancel && this._cancel.querySelector('button'); b && b.focus(); }, 30); },
+      confirmOpen: this.state.confirm, busy: this.state.busy, hasErr: !!this.state.err, err: this.state.err, cancelRef: this.cancelRef,
+      confirmLabel: this.state.busy ? 'Signing out…' : 'Sign out',
+      cancel: () => this.setState({ confirm: false, err: '' }), confirm: () => this.signOut(),
+      scrimDown: e => { if (e.target === e.currentTarget && !this.state.busy) this.setState({ confirm: false, err: '' }); },
+    };
+  }
+}
+</script>
+</body>
+</html>

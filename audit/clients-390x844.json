@@ -1,0 +1,90 @@
+[
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 50px",
+    "selector": "div:nth-of-type(2) > section:nth-of-type(1) > div > div > span > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 50px",
+    "selector": "section:nth-of-type(2) > div > div > span > span"
+  },
+  {
+    "antipattern": "text-overflow",
+    "name": "Content overflowing its container",
+    "description": "Content renders wider than its container and the spill does harm: a clipping ancestor cuts it off, it runs into another box, or it reaches the viewport edge. Let text wrap, constrain widths, or give the region a deliberate scroll affordance.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "span.sc-interp overflows its container by 57px",
+    "selector": "section:nth-of-type(3) > div > div > span > span"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "placeholder \"Search clients, contacts, email, phone\" 3.3:1 (need 4.5:1) — text #757575 on #23262f",
+    "selector": "input"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "div:nth-of-type(2) > section:nth-of-type(1)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(2)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "section:nth-of-type(3)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://localhost:5175/clients.html",
+    "line": 0,
+    "snippet": "Card inside card",
+    "selector": "main > div > section"
+  }
+]

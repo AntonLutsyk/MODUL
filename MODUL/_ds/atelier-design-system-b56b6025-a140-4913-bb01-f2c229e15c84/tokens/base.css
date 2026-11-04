@@ -1,0 +1,8 @@
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:var(--font-sans);font-size:var(--text-body);line-height:var(--lh-body);color:var(--text-body);background:var(--bg-app);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 0}
+a{color:var(--text-accent);text-decoration:none}
+a:hover{color:var(--sage-600);text-decoration:underline}
+button,input,select,textarea{font-family:inherit}
+::selection{background:var(--sage-200)}
+.at-num{font-variant-numeric:tabular-nums}

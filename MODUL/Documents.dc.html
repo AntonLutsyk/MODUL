@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+<link rel="preload" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js" as="script">
+<style>html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}</style>
+<link rel="preload" href="SideNav.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="HeaderUtilities.dc.html" as="fetch" crossorigin="anonymous">
+<link rel="modulepreload" href="modul-index.js">
+<link rel="stylesheet" href="./modul-theme.css">
+<script src="./modul-theme.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./modul-theme.css">
+  <script src="./modul-theme.js"></script>
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/tokens/base.css">
+  <link rel="stylesheet" href="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/styles.css">
+  <script src="_ds/atelier-design-system-b56b6025-a140-4913-bb01-f2c229e15c84/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html,body{margin:0;background:#E7E7EA;font-family:var(--font-sans);color:var(--text-body)}
+    a{color:var(--text-accent);text-decoration:none}
+    a:hover{color:var(--sage-700);text-decoration:underline}
+    :root{--sage-700:#3D6047;--sage-600:#4C7656;--sage-500:#67906F;--sage-400:#8DB091;--sage-300:#B3CDB4;--sage-200:#D2E3D1;--sage-100:#E3EFE2;--sage-50:#F0F6EF;--surface-inverse:var(--sage-600);--graphite-700:var(--sage-700);--phase-documents:#3D3C38;--terracotta-600:#A9472D;--ochre-600:#8A5F0E;--gray-500:#6E6A62;--slate-600:#46698C;--bg-app:#F4F4F6;--bg-frame:#E7E7EA;--surface-inset:#F4F4F6;--surface-muted:#EFEFF1;--surface-hover:#EFEFF1;--surface-pressed:#E6E6E9;--border-subtle:#EBEBEE}
+    button:focus-visible,[tabindex]:focus-visible,a:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+    div[style*="inset: 0px"][style*="z-index: 100"]{overflow-y:auto;align-items:flex-start !important}
+    div[style*="inset: 0px"][style*="z-index: 100"]>[role="dialog"]{margin:auto 0}
+    aside[role="dialog"] > div:first-child > *{flex-shrink:0}
+    @keyframes atl-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+      @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
+      @container kpi (max-width: 811px){[data-kpi]>:last-child:nth-child(odd)>*{grid-column:1 / -1}}
+  </style>
+</helmet>
+<div data-frame="" style="height:100vh;box-sizing:border-box;margin:0;padding:0 14px 14px 0;background:var(--surface-shell, var(--surface-card));display:grid;grid-template-columns:{{ shellCols }};grid-template-rows:76px minmax(0,1fr);overflow:hidden">
+  <a href="Overview Dashboard.dc.html" aria-label="MODUL overview" style="grid-column:1;grid-row:1;display:flex;align-items:center;padding:0 24px;box-sizing:border-box;width:var(--nav-w, 256px);min-width:fit-content">
+    <img src="assets/modul-logo-v4.png" alt="MODUL" data-logo="light" style="height:28px;width:auto;max-width:none;display:block">
+    <img src="assets/modul-logo-v4-dark.png" alt="MODUL" data-logo="dark" style="height:28px;width:auto;max-width:none;display:block">
+  </a>
+  <header style="grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:flex-end;gap:16px;min-width:0;padding:0 10px 0 0">
+      <dc-import name="HeaderUtilities" style="flex:1;min-width:0;width:100%" hint-size="100%,60px"></dc-import>
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.UserMenu" name="{{ me.name }}" email="{{ me.email }}" hint-size="262px,60px"></x-import>
+      </sc-if>
+    </header>
+  <div style="grid-column:1;grid-row:2;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none"><dc-import name="SideNav" active="documents" hint-size="256px,560px"></dc-import></div>
+
+  <main data-screen-label="Documents" style="grid-column:2;grid-row:2;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;overscroll-behavior:contain;background:var(--bg-app);border-radius:28px;padding:28px 28px 40px;box-sizing:border-box;min-width:0;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:4px;margin-bottom:8px">
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+        <h1 style="margin:0;font-size:var(--text-display);line-height:var(--lh-display);font-weight:var(--weight-heading);letter-spacing:var(--tracking-display);color:var(--text-strong)">Documents</h1>
+        <p style="margin:0;font-size:var(--text-lead);line-height:var(--lh-lead);color:var(--text-muted)">{{ subtitle }}</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <sc-if value="{{ roleNote }}" hint-placeholder-val="{{ false }}">
+          <span style="font-size:13px;color:var(--text-muted);max-width:260px;text-align:right">{{ roleNoteText }}</span>
+        </sc-if>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="lg" icon="upload" disabled="{{ readOnly }}" on-click="{{ openUpload }}" hint-size="190px,48px">Upload document</x-import>
+      </div>
+    </div>
+
+    <div data-kpi="" style="container-type:inline-size;container-name:kpi;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px">
+      <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="3">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Card" padding="20px" selected="{{ k.selected }}" on-click="{{ k.onClick }}" hint-size="100%,108px">
+          <div role="button" tabindex="0" aria-pressed="{{ k.selected }}" aria-label="{{ k.aria }}" onKeyDown="{{ k.onKey }}" style="position:relative;display:flex;align-items:center;gap:{{ kGap }}px;border-radius:12px;min-height:68px">
+            <sc-if value="{{ kShowTile }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="width:{{ kTile }}px;height:{{ kTile }}px;flex-shrink:0;border-radius:16px;background:{{ k.iconBg }};color:{{ k.iconFg }};display:inline-flex;align-items:center;justify-content:center;transition:background var(--dur-base)">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ k.icon }}" size="{{ kIcon }}" hint-size="24px,24px"></x-import>
+            </span></sc-if>
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1;padding-right:30px">
+              <span style="font-size:var(--text-body);line-height:20px;font-weight:500;color:var(--text-strong);white-space:{{ kWs }};overflow:hidden;text-overflow:ellipsis">{{ k.label }}</span>
+              <div style="display:flex;align-items:baseline;column-gap:10px;flex-wrap:{{ kNoteWrap }};min-width:0">
+                <span style="font-size:var(--text-figure-lg);line-height:var(--lh-figure-lg);font-weight:var(--weight-figure);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;color:var(--text-strong)">{{ k.value }}</span>
+                <span style="font-size:14px;color:var(--text-muted);white-space:{{ kWs }};overflow:hidden;text-overflow:ellipsis;min-width:0">{{ k.note }}</span>
+              </div>
+            </div>
+            <div data-pop="{{ k.popKey }}" onClick="{{ k.stop }}" style="position:absolute;top:-4px;right:-4px">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="ellipsis" size="xs" variant="soft" active="{{ k.menuOpen }}" label="{{ k.menuAria }}" on-click="{{ k.toggleMenu }}" hint-size="28px,28px"></x-import>
+              <sc-if value="{{ k.menuOpen }}" hint-placeholder-val="{{ false }}">
+                <div role="menu" style="position:absolute;right:0;top:36px;z-index:40;width:220px;max-width:calc(100vw - 48px);background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-pop);padding:6px;display:flex;flex-direction:column;gap:2px">
+                  <sc-for list="{{ k.menu }}" as="m" hint-placeholder-count="2">
+                    <button type="button" role="menuitem" onClick="{{ m.onClick }}" style="display:flex;align-items:center;gap:10px;height:38px;padding:0 12px;border:0;border-radius:var(--radius-sm);background:transparent;font-family:inherit;font-size:var(--text-table);font-weight:500;color:var(--text-strong);cursor:pointer;text-align:left" style-hover="background:var(--surface-hover)">
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ m.icon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                      <span style="flex:1">{{ m.label }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </x-import>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+      <nav aria-label="Categories" style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:8px;min-width:0">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;min-width:0">
+          <sc-for list="{{ cats }}" as="ct" hint-placeholder-count="11">
+            <sc-if value="{{ ct.sep }}" hint-placeholder-val="{{ false }}">
+              <span aria-hidden="true" style="width:1px;height:24px;flex-shrink:0;background:var(--border-subtle);margin:0 6px"></span>
+            </sc-if>
+            <button type="button" aria-current="{{ ct.current }}" onClick="{{ ct.select }}" title="{{ ct.label }}" style="display:inline-flex;align-items:center;gap:8px;height:40px;flex-shrink:0;padding:0 14px;border:0;border-radius:12px;background:{{ ct.bg }};color:{{ ct.fg }};font-family:inherit;font-size:14px;font-weight:{{ ct.weight }};cursor:pointer;white-space:nowrap;transition:background var(--dur-fast)" style-hover="background:{{ ct.hover }}">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ ct.icon }}" size="{{ 17 }}" hint-size="17px,17px"></x-import>
+              <span>{{ ct.label }}</span>
+              <span style="min-width:20px;height:20px;padding:0 6px;box-sizing:border-box;border-radius:999px;background:{{ ct.countBg }};font-size:12px;line-height:20px;font-weight:600;text-align:center;color:{{ ct.countFg }};font-variant-numeric:tabular-nums">{{ ct.count }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </nav>
+
+      <section style="background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--card-padding);display:flex;flex-direction:column;gap:14px;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div style="display:flex;align-items:baseline;gap:10px;min-width:0">
+            <span style="font-size:var(--text-title);line-height:var(--lh-title);font-weight:var(--weight-heading);letter-spacing:var(--tracking-tight);color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ catTitle }}</span>
+            <span style="font-size:14px;color:var(--text-subtle);font-variant-numeric:tabular-nums">{{ countLabel }}</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <sc-if value="{{ showCatSelect }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" size="sm" value="{{ cat }}" options="{{ catOpts }}" on-change="{{ setCat }}" hint-size="170px,36px"></x-import>
+            </sc-if>
+            <div style="position:relative;display:flex;align-items:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" icon="search" size="sm" placeholder="Search name, project, client, type" value="{{ q }}" on-change="{{ setQ }}" style="width:{{ searchW }}px" hint-size="280px,36px"></x-import>
+              <sc-if value="{{ hasQ }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;right:4px;top:4px">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="xs" label="Clear search" on-click="{{ clearQ }}" hint-size="28px,28px"></x-import>
+                </div>
+              </sc-if>
+            </div>
+            <div data-pop="filters" style="position:relative">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="{{ filterBtnVariant }}" icon="sliders-horizontal" on-click="{{ toggleFilters }}" hint-size="100px,36px">{{ filterBtnLabel }}</x-import>
+              <sc-if value="{{ filtersOpen }}" hint-placeholder-val="{{ false }}">
+                <div role="dialog" aria-label="Filters" style="position:absolute;right:0;top:44px;z-index:45;width:370px;max-width:calc(100vw - 48px);background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-pop);padding:18px;display:flex;flex-direction:column;gap:14px">
+                  <div style="display:flex;justify-content:space-between;align-items:center">
+                    <span style="font-size:16px;font-weight:600;color:var(--text-strong)">Filters</span>
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="sm" variant="soft" label="Close filters" on-click="{{ toggleFilters }}" hint-size="36px,36px"></x-import>
+                  </div>
+                  <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px 12px;align-items:center">
+                    <sc-for list="{{ filterFields }}" as="ff" hint-placeholder-count="6">
+                      <span style="font-size:13px;font-weight:600;color:var(--text-body)">{{ ff.label }}</span>
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" size="sm" value="{{ ff.value }}" options="{{ ff.options }}" on-change="{{ ff.onChange }}" align="right" hint-size="170px,32px"></x-import>
+                    </sc-for>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;gap:8px">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" on-click="{{ clearAll }}" hint-size="80px,36px">Clear all</x-import>
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" on-click="{{ toggleFilters }}" hint-size="140px,36px">{{ showResultsLabel }}</x-import>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+            <div role="tablist" aria-label="View" style="display:inline-flex;align-items:center;gap:2px;height:40px;padding:3px;box-sizing:border-box;border-radius:999px;border:1px solid var(--border-subtle);background:var(--surface-card)">
+              <sc-for list="{{ views }}" as="vw" hint-placeholder-count="2">
+                <button type="button" role="tab" aria-selected="{{ vw.on }}" onClick="{{ vw.pick }}" style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:0;border-radius:999px;background:{{ vw.bg }};color:{{ vw.fg }};font-family:inherit;font-size:13px;font-weight:{{ vw.weight }};cursor:pointer;transition:background var(--dur-fast)" style-hover="background:{{ vw.hover }}">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ vw.icon }}" size="{{ 15 }}" hint-size="15px,15px"></x-import>
+                  <span>{{ vw.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <sc-if value="{{ hasChips }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ chips }}" as="c" hint-placeholder-count="2">
+              <span style="display:inline-flex;align-items:center;gap:4px;height:30px;padding:0 4px 0 12px;border-radius:999px;background:var(--surface-muted);font-size:13px;font-weight:500;color:var(--text-strong)">
+                <span style="color:var(--text-muted)">{{ c.key }}</span>
+                <span>{{ c.value }}</span>
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="xs" label="{{ c.aria }}" on-click="{{ c.remove }}" style="width:24px;height:24px" hint-size="24px,24px"></x-import>
+              </span>
+            </sc-for>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" on-click="{{ clearAll }}" style="height:30px" hint-size="80px,30px">Clear all</x-import>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ hasSelection }}" hint-placeholder-val="{{ false }}">
+          <div data-on-inverse="" role="region" aria-label="Bulk actions" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 8px 8px 18px;border-radius:999px;background:var(--surface-inverse);color:#fff">
+            <span style="font-size:14px;font-weight:600">{{ selLabel }}</span>
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" size="sm" variant="ghost" placeholder="Move to…" options="{{ moveCatOpts }}" on-change="{{ bulkMove }}" style="background:#fff;border-radius:999px" hint-size="150px,32px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="inverse" icon="box" on-click="{{ bulkArchive }}" hint-size="100px,36px">{{ bulkArchiveLabel }}</x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="sm" variant="glass" label="Clear selection" on-click="{{ clearSel }}" hint-size="36px,36px"></x-import>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+          <div aria-busy="true" aria-label="Loading documents" style="display:flex;flex-direction:column">
+            <div style="height:48px;border-radius:var(--radius-tile);background:var(--surface-inset)"></div>
+            <sc-for list="{{ skeleton }}" as="s" hint-placeholder-count="6">
+              <div style="display:grid;grid-template-columns:20px 40px 2fr 1fr 1fr 0.7fr 0.9fr;gap:16px;align-items:center;padding:0 16px;min-height:64px;border-bottom:1px solid var(--border-subtle)">
+                <div style="width:18px;height:18px;border-radius:6px;background:var(--limestone-100)"></div>
+                <div style="width:40px;height:40px;border-radius:12px;background:var(--limestone-100);animation:atl-pulse 1.4s ease-in-out infinite"></div>
+                <div style="height:10px;width:62%;border-radius:99px;background:var(--limestone-200)"></div>
+                <div style="height:10px;width:70%;border-radius:99px;background:var(--limestone-100)"></div>
+                <div style="height:10px;width:60%;border-radius:99px;background:var(--limestone-100)"></div>
+                <div style="height:10px;width:50%;border-radius:99px;background:var(--limestone-100)"></div>
+                <div style="height:22px;width:90px;border-radius:99px;background:var(--limestone-100)"></div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:56px 24px;text-align:center">
+            <span style="width:52px;height:52px;border-radius:999px;background:var(--status-negative-bg);color:var(--status-negative);display:inline-flex;align-items:center;justify-content:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+            </span>
+            <span style="font-size:var(--text-heading);font-weight:var(--weight-heading);color:var(--text-strong)">Documents didn’t load</span>
+            <span style="font-size:var(--text-body);color:var(--text-muted);max-width:420px">The file index didn’t respond. Your files are safe, so try again in a moment.</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="refresh-cw" on-click="{{ retry }}" hint-size="96px,36px">Try again</x-import>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:56px 24px;text-align:center">
+            <span style="width:52px;height:52px;border-radius:999px;background:var(--accent-soft);color:var(--accent);display:inline-flex;align-items:center;justify-content:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="files" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+            </span>
+            <span style="font-size:var(--text-heading);font-weight:var(--weight-heading);color:var(--text-strong)">No documents yet</span>
+            <span style="font-size:var(--text-body);color:var(--text-muted);max-width:440px">Upload briefs, drawings and contracts and file them under a project, so the team and the client work from the same version.</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" icon="upload" disabled="{{ readOnly }}" on-click="{{ openUpload }}" hint-size="180px,44px">Upload document</x-import>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isNoResults }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:56px 24px;text-align:center">
+            <span style="width:52px;height:52px;border-radius:999px;background:var(--surface-muted);color:var(--text-strong);display:inline-flex;align-items:center;justify-content:center">
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ noResults.icon }}" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+            </span>
+            <span style="font-size:var(--text-heading);font-weight:var(--weight-heading);color:var(--text-strong)">{{ noResults.title }}</span>
+            <span style="font-size:var(--text-body);color:var(--text-muted);max-width:440px">{{ noResults.body }}</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" on-click="{{ noResults.action }}" hint-size="140px,36px">{{ noResults.cta }}</x-import>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showList }}" hint-placeholder-val="{{ true }}">
+          <div role="table" aria-label="Documents" style="display:flex;flex-direction:column;min-width:0">
+            <div role="row" style="display:grid;grid-template-columns:{{ tableCols }};column-gap:14px;align-items:center;height:48px;padding:0 16px;border-radius:var(--radius-tile);background:var(--surface-inset)">
+              <span role="columnheader" title="Select all on this page" style="display:flex">
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Checkbox" checked="{{ pageAllSel }}" on-change="{{ togglePageSel }}" hint-size="20px,20px"></x-import>
+              </span>
+              <sc-for list="{{ headers }}" as="hd" hint-placeholder-count="8">
+                <button type="button" role="columnheader" aria-sort="{{ hd.aria }}" onClick="{{ hd.onClick }}" disabled="{{ hd.static }}" style="display:flex;align-items:center;gap:4px;border:0;background:transparent;padding:4px 0;font-family:inherit;font-size:var(--text-table);font-weight:500;color:{{ hd.color }};cursor:{{ hd.cursor }};white-space:nowrap;min-width:0;border-radius:6px">
+                  <span style="overflow:hidden;text-overflow:ellipsis">{{ hd.label }}</span>
+                  <sc-if value="{{ hd.on }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ hd.icon }}" size="{{ 14 }}" hint-size="14px,14px"></x-import>
+                  </sc-if>
+                </button>
+              </sc-for>
+            </div>
+            <sc-for list="{{ rows }}" as="r" hint-placeholder-count="10">
+              <div role="row" tabindex="0" aria-selected="{{ r.selected }}" onKeyDown="{{ r.onKey }}" onClick="{{ r.open }}" style="display:grid;grid-template-columns:{{ tableCols }};column-gap:14px;align-items:center;padding:0 16px;min-height:64px;border-bottom:1px solid var(--border-subtle);border-radius:12px;background:{{ r.bg }};cursor:pointer;transition:background var(--dur-fast)" style-hover="background:var(--surface-inset)">
+                <span role="cell" onClick="{{ r.stop }}" title="Select document" style="display:flex">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Checkbox" checked="{{ r.selected }}" on-change="{{ r.toggleSel }}" hint-size="20px,20px"></x-import>
+                </span>
+                <div role="cell" style="display:flex;align-items:center;gap:12px;min-width:0;padding:10px 0">
+                  <span aria-hidden="true" style="width:40px;height:40px;border-radius:10px;background:{{ r.extBg }};color:{{ r.extFg }};display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:600;letter-spacing:.03em">{{ r.ext }}</span>
+                  <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                    <span title="{{ r.name }}" style="font-size:var(--text-table);line-height:var(--lh-table);font-weight:var(--weight-strong);color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</span>
+                    <span title="{{ r.sub }}" style="display:inline-flex;align-items:center;gap:5px;font-size:var(--text-xs);color:{{ r.subColor }};font-weight:{{ r.subWeight }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+                      <sc-if value="{{ r.subAlert }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 12 }}" hint-size="12px,12px"></x-import></sc-if>{{ r.sub }}
+                    </span>
+                  </div>
+                </div>
+                <sc-if value="{{ cols.category }}" hint-placeholder-val="{{ true }}">
+                  <span role="cell" style="font-size:14px;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.category }}</span>
+                </sc-if>
+                <sc-if value="{{ cols.project }}" hint-placeholder-val="{{ true }}">
+                  <div role="cell" style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                    <span title="{{ r.project }}" style="font-size:14px;color:{{ r.projectColor }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.project }}</span>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.client }}</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ cols.version }}" hint-placeholder-val="{{ true }}">
+                  <div role="cell" style="display:flex;flex-direction:column;gap:2px;font-variant-numeric:tabular-nums">
+                    <span style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap">{{ r.version }}</span>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap">{{ r.versionNote }}</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ cols.by }}" hint-placeholder-val="{{ true }}">
+                  <div role="cell" style="display:flex;align-items:center;gap:8px;min-width:0">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Avatar" name="{{ r.by }}" size="xs" hint-size="24px,24px"></x-import>
+                    <span title="{{ r.by }}" style="font-size:14px;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.by }}</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ cols.modified }}" hint-placeholder-val="{{ true }}">
+                  <span role="cell" style="font-size:14px;color:var(--text-strong);font-variant-numeric:tabular-nums;white-space:nowrap">{{ r.modified }}</span>
+                </sc-if>
+                <sc-if value="{{ cols.approval }}" hint-placeholder-val="{{ true }}">
+                  <div role="cell" style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0">
+                    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ r.apTone }}" icon="{{ r.apIcon }}" hint-size="110px,24px">{{ r.apLabel }}</x-import>
+                    <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap">{{ r.apNote }}</span>
+                  </div>
+                </sc-if>
+                <div role="cell" data-pop="{{ r.popKey }}" onClick="{{ r.stop }}" style="position:relative;display:flex;justify-content:flex-end">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="ellipsis-vertical" size="sm" active="{{ r.menuOpen }}" label="{{ r.menuAria }}" on-click="{{ r.toggleMenu }}" hint-size="36px,36px"></x-import>
+                  <sc-if value="{{ r.menuOpen }}" hint-placeholder-val="{{ false }}">
+                    <div role="menu" style="position:absolute;right:0;top:42px;z-index:40;width:226px;max-width:calc(100vw - 48px);background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-pop);padding:6px;display:flex;flex-direction:column;gap:2px">
+                      <sc-for list="{{ r.menu }}" as="m" hint-placeholder-count="6">
+                        <button type="button" role="menuitem" onClick="{{ m.onClick }}" style="display:flex;align-items:center;gap:10px;height:38px;padding:0 12px;border:0;border-radius:var(--radius-sm);background:transparent;font-family:inherit;font-size:var(--text-table);font-weight:500;color:{{ m.color }};cursor:pointer;text-align:left" style-hover="background:var(--surface-hover)">
+                          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ m.icon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                          <span style="flex:1">{{ m.label }}</span>
+                        </button>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px">
+            <sc-for list="{{ rows }}" as="g" hint-placeholder-count="8">
+              <div role="button" tabindex="0" aria-label="{{ g.aria }}" onClick="{{ g.open }}" onKeyDown="{{ g.onKey }}" style="display:flex;flex-direction:column;gap:10px;padding:10px 10px 14px;border-radius:var(--radius-tile);background:{{ g.cardBg }};cursor:pointer;outline:{{ g.outline }}" style-hover="background:var(--surface-muted)">
+                <div style="position:relative;width:100%;aspect-ratio:4 / 3;border-radius:12px;overflow:hidden;background:var(--surface-card);display:flex;align-items:center;justify-content:center">
+                  <sc-if value="{{ g.slotImage }}" hint-placeholder-val="{{ false }}">
+                    <image-slot id="{{ g.slotId }}" shape="rounded" radius="12" placeholder="Drop a preview"></image-slot>
+                  </sc-if>
+                  <sc-if value="{{ g.blobImage }}" hint-placeholder-val="{{ false }}">
+                    <div role="img" aria-label="{{ g.name }}" style="width:100%;height:100%;background-image:{{ g.bgImage }};background-size:cover;background-position:center"></div>
+                  </sc-if>
+                  <sc-if value="{{ g.fileTile }}" hint-placeholder-val="{{ true }}">
+                    <span aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-muted)">
+                      <span style="width:56px;height:68px;border-radius:10px;background:{{ g.extBg }};color:{{ g.extFg }};display:inline-flex;align-items:flex-end;justify-content:center;padding-bottom:10px;box-sizing:border-box;font-size:12px;font-weight:700;letter-spacing:.04em">{{ g.ext }}</span>
+                      <span style="font-size:12px">{{ g.size }}</span>
+                    </span>
+                  </sc-if>
+                  <sc-if value="{{ g.subAlert }}" hint-placeholder-val="{{ false }}">
+                    <span style="position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;background:var(--status-negative-bg);font-size:12px;font-weight:600;color:var(--status-negative)">
+                      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 11 }}" hint-size="11px,11px"></x-import>{{ g.alertShort }}
+                    </span>
+                  </sc-if>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:2px;padding:0 4px;min-width:0">
+                  <span title="{{ g.name }}" style="font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ g.name }}</span>
+                  <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ g.ext }} · {{ g.project }} · {{ g.version }}</span>
+                </div>
+                <div style="display:flex;padding:0 4px">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ g.apTone }}" icon="{{ g.apIcon }}" hint-size="110px,24px">{{ g.apLabel }}</x-import>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showPager }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:4px">
+            <span style="font-size:14px;color:var(--text-muted);font-variant-numeric:tabular-nums">{{ pagerLabel }}</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;color:var(--text-muted);font-variant-numeric:tabular-nums">{{ pageLabel }}</span>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="chevron-left" size="sm" variant="outline" label="Previous page" disabled="{{ prevDisabled }}" on-click="{{ prevPage }}" hint-size="36px,36px"></x-import>
+              <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="chevron-right" size="sm" variant="outline" label="Next page" disabled="{{ nextDisabled }}" on-click="{{ nextPage }}" hint-size="36px,36px"></x-import>
+            </div>
+          </div>
+        </sc-if>
+      </section>
+    </div>
+  </main>
+</div>
+
+<sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeDoc }}" style="position:fixed;inset:0;z-index:80;background:rgba(23,23,21,.28)"></div>
+  <aside role="dialog" aria-modal="true" aria-label="{{ dk.aria }}" style="position:fixed;top:12px;right:12px;bottom:12px;z-index:81;width:{{ drawerW }};max-width:calc(100vw - 24px);box-sizing:border-box;background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-pop);display:flex;flex-direction:column">
+    <div style="flex:1;min-height:0;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+          <span style="font-size:13px;color:var(--text-muted)">{{ dk.category }}</span>
+          <span style="font-size:var(--text-title);line-height:var(--lh-title);font-weight:var(--weight-heading);letter-spacing:var(--tracking-tight);color:var(--text-strong);word-break:break-word">{{ dk.name }}</span>
+        </div>
+        <div data-pop="dmenu" style="position:relative;display:flex;gap:6px">
+          <sc-if value="{{ dk.canEdit }}" hint-placeholder-val="{{ true }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="ellipsis-vertical" size="sm" variant="soft" label="More actions" active="{{ dk.menuOpen }}" on-click="{{ dk.toggleMenu }}" hint-size="36px,36px"></x-import>
+          </sc-if>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="x" size="sm" variant="soft" label="Close document" on-click="{{ closeDoc }}" hint-size="36px,36px"></x-import>
+          <sc-if value="{{ dk.menuOpen }}" hint-placeholder-val="{{ false }}">
+            <div role="menu" style="position:absolute;right:42px;top:42px;z-index:40;width:200px;max-width:calc(100vw - 48px);background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-pop);padding:6px;display:flex;flex-direction:column;gap:2px">
+              <sc-for list="{{ dk.menu }}" as="m" hint-placeholder-count="3">
+                <button type="button" role="menuitem" onClick="{{ m.onClick }}" style="display:flex;align-items:center;gap:10px;height:38px;padding:0 12px;border:0;border-radius:var(--radius-sm);background:transparent;font-family:inherit;font-size:var(--text-table);font-weight:500;color:{{ m.color }};cursor:pointer;text-align:left" style-hover="background:var(--surface-hover)">
+                  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="{{ m.icon }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+                  <span style="flex:1">{{ m.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <sc-if value="{{ dk.archived }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-radius:12px;background:var(--surface-muted);font-size:14px;color:var(--text-body)">
+          <span>Archived. Hidden from projects and search, nothing deleted.</span>
+          <sc-if value="{{ dk.canEdit }}" hint-placeholder-val="{{ true }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" on-click="{{ dk.restore }}" hint-size="80px,32px">Restore</x-import>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <div style="position:relative;flex-shrink:0;width:100%;aspect-ratio:16 / 10;border-radius:var(--radius-tile);overflow:hidden;background:var(--surface-inset);display:flex;align-items:center;justify-content:center">
+        <sc-if value="{{ dk.slotImage }}" hint-placeholder-val="{{ false }}">
+          <image-slot id="{{ dk.slotId }}" shape="rounded" radius="16" placeholder="Drop a preview image"></image-slot>
+        </sc-if>
+        <sc-if value="{{ dk.blobImage }}" hint-placeholder-val="{{ false }}">
+          <div role="img" aria-label="{{ dk.name }}" style="width:100%;height:100%;background-image:{{ dk.bgImage }};background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+        </sc-if>
+        <sc-if value="{{ dk.fileTile }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px;text-align:center">
+            <span style="width:64px;height:78px;border-radius:12px;background:{{ dk.extBg }};color:{{ dk.extFg }};display:inline-flex;align-items:flex-end;justify-content:center;padding-bottom:12px;box-sizing:border-box;font-size:13px;font-weight:700;letter-spacing:.04em">{{ dk.ext }}</span>
+            <span style="font-size:13px;color:var(--text-muted);max-width:300px">{{ dk.previewNote }}</span>
+          </div>
+        </sc-if>
+        <sc-if value="{{ dk.unavailable }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px;text-align:center">
+            <span style="display:inline-flex;color:var(--status-negative)"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 26 }}" hint-size="26px,26px"></x-import></span>
+            <span style="font-size:var(--text-body-lg);font-weight:var(--weight-strong);color:var(--text-strong)">File unavailable</span>
+            <span style="font-size:13px;color:var(--text-body);max-width:320px">The stored file for {{ dk.version }} can’t be reached. Upload it again as a new version, or ask the uploader for a copy.</span>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 12px;align-items:baseline">
+        <sc-for list="{{ dk.facts }}" as="fa" hint-placeholder-count="7">
+          <span style="font-size:13px;color:var(--text-subtle)">{{ fa.label }}</span>
+          <sc-if value="{{ fa.isLink }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ fa.href }}" style="font-size:var(--text-table);font-weight:500;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ fa.value }}</a>
+          </sc-if>
+          <sc-if value="{{ fa.isText }}" hint-placeholder-val="{{ true }}">
+            <span style="font-size:var(--text-table);font-weight:500;color:{{ fa.color }};min-width:0;overflow:hidden;text-overflow:ellipsis">{{ fa.value }}</span>
+          </sc-if>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ dk.hasTags }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <sc-for list="{{ dk.tags }}" as="tg" hint-placeholder-count="2">
+            <span style="height:26px;padding:0 10px;border-radius:999px;background:var(--surface-muted);font-size:12px;font-weight:600;color:var(--text-body);display:inline-flex;align-items:center">{{ tg.t }}</span>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ dk.hasDesc }}" hint-placeholder-val="{{ false }}">
+        <span style="font-size:14px;line-height:21px;color:var(--text-body)">{{ dk.description }}</span>
+      </sc-if>
+
+      <sc-if value="{{ dk.hasApproval }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ dk.apHref }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-tile);background:var(--surface-inset);text-decoration:none;color:inherit" style-hover="background:var(--surface-muted)">
+          <span style="width:36px;height:36px;border-radius:999px;background:var(--surface-card);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="stamp" size="{{ 17 }}" hint-size="17px,17px"></x-import></span>
+          <span style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0">
+            <span style="font-size:14px;font-weight:600;color:var(--text-strong)">{{ dk.apTitle }}</span>
+            <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ dk.apMeta }}</span>
+          </span>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="arrow-up-right" size="{{ 16 }}" hint-size="16px,16px"></x-import>
+        </a>
+      </sc-if>
+
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:13px;font-weight:600;color:var(--text-muted)">Version history</span>
+        <sc-for list="{{ dk.versions }}" as="vv" hint-placeholder-count="2">
+          <div style="display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border-radius:14px;border:1px solid var(--border-subtle);background:{{ vv.bg }}">
+            <span style="font-size:14px;font-weight:700;color:var(--text-strong);font-variant-numeric:tabular-nums">{{ vv.id }}</span>
+            <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
+              <span style="font-size:13px;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ vv.meta }}</span>
+              <span style="font-size:var(--text-xs);color:var(--text-subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ vv.note }}</span>
+            </span>
+            <span style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
+              <sc-for list="{{ vv.tags }}" as="vt" hint-placeholder-count="1">
+                <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Badge" size="sm" tone="{{ vt.tone }}" hint-size="70px,24px">{{ vt.label }}</x-import>
+              </sc-for>
+            </span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;padding:16px 24px 24px;border-top:1px solid var(--border-subtle)">
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" icon="arrow-up-right" full-width="{{ true }}" disabled="{{ dk.fileDisabled }}" on-click="{{ dk.openFile }}" hint-size="100%,44px">Open</x-import>
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.IconButton" icon="download" variant="outline" label="Download" disabled="{{ dk.fileDisabled }}" on-click="{{ dk.download }}" hint-size="44px,44px"></x-import>
+      <sc-if value="{{ dk.canEdit }}" hint-placeholder-val="{{ true }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="outline" icon="upload" disabled="{{ dk.archived }}" on-click="{{ dk.replace }}" hint-size="150px,44px">New version</x-import>
+      </sc-if>
+    </div>
+  </aside>
+</sc-if>
+
+<sc-if value="{{ upOpen }}" hint-placeholder-val="{{ false }}">
+  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Dialog" title="{{ up.title }}" description="{{ up.desc }}" width="{{ 620 }}" on-close="{{ up.close }}" hint-size="620px,600px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <label onDragOver="{{ up.onDragOver }}" onDragLeave="{{ up.onDragLeave }}" onDrop="{{ up.onDrop }}" style="position:relative;display:flex;align-items:center;gap:14px;padding:18px;border-radius:var(--radius-tile);border:1.5px dashed {{ up.dropBorder }};background:{{ up.dropBg }};cursor:pointer">
+        <span style="width:44px;height:44px;border-radius:999px;background:var(--surface-card);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="upload" size="{{ 19 }}" hint-size="19px,19px"></x-import>
+        </span>
+        <span style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0">
+          <span style="font-size:14px;font-weight:600;color:var(--text-strong);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ up.dropTitle }}</span>
+          <span style="font-size:13px;color:var(--text-subtle)">{{ up.dropSub }}</span>
+        </span>
+        <input type="file" onChange="{{ up.onPick }}" disabled="{{ up.busy }}" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+      </label>
+      <sc-if value="{{ up.fileErr }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:13px;color:var(--status-negative);margin-top:-6px">{{ up.fileErr }}</span></sc-if>
+
+      <sc-if value="{{ up.dup }}" hint-placeholder-val="{{ false }}">
+        <div role="alert" style="display:flex;flex-direction:column;gap:10px;padding:12px 14px;border-radius:var(--radius-md);background:var(--status-warning-bg)">
+          <span style="font-size:14px;color:var(--text-body)">{{ up.dupText }}</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="outline" icon="layers" on-click="{{ up.asVersion }}" hint-size="170px,32px">Add as a new version</x-import>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" size="sm" variant="ghost" on-click="{{ up.keepBoth }}" hint-size="150px,32px">Keep both, rename</x-import>
+          </div>
+        </div>
+      </sc-if>
+
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Document name *" value="{{ uv.name }}" on-change="{{ us.name }}" error="{{ ue.name }}" shape="rounded" hint-size="100%,70px"></x-import>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:13px;font-weight:600;color:var(--text-body)">Category *</span>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" value="{{ uv.cat }}" options="{{ catChoice }}" on-change="{{ us.cat }}" placeholder="Choose a category" hint-size="220px,44px"></x-import>
+          <sc-if value="{{ ue.cat }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:13px;color:var(--status-negative)">{{ ue.cat }}</span></sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:13px;font-weight:600;color:var(--text-body)">Project</span>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" value="{{ uv.project }}" options="{{ projOpts }}" on-change="{{ us.project }}" placeholder="Choose a project" hint-size="220px,44px"></x-import>
+          <span style="font-size:var(--text-xs);color:{{ up.projHintColor }}">{{ up.projHint }}</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;align-items:start">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Version" value="{{ uv.version }}" on-change="{{ us.version }}" error="{{ ue.version }}" shape="rounded" hint-size="100%,70px"></x-import>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Tags" placeholder="e.g. kitchen, joinery" value="{{ uv.tags }}" on-change="{{ us.tags }}" hint="Separate with commas" shape="rounded" hint-size="100%,70px"></x-import>
+      </div>
+      <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Description" placeholder="What’s in this file" value="{{ uv.description }}" on-change="{{ us.description }}" shape="rounded" hint-size="100%,70px"></x-import>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:13px;font-weight:600;color:var(--text-body)">Who can see it</span>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.SegmentedControl" size="sm" options="{{ accessOpts }}" value="{{ uv.access }}" on-change="{{ us.access }}" hint-size="300px,40px"></x-import>
+        <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ up.accessHint }}</span>
+      </div>
+
+      <sc-if value="{{ up.showProgress }}" hint-placeholder-val="{{ false }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.ProgressBar" value="{{ up.pct }}" tone="{{ up.pctTone }}" label="{{ up.progLabel }}" value-label="{{ up.pctLabel }}" hint-size="100%,40px"></x-import>
+      </sc-if>
+      <sc-if value="{{ up.hasError }}" hint-placeholder-val="{{ false }}">
+        <div role="alert" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:var(--radius-md);background:var(--status-negative-bg);font-size:14px;color:var(--status-negative)">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="circle-alert" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+          <span style="flex:1">{{ up.error }}</span>
+        </div>
+      </sc-if>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--border-subtle);padding-top:16px">
+        <span style="font-size:var(--text-xs);color:var(--text-subtle);max-width:280px">Files stay in this browser tab in the prototype. Nothing is sent to a server.</span>
+        <div style="display:flex;gap:8px">
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="ghost" disabled="{{ up.busy }}" on-click="{{ up.close }}" hint-size="90px,44px">Cancel</x-import>
+          <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" icon="upload" disabled="{{ up.busy }}" on-click="{{ up.submit }}" hint-size="120px,44px">{{ up.submitLabel }}</x-import>
+        </div>
+      </div>
+    </div>
+  </x-import>
+</sc-if>
+
+<sc-if value="{{ dlgOpen }}" hint-placeholder-val="{{ false }}">
+  <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Dialog" title="{{ dl.title }}" description="{{ dl.desc }}" width="{{ 500 }}" on-close="{{ dl.cancel }}" hint-size="500px,320px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <sc-if value="{{ dl.isRename }}" hint-placeholder-val="{{ false }}">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="Name" value="{{ dl.name }}" on-change="{{ dl.setName }}" error="{{ dl.nameErr }}" shape="rounded" hint-size="100%,70px"></x-import>
+      </sc-if>
+      <sc-if value="{{ dl.isMove }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:600;color:var(--text-body)">Category</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" value="{{ dl.cat }}" options="{{ catChoice }}" on-change="{{ dl.setCat }}" hint-size="200px,44px"></x-import>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:600;color:var(--text-body)">Project</span>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Select" value="{{ dl.project }}" options="{{ projOpts }}" on-change="{{ dl.setProject }}" placeholder="Choose a project" hint-size="200px,44px"></x-import>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ dl.isReplace }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <label onDragOver="{{ dl.onDragOver }}" onDrop="{{ dl.onDrop }}" style="position:relative;display:flex;align-items:center;gap:12px;padding:14px;border-radius:var(--radius-tile);border:1.5px dashed var(--border-default);background:var(--surface-inset);cursor:pointer">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="upload" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+            <span style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0">
+              <span style="font-size:14px;font-weight:600;color:var(--text-strong);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dl.fileLabel }}</span>
+              <span style="font-size:var(--text-xs);color:var(--text-subtle)">{{ dl.fileSub }}</span>
+            </span>
+            <input type="file" onChange="{{ dl.onPick }}" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+          </label>
+          <sc-if value="{{ dl.fileErr }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size:13px;color:var(--status-negative);margin-top:-8px">{{ dl.fileErr }}</span></sc-if>
+          <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;align-items:start">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="New version" value="{{ dl.version }}" on-change="{{ dl.setVersion }}" error="{{ dl.versionErr }}" shape="rounded" hint-size="100%,70px"></x-import>
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Input" label="What changed" placeholder="e.g. Island shortened to 2.4 m" value="{{ dl.note }}" on-change="{{ dl.setNote }}" shape="rounded" hint-size="100%,70px"></x-import>
+          </div>
+          <sc-if value="{{ dl.showProgress }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.ProgressBar" value="{{ dl.pct }}" tone="{{ dl.pctTone }}" label="{{ dl.progLabel }}" value-label="{{ dl.pctLabel }}" hint-size="100%,40px"></x-import>
+          </sc-if>
+        </div>
+      </sc-if>
+      <sc-if value="{{ dl.hasWarn }}" hint-placeholder-val="{{ false }}">
+        <span style="display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:19px;color:var(--text-muted)">
+          <span style="display:inline-flex;flex-shrink:0;margin-top:1px"><x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Icon" name="info" size="{{ 14 }}" hint-size="14px,14px"></x-import></span>{{ dl.warn }}
+        </span>
+      </sc-if>
+      <sc-if value="{{ dl.hasError }}" hint-placeholder-val="{{ false }}">
+        <div role="alert" style="padding:10px 14px;border-radius:var(--radius-md);background:var(--status-negative-bg);font-size:14px;color:var(--status-negative)">{{ dl.error }}</div>
+      </sc-if>
+      <div style="display:flex;justify-content:flex-end;gap:10px">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="ghost" disabled="{{ dl.busy }}" on-click="{{ dl.cancel }}" hint-size="90px,44px">Cancel</x-import>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" disabled="{{ dl.busy }}" on-click="{{ dl.ok }}" hint-size="130px,44px">{{ dl.okLabel }}</x-import>
+      </div>
+    </div>
+  </x-import>
+</sc-if>
+
+<sc-if value="{{ confirmOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:relative;z-index:120">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Dialog" title="{{ confirm.title }}" description="{{ confirm.desc }}" width="{{ 460 }}" on-close="{{ confirm.cancel }}" hint-size="460px,220px">
+      <div style="display:flex;justify-content:flex-end;gap:10px">
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" variant="ghost" on-click="{{ confirm.cancel }}" hint-size="100px,44px">{{ confirm.cancelLabel }}</x-import>
+        <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Button" on-click="{{ confirm.ok }}" hint-size="120px,44px">{{ confirm.okLabel }}</x-import>
+      </div>
+    </x-import>
+  </div>
+</sc-if>
+
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;right:24px;bottom:24px;z-index:140">
+    <x-import component-from-global-scope="ATELIERDesignSystem_b56b60.Toast" title="{{ toast.title }}" description="{{ toast.description }}" icon="{{ toast.icon }}" action="{{ toast.action }}" on-action="{{ toast.onAction }}" on-close="{{ closeToast }}" hint-size="340px,64px"></x-import>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;role&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;studio&quot;,&quot;client&quot;],&quot;default&quot;:&quot;studio&quot;,&quot;tsType&quot;:&quot;'studio'|'client'&quot;,&quot;section&quot;:&quot;Permissions&quot;},&quot;dataState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;live&quot;,&quot;loading&quot;,&quot;empty&quot;,&quot;error&quot;],&quot;default&quot;:&quot;live&quot;,&quot;tsType&quot;:&quot;'live'|'loading'|'empty'|'error'&quot;,&quot;section&quot;:&quot;States&quot;},&quot;uploadFails&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;States&quot;}}">
+const TODAY = new Date(2026, 9, 19);
+const TODAY_ISO = '2026-10-19';
+const ME = 'Elena Marsh';
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const PAGE = 12;
+const MAX_MB = 250;
+const ALLOWED = ['pdf', 'dwg', 'dxf', 'ifc', 'jpg', 'jpeg', 'png', 'webp', 'xlsx', 'xls', 'docx', 'doc', 'pptx', 'zip'];
+const CATS = [
+  ['briefs', 'Project briefs', 'clipboard-check'], ['concept', 'Concept design', 'pencil-ruler'], ['drawings', 'Drawings & plans', 'ruler'], ['technical', 'Technical documentation', 'layers'],
+  ['contracts', 'Contracts & proposals', 'receipt'], ['materials', 'Materials & finishes', 'sofa'], ['approvals', 'Approvals', 'stamp'], ['handover', 'Handover', 'folder-kanban'],
+];
+const CAT = Object.fromEntries(CATS.map(c => [c[0], c]));
+const PROJ = {
+  halden: ['Halden Residence', 'Mira Halden'], kvarn: ['Kvarn Offices, Level 3', 'Kvarn AB'], lumen: ['Lumen Gallery Annex', 'Lumen Foundation'], brask: ['Brask Townhouse', 'Ida & Karl Brask'],
+  nordre: ['Nordre Clinic', 'Nordre Health'], tarn: ['Tårn Apartments', 'Tårn Eiendom'], vik: ['Vik Café Interior', 'Vik & Co.'], orsa: ['Orsa Apartments', 'Orsa Living'],
+  strand: ['Strand Pavilion', 'Municipality of Lysaker'], ekeberg: ['Ekeberg School Extension', 'Oslo Kommune'], molle: ['Mølle Loft', 'Sara Mølle'],
+};
+const AP = { review: ['Awaiting review', 'info', 'clock'], changes: ['Changes requested', 'warning', 'refresh-cw'], approved: ['Approved', 'positive', 'check'], rejected: ['Rejected', 'negative', 'x'], withdrawn: ['Withdrawn', 'neutral', 'box'] };
+const KIND = ext => ['jpg', 'jpeg', 'png', 'webp'].includes(ext) ? 'image' : ext === 'pdf' ? 'pdf' : ['dwg', 'dxf', 'ifc'].includes(ext) ? 'cad' : ['xlsx', 'xls'].includes(ext) ? 'sheet' : 'other';
+const KIND_LABEL = { pdf: 'PDF', cad: 'CAD (DWG, DXF, IFC)', image: 'Image', sheet: 'Spreadsheet', other: 'Other' };
+const EXT_STYLE = { pdf: ['var(--status-negative-bg)', 'var(--status-negative)'], cad: ['var(--accent-soft)', 'var(--text-accent)'], image: ['var(--status-warning-bg)', 'var(--status-warning)'], sheet: ['var(--status-positive-bg)', 'var(--status-positive)'], other: ['var(--surface-muted)', 'var(--text-strong)'] };
+
+const V = (id, at, by, size, note, extra) => ({ id, at, by, size, note: note || '', ...extra });
+const Dc = o => ({ tags: [], description: '', access: 'studio', archived: false, approval: null, state: 'ok', ...o });
+const SEED = [
+  Dc({ id: 'd1', name: 'HAL-A-301 Kitchen elevations', ext: 'pdf', cat: 'drawings', project: 'halden', tags: ['kitchen', 'joinery'], access: 'client', approval: { id: 'ap1', status: 'review', ver: 'rev C' },
+    versions: [V('rev A', '2026-09-22', 'Aiko Tan', '4.2 MB'), V('rev B', '2026-09-30', 'Aiko Tan', '4.4 MB', 'Tall units moved to the north wall'), V('rev C', '2026-10-14', 'Aiko Tan', '4.5 MB', 'Island shortened to 2.4 m')] }),
+  Dc({ id: 'd2', name: 'HAL-A-110 Ground floor plan', ext: 'pdf', cat: 'drawings', project: 'halden', access: 'client', approval: { id: 'ap13', status: 'approved', ver: 'rev C' },
+    versions: [V('rev C', '2026-06-12', 'Elena Marsh', '3.0 MB'), V('rev D', '2026-10-08', 'Elena Marsh', '3.1 MB', 'Structural column added at grid C4')] }),
+  Dc({ id: 'd3', name: 'HAL Stone samples', ext: 'jpg', cat: 'materials', project: 'halden', tags: ['stone'], access: 'client', approval: { id: 'ap10', status: 'approved', ver: 'v1' }, versions: [V('v1', '2026-10-02', 'Elena Marsh', '3.1 MB')] }),
+  Dc({ id: 'd4', name: 'Client brief', ext: 'docx', cat: 'briefs', project: 'halden', access: 'client', versions: [V('rev A', '2025-02-14', 'Elena Marsh', '0.2 MB'), V('rev B', '2025-02-20', 'Elena Marsh', '0.2 MB', 'Added home office')] }),
+  Dc({ id: 'd5', name: 'Appointment contract', ext: 'pdf', cat: 'contracts', project: 'halden', access: 'client', tags: ['signed'], versions: [V('v1', '2025-03-10', 'Elena Marsh', '0.8 MB')] }),
+  Dc({ id: 'd6', name: 'KVA-E-501 Lighting schedule', ext: 'pdf', cat: 'technical', project: 'kvarn', tags: ['lighting'], access: 'client', approval: { id: 'ap2', status: 'review', ver: 'v1' }, versions: [V('v1', '2026-10-02', 'Jonas Weil', '2.1 MB')] }),
+  Dc({ id: 'd7', name: 'KVA-A-200 L3 furniture layout', ext: 'pdf', cat: 'drawings', project: 'kvarn', approval: { id: 'ap15', status: 'withdrawn', ver: 'v1' }, versions: [V('v1', '2026-09-24', 'Jonas Weil', '2.2 MB')] }),
+  Dc({ id: 'd8', name: 'Framework agreement', ext: 'pdf', cat: 'contracts', project: 'kvarn', access: 'client', versions: [V('v1', '2024-10-14', 'Jonas Weil', '1.1 MB')] }),
+  Dc({ id: 'd9', name: 'LUM Massing options', ext: 'pdf', cat: 'concept', project: 'lumen', access: 'client', approval: { id: 'ap3', status: 'review', ver: 'v2' },
+    versions: [V('v1', '2026-09-29', 'Theo Lund', '8.0 MB'), V('v2', '2026-10-06', 'Theo Lund', '8.6 MB', 'Link lowered and set back 3 m')] }),
+  Dc({ id: 'd10', name: 'LUM Schematic set', ext: 'pdf', cat: 'concept', project: 'lumen', access: 'client', approval: { id: 'ap9', status: 'approved', ver: 'v1' }, versions: [V('v1', '2026-10-07', 'Theo Lund', '22 MB')] }),
+  Dc({ id: 'd11', name: 'BRA Dining chair sample', ext: 'jpg', cat: 'materials', project: 'brask', tags: ['FF&E'], access: 'client', approval: { id: 'ap4', status: 'review', ver: 'v1' }, versions: [V('v1', '2026-10-15', 'Aiko Tan', '1.8 MB')] }),
+  Dc({ id: 'd12', name: 'BRA FF&E schedule, ground floor', ext: 'xlsx', cat: 'materials', project: 'brask', tags: ['FF&E'], versions: [V('v1', '2026-10-15', 'Aiko Tan', '0.3 MB')] }),
+  Dc({ id: 'd13', name: 'NOR-F-100 Fire strategy', ext: 'pdf', cat: 'technical', project: 'nordre', tags: ['fire', 'permit'], approval: { id: 'ap5', status: 'review', ver: 'v1' }, state: 'missing', versions: [V('v1', '2026-10-08', 'Jonas Weil', '6.3 MB')] }),
+  Dc({ id: 'd14', name: 'NOR Ward finish schedule', ext: 'pdf', cat: 'materials', project: 'nordre', approval: { id: 'ap6', status: 'changes', ver: 'v1' }, versions: [V('v1', '2026-10-13', 'Rui Costa', '1.2 MB')] }),
+  Dc({ id: 'd15', name: 'Clinical brief', ext: 'pdf', cat: 'briefs', project: 'nordre', access: 'client', versions: [V('v1', '2024-08-30', 'Jonas Weil', '2.4 MB')] }),
+  Dc({ id: 'd16', name: 'TAR Façade options A–C', ext: 'pdf', cat: 'concept', project: 'tarn', access: 'client', approval: { id: 'ap7', status: 'review', ver: 'v1' }, versions: [V('v1', '2026-10-19', 'Elena Marsh', '12.4 MB')] }),
+  Dc({ id: 'd17', name: 'TAR Cost plan stage 2', ext: 'xlsx', cat: 'contracts', project: 'tarn', description: 'Draft, not yet sent for approval.', versions: [V('v1', '2026-10-18', 'Elena Marsh', '0.3 MB')] }),
+  Dc({ id: 'd18', name: 'VIK Joinery variation 03', ext: 'pdf', cat: 'contracts', project: 'vik', access: 'client', approval: { id: 'ap11', status: 'approved', ver: 'v1' }, versions: [V('v1', '2026-10-09', 'Theo Lund', '0.4 MB')] }),
+  Dc({ id: 'd19', name: 'ORS Fee proposal, concept stage', ext: 'pdf', cat: 'contracts', project: 'orsa', access: 'client', approval: { id: 'ap12', status: 'rejected', ver: 'v1' }, versions: [V('v1', '2026-10-01', 'Rui Costa', '0.6 MB')] }),
+  Dc({ id: 'd20', name: 'MOL Handover pack', ext: 'pdf', cat: 'handover', project: 'molle', access: 'client', approval: { id: 'ap14', status: 'approved', ver: 'v1' }, versions: [V('v1', '2026-09-12', 'Elena Marsh', '15 MB')] }),
+  Dc({ id: 'd21', name: 'HAL-A-420 Bathroom tile layout', ext: 'pdf', cat: 'drawings', project: 'halden', approval: { id: 'ap8', status: 'review', ver: 'v1' }, versions: [V('v1', '2026-10-17', 'Aiko Tan', '1.9 MB')] }),
+  Dc({ id: 'd22', name: 'Kick-off meeting minutes', ext: 'docx', cat: 'briefs', project: 'ekeberg', versions: [V('v1', '2026-10-18', 'Rui Costa', '0.1 MB')] }),
+  Dc({ id: 'd23', name: 'Strand site survey', ext: 'dwg', cat: 'technical', project: 'strand', tags: ['survey'], versions: [V('v1', '2026-10-12', 'Elena Marsh', '18 MB')] }),
+  Dc({ id: 'd24', name: 'Schematic sign-off form, signed', ext: 'pdf', cat: 'approvals', project: 'lumen', access: 'client', versions: [V('v1', '2026-10-12', 'Theo Lund', '0.2 MB')] }),
+  Dc({ id: 'd25', name: 'Mølle early sketches', ext: 'pdf', cat: 'concept', project: 'molle', archived: true, versions: [V('v1', '2025-10-10', 'Elena Marsh', '5.5 MB')] }),
+  Dc({ id: 'd26', name: 'Site photos, October', ext: 'zip', cat: 'technical', project: null, description: 'Uploaded from a phone without a project.', versions: [V('v1', '2026-10-16', 'Theo Lund', '64 MB')] }),
+];
+
+const parse = s => { if (!s) return null; const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const days = s => Math.round((parse(s) - TODAY) / 86400000);
+const fmt = s => { const d = parse(s); if (!d) return ''; return d.getDate() + ' ' + MON[d.getMonth()] + (d.getFullYear() !== TODAY.getFullYear() ? ' ' + d.getFullYear() : ''); };
+const rel = s => { const d = -days(s); return d === 0 ? 'Today' : d === 1 ? 'Yesterday' : d < 7 ? d + ' days ago' : fmt(s); };
+const latest = d => d.versions[d.versions.length - 1];
+const extOf = n => { const m = /\.([a-z0-9]+)$/i.exec(n || ''); return m ? m[1].toLowerCase() : ''; };
+const stripExt = n => (n || '').replace(/\.[a-z0-9]+$/i, '');
+const nextVer = id => { let m = /^rev ([A-Z])$/.exec(id || ''); if (m) return 'rev ' + String.fromCharCode(m[1].charCodeAt(0) + 1); m = /^v(\d+)$/.exec(id || ''); if (m) return 'v' + (+m[1] + 1); return 'v2'; };
+const mb = b => b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB';
+
+class Component extends DCLogic {
+  state = {
+    docs: SEED, cat: 'all', q: '', f: { project: '', type: '', by: '', date: '', approval: '' }, sort: { key: 'modified', dir: 'desc' }, view: 'list', page: 0, sel: [],
+    cols: { category: true, project: true, version: true, by: true, modified: true, approval: true }, kpi: null,
+    pop: null, docId: null, up: null, dlg: null, confirm: null, toast: null, flashId: null, booting: false, retrying: false, vw: typeof window !== 'undefined' ? window.innerWidth - 14 : 1426,
+  };
+
+  componentDidMount() {
+    
+    this._down = e => { if (this.state.pop && !e.target.closest('[data-pop]') && !e.target.closest('[role="listbox"]')) this.setState({ pop: null }); };
+    this._key = e => { if (e.key !== 'Escape') return; const s = this.state;
+      if (s.confirm) return this.setState({ confirm: null }); if (s.pop) return this.setState({ pop: null });
+      if (s.dlg && !s.dlg.busy) return this.setState({ dlg: null }); if (s.up) return this.closeUpload(); if (s.docId) this.setState({ docId: null }); };
+    this._rs = () => { const w = window.innerWidth - 14; if (Math.abs(w - this.state.vw) > 4) this.setState({ vw: w }); };
+    this._rs();
+    const m = /project=([\w-]+)/.exec(location.hash); if (m && PROJ[m[1]]) this.setState(s => ({ f: { ...s.f, project: m[1] } }));
+    this._gh = () => { const d = /doc=([\w-]+)/.exec(location.hash); if (d && this.state.docs && this.state.docs.some(x => x.id === d[1])) this.setState({ docId: d[1], pop: null }); }; this._gh(); window.addEventListener('hashchange', this._gh);
+    document.addEventListener('mousedown', this._down); document.addEventListener('keydown', this._key); window.addEventListener('resize', this._rs);
+  }
+  componentWillUnmount() { clearTimeout(this._boot); clearTimeout(this._t); clearTimeout(this._fl); clearInterval(this._prog);
+    document.removeEventListener('mousedown', this._down); document.removeEventListener('keydown', this._key); window.removeEventListener('resize', this._rs); }
+
+  role() { return this.props.role ?? 'studio'; }
+  canEdit() { return this.role() === 'studio'; }
+  visible() { const r = this.role(); return this.state.docs.filter(d => r !== 'client' || (d.access === 'client' && !d.archived)); }
+  toast(title, extra) { this.setState({ toast: { title, icon: 'circle-check', ...extra } }); clearTimeout(this._t); this._t = setTimeout(() => this.setState({ toast: null }), 5000); }
+  flash(id) { this.setState({ flashId: id }); clearTimeout(this._fl); this._fl = setTimeout(() => this.setState({ flashId: null }), 2400); }
+  byId(id) { return this.state.docs.find(d => d.id === id); }
+  setF(p) { this.setState(s => ({ f: { ...s.f, ...p }, page: 0, kpi: null })); }
+  clearAll = () => this.setState({ q: '', f: { project: '', type: '', by: '', date: '', approval: '' }, page: 0, kpi: null });
+  label(ids) { return ids.length > 1 ? ids.length + ' documents' : '“' + this.byId(ids[0]).name + '”'; }
+  mutate(ids, fn, msg) { const prev = this.state.docs; this.setState(s => ({ docs: s.docs.map(d => ids.includes(d.id) ? fn(d) : d), pop: null, confirm: null, dlg: null })); this.toast(msg, { action: 'Undo', onAction: () => this.setState({ docs: prev, toast: null }) }); }
+  askArchive(ids) {
+    const inReview = ids.map(id => this.byId(id)).filter(d => d.approval && d.approval.status === 'review');
+    this.setState({ pop: null, confirm: { title: 'Archive ' + this.label(ids) + '?', okLabel: 'Archive',
+      desc: 'Archived files leave project folders and search, but every version is kept and you can restore them.' + (inReview.length ? ' ' + (inReview.length > 1 ? inReview.length + ' of these are' : 'This file is') + ' still awaiting approval, so the reviewer may lose access to it.' : ''),
+      ok: () => { this.mutate(ids, d => ({ ...d, archived: true }), this.label(ids) + ' archived'); this.setState(s => ({ sel: s.sel.filter(x => !ids.includes(x)), docId: ids.includes(s.docId) ? null : s.docId })); } } });
+  }
+  restore(ids) { this.mutate(ids, d => ({ ...d, archived: false }), this.label(ids) + ' restored'); }
+  validateFile(file) {
+    const ext = extOf(file.name);
+    if (!ALLOWED.includes(ext)) return (ext ? '.' + ext + ' files aren’t supported.' : 'This file has no extension.') + ' Use PDF, DWG, DXF, IFC, images or Office files.';
+    if (file.size > MAX_MB * 1048576) return 'This file is ' + mb(file.size) + '. The limit is ' + MAX_MB + ' MB per file.';
+    if (file.size === 0) return 'This file is empty.';
+    return null;
+  }
+  runProgress(target, onDone) {
+    clearInterval(this._prog); const fails = this.props.uploadFails && !this._failedOnce;
+    this._prog = setInterval(() => {
+      const cur = this.state[target]; if (!cur) return clearInterval(this._prog);
+      const pct = Math.min(100, (cur.pct || 0) + 9 + Math.random() * 10);
+      if (fails && pct >= 58) { clearInterval(this._prog); this._failedOnce = true; return this.setState({ [target]: { ...cur, pct: 58, busy: false, failed: true, error: 'Upload stopped at 58%. Check your connection and try again. Nothing was saved.' } }); }
+      if (pct >= 100) { clearInterval(this._prog); this.setState({ [target]: { ...cur, pct: 100 } }); return setTimeout(onDone, 250); }
+      this.setState({ [target]: { ...cur, pct } });
+    }, 120);
+  }
+
+  openUpload(prefill) {
+    if (!this.canEdit()) return;
+    const v = { name: '', cat: this.state.cat !== 'all' && CAT[this.state.cat] ? this.state.cat : '', project: this.state.f.project || '', version: 'v1', tags: '', description: '', access: 'studio', ...(prefill || {}) };
+    this.setState({ pop: null, up: { v, e: {}, file: null, over: false, busy: false, pct: 0, failed: false, error: null, dupId: null, mode: 'new', touched: false } });
+  }
+  closeUpload = () => { const U = this.state.up; if (!U || U.busy) return;
+    if (!U.file && !U.touched) return this.setState({ up: null });
+    this.setState({ confirm: { title: 'Discard this upload?', desc: 'The file and details you entered won’t be saved.', okLabel: 'Discard', cancelLabel: 'Keep going', ok: () => this.setState({ up: null, confirm: null }) } }); };
+  pickUpload(file) {
+    const U = this.state.up; if (!U || U.busy || !file) return; const err = this.validateFile(file);
+    if (err) return this.setState({ up: { ...U, file: null, over: false, e: { ...U.e, file: err } } });
+    this.setState({ up: { ...U, file, over: false, failed: false, error: null, pct: 0, e: { ...U.e, file: undefined }, v: { ...U.v, name: U.v.name || stripExt(file.name) }, dupId: null, mode: 'new' } });
+  }
+  setUv(k, val) { this.setState(s => ({ up: { ...s.up, touched: true, v: { ...s.up.v, [k]: val }, e: { ...s.up.e, [k]: undefined }, ...(k === 'name' || k === 'project' ? { dupId: null, mode: 'new' } : {}) } })); }
+  submitUpload = () => {
+    const U = this.state.up; if (U.busy) return; const v = U.v; const e = {};
+    if (!U.file) e.file = 'Choose a file or drop one here.';
+    if (U.mode === 'new') {
+      if (!v.name.trim()) e.name = 'Name the document.';
+      if (!v.cat) e.cat = 'Choose a category.';
+      if (!v.version.trim()) e.version = 'Add a version label.';
+    }
+    if (Object.keys(e).length) return this.setState({ up: { ...U, e } });
+    if (U.mode === 'new') { const dup = this.state.docs.find(d => !d.archived && d.project === (v.project || null) && d.name.toLowerCase() === v.name.trim().toLowerCase()); if (dup) return this.setState({ up: { ...U, dupId: dup.id } }); }
+    this.setState({ up: { ...U, busy: true, failed: false, error: null, pct: 0 } });
+    this.runProgress('up', () => {
+      const c = this.state.up; if (!c) return; const f = c.file; const url = URL.createObjectURL(f); const ext = extOf(f.name);
+      if (c.mode === 'version') { const d = this.byId(c.dupId); const nv = nextVer(latest(d).id);
+        this.setState(s => ({ up: null, docs: s.docs.map(x => x.id === d.id ? { ...x, ext, state: 'ok', versions: x.versions.concat(V(nv, TODAY_ISO, ME, mb(f.size), 'Uploaded as a new version', { url, fileName: f.name })) } : x) }));
+        this.flash(d.id); return this.toast(nv + ' added to ' + d.name, { description: 'Earlier versions are kept.' }); }
+      const id = 'd' + Date.now();
+      const doc = Dc({ id, name: v.name.trim(), ext, cat: v.cat, project: v.project || null, tags: v.tags.split(',').map(t => t.trim()).filter(Boolean), description: v.description.trim(), access: v.access,
+        versions: [V(v.version.trim(), TODAY_ISO, ME, mb(f.size), '', { url, fileName: f.name })] });
+      this.setState(s => ({ up: null, docs: [doc].concat(s.docs), sort: { key: 'modified', dir: 'desc' }, page: 0, cat: s.cat === 'all' || s.cat === v.cat ? s.cat : 'all' }));
+      this.flash(id); this.toast(doc.name + ' uploaded', { description: (doc.project ? PROJ[doc.project][0] : 'No project') + ' · ' + CAT[doc.cat][1], action: 'Open', onAction: () => this.setState({ docId: id, toast: null }) });
+    });
+  };
+
+  openDlg(kind, id) {
+    const d = this.byId(id);
+    this.setState({ pop: null, dlg: { kind, id, name: d.name, cat: d.cat, project: d.project || '', version: nextVer(latest(d).id), note: '', file: null, errs: {}, busy: false, pct: 0, error: null } });
+  }
+  submitDlg = () => {
+    const D = this.state.dlg; if (D.busy) return; const d = this.byId(D.id); const errs = {};
+    if (D.kind === 'rename') {
+      const n = D.name.trim(); if (!n) errs.name = 'Name can’t be empty.';
+      else if (this.state.docs.some(x => x.id !== d.id && !x.archived && x.project === d.project && x.name.toLowerCase() === n.toLowerCase())) errs.name = 'Another document in this project already has that name.';
+      if (Object.keys(errs).length) return this.setState({ dlg: { ...D, errs } });
+      if (n === d.name) return this.setState({ dlg: null });
+      return this.mutate([d.id], x => ({ ...x, name: n }), 'Renamed to “' + n + '”');
+    }
+    if (D.kind === 'move') {
+      if (D.cat === d.cat && (D.project || null) === d.project) return this.setState({ dlg: null });
+      return this.mutate([d.id], x => ({ ...x, cat: D.cat, project: D.project || null }), 'Moved to ' + CAT[D.cat][1] + (D.project ? ' · ' + PROJ[D.project][0] : ''));
+    }
+    if (!D.file) errs.file = 'Choose the new file.';
+    if (!D.version.trim()) errs.version = 'Add a version label.'; else if (d.versions.some(v => v.id.toLowerCase() === D.version.trim().toLowerCase())) errs.version = D.version.trim() + ' already exists. Versions are never overwritten.';
+    if (Object.keys(errs).length) return this.setState({ dlg: { ...D, errs } });
+    this.setState({ dlg: { ...D, busy: true, pct: 0, error: null, errs: {} } });
+    this.runProgress('dlg', () => {
+      const c = this.state.dlg; if (!c) return; const f = c.file;
+      this.setState(s => ({ dlg: null, docs: s.docs.map(x => x.id === d.id ? { ...x, ext: extOf(f.name), state: 'ok', versions: x.versions.concat(V(c.version.trim(), TODAY_ISO, ME, mb(f.size), c.note.trim(), { url: URL.createObjectURL(f), fileName: f.name })) } : x) }));
+      this.flash(d.id); this.toast(c.version.trim() + ' uploaded', { description: d.name + '. ' + latest(d).id + ' and earlier are kept.' });
+    });
+  };
+  openFile(d, download) {
+    const v = latest(d);
+    if (d.state !== 'ok') return;
+    if (v.url) { if (download) { const a = document.createElement('a'); a.href = v.url; a.download = v.fileName || d.name; document.body.appendChild(a); a.click(); a.remove(); } else window.open(v.url, '_blank'); return; }
+    this.toast('Sample file', { icon: 'info', description: 'This demo document has no stored content. Files you upload in this tab can be opened and downloaded.' });
+  }
+
+  renderVals() {
+    const s = this.state; const h = React.createElement; const edit = this.canEdit(); const role = this.role();
+    const dsProp = s.retrying ? 'loading' : (this.props.dataState ?? 'live');
+    const loading = s.booting || dsProp === 'loading';
+    const all = dsProp === 'empty' ? [] : this.visible();
+    const vw = s.vw + 48; const wide = vw >= 1180; const kTile = vw >= 1280 ? 64 : 48, kGap = vw >= 1280 ? 20 : 14, kIcon = vw >= 1280 ? 24 : 20, kShowTile = vw >= 1100, kWs = vw >= 1100 ? 'nowrap' : 'normal', kNoteWrap = vw >= 1100 ? 'nowrap' : 'wrap'; const narrow = vw < 860; const sideHidden = vw < 1100;
+    const live = all.filter(d => !d.archived);
+    const recent = live.filter(d => -days(latest(d).at) <= 7);
+    const awaiting = live.filter(d => d.approval && d.approval.status === 'review');
+
+    const q = s.q.trim().toLowerCase(); const F = s.f;
+    const match = d => {
+      const P = d.project ? PROJ[d.project] : ['', ''];
+      if (q && !(d.name + ' ' + P[0] + ' ' + P[1] + ' ' + d.ext + ' ' + KIND_LABEL[KIND(d.ext)] + ' ' + d.tags.join(' ')).toLowerCase().includes(q)) return false;
+      if (F.project === '__none' ? d.project : (F.project && d.project !== F.project)) return false;
+      if (F.type && KIND(d.ext) !== F.type) return false;
+      if (F.by && latest(d).by !== F.by) return false;
+      if (F.date) { const a = -days(latest(d).at); if (F.date === '7' && a > 7) return false; if (F.date === '30' && a > 30) return false; if (F.date === 'older' && a <= 90) return false; }
+      if (F.approval === 'none' ? d.approval : (F.approval && (!d.approval || d.approval.status !== F.approval))) return false;
+      if (s.kpi === 'recent' && -days(latest(d).at) > 7) return false;
+      return true;
+    };
+    const pool = all.filter(match);
+    const inCat = d => s.cat === 'archived' ? d.archived : d.archived ? false : s.cat === 'all' ? true : s.cat === 'unfiled' ? !d.project : d.cat === s.cat;
+    const val = { name: d => d.name.toLowerCase(), category: d => CAT[d.cat][1], project: d => d.project ? PROJ[d.project][0] : null, version: d => d.versions.length, by: d => latest(d).by, modified: d => latest(d).at, approval: d => d.approval ? ['review', 'changes', 'approved', 'rejected', 'withdrawn'].indexOf(d.approval.status) : null };
+    const dir = s.sort.dir === 'asc' ? 1 : -1; const gv = val[s.sort.key];
+    const list = pool.filter(inCat).sort((x, y) => { const p = gv(x), r = gv(y); if (p == null && r == null) return 0; if (p == null) return 1; if (r == null) return -1; return (p < r ? -1 : p > r ? 1 : 0) * dir || x.name.localeCompare(y.name); });
+    const total = list.length; const pages = Math.max(1, Math.ceil(total / PAGE)); const page = Math.min(s.page, pages - 1);
+    const pageList = list.slice(page * PAGE, page * PAGE + PAGE);
+
+    const cnt = fn => pool.filter(fn).length;
+    const catItem = (key, label, icon, n, sep) => { const on = s.cat === key; return { label, icon, count: String(n), sep: !!sep, current: on ? 'page' : undefined,
+      bg: on ? 'var(--surface-muted)' : 'transparent', fg: 'var(--text-strong)', countFg: on ? 'var(--text-strong)' : 'var(--text-muted)', countBg: on ? 'var(--surface-card)' : 'var(--surface-muted)', hover: on ? 'var(--surface-muted)' : 'var(--surface-inset)', weight: on ? 600 : 500,
+      select: () => this.setState({ cat: key, page: 0, sel: [] }) }; };
+    const cats = [catItem('all', 'All documents', 'files', cnt(d => !d.archived))].concat(CATS.map(c => catItem(c[0], c[1], c[2], cnt(d => !d.archived && d.cat === c[0]))),
+      edit ? [catItem('unfiled', 'No project', 'circle-alert', cnt(d => !d.archived && !d.project), true), catItem('archived', 'Archived', 'box', cnt(d => d.archived))] : []);
+    const catTitle = s.cat === 'all' ? 'All documents' : s.cat === 'unfiled' ? 'Documents without a project' : s.cat === 'archived' ? 'Archived' : CAT[s.cat][1];
+
+    const autoHide = { by: vw < 1460, version: vw < 1340, category: vw < 1240 || s.cat !== 'all' && s.cat !== 'unfiled' && s.cat !== 'archived' && vw < 1400, project: vw < 1000 };
+    const cols = {}; Object.keys(s.cols).forEach(k => { cols[k] = s.cols[k] && !autoHide[k]; });
+    const tpl = ['20px', 'minmax(220px,2fr)'];
+    if (cols.category) tpl.push('minmax(120px,1fr)'); if (cols.project) tpl.push('minmax(130px,1.1fr)'); if (cols.version) tpl.push('80px'); if (cols.by) tpl.push('minmax(110px,128px)');
+    if (cols.modified) tpl.push('92px'); if (cols.approval) tpl.push('150px'); tpl.push('36px');
+    const H = [['name', 'Document'], ['category', 'Category'], ['project', 'Project'], ['version', 'Version'], ['by', 'Uploaded by'], ['modified', 'Modified'], ['approval', 'Approval']];
+    const headers = H.filter(([k]) => k === 'name' || cols[k]).map(([k, l]) => { const on = s.sort.key === k; return { label: l, on, icon: s.sort.dir === 'asc' ? 'arrow-up' : 'arrow-down', aria: on ? (s.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none', color: on ? 'var(--text-strong)' : 'var(--text-muted)', cursor: 'pointer', static: false,
+      onClick: () => this.setState(x => ({ sort: { key: k, dir: x.sort.key === k ? (x.sort.dir === 'asc' ? 'desc' : 'asc') : (k === 'modified' || k === 'version' ? 'desc' : 'asc') }, page: 0 })) }; }).concat({ label: '', on: false, static: true, cursor: 'default', color: '', aria: 'none', onClick: () => {} });
+
+    const stop = e => e.stopPropagation();
+    const apInfo = d => { if (!d.approval) return { apLabel: 'Not submitted', apTone: 'neutral', apIcon: undefined, apNote: '' };
+      const a = AP[d.approval.status]; const lv = latest(d).id; return { apLabel: a[0], apTone: a[1], apIcon: a[2], apNote: d.approval.ver + (d.approval.ver !== lv ? ' · latest is ' + lv : '') }; };
+    const rows = pageList.map(d => { const v = latest(d); const k = KIND(d.ext); const es = EXT_STYLE[k]; const selected = s.sel.includes(d.id); const open = () => this.setState({ docId: d.id, pop: null });
+      const issue = d.state !== 'ok' ? 'File unavailable' : !d.project ? 'Not linked to a project' : '';
+      const menu = [{ label: 'Details', icon: 'eye', onClick: open }, { label: 'Open', icon: 'arrow-up-right', onClick: () => this.openFile(d) }, { label: 'Download', icon: 'download', onClick: () => this.openFile(d, true) }];
+      if (edit && !d.archived) menu.push({ label: 'Rename', icon: 'square-pen', onClick: () => this.openDlg('rename', d.id) }, { label: 'Move', icon: 'folder-kanban', onClick: () => this.openDlg('move', d.id) }, { label: 'Upload new version', icon: 'upload', onClick: () => this.openDlg('replace', d.id) }, { label: 'Archive', icon: 'box', onClick: () => this.askArchive([d.id]), danger: true });
+      if (edit && d.archived) menu.push({ label: 'Restore', icon: 'refresh-cw', onClick: () => this.restore([d.id]) });
+      const fileMenu = d.state !== 'ok' ? menu.filter(m => m.label !== 'Open' && m.label !== 'Download') : menu;
+      return { id: d.id, name: d.name, ext: d.ext.toUpperCase(), extBg: es[0], extFg: es[1], size: v.size,
+        sub: issue || (d.ext.toUpperCase() + ' · ' + v.size + (d.access === 'client' ? ' · Shared with client' : '') + (d.tags.length ? ' · ' + d.tags.join(', ') : '')), subColor: issue ? 'var(--status-negative)' : 'var(--text-subtle)', subWeight: issue ? 600 : 400, subAlert: !!issue, alertShort: d.state !== 'ok' ? 'Unavailable' : 'No project',
+        category: CAT[d.cat][1], project: d.project ? PROJ[d.project][0] : 'No project', projectColor: d.project ? 'var(--text-strong)' : 'var(--status-negative)', client: d.project ? PROJ[d.project][1] : 'Move it to a project',
+        version: v.id, versionNote: d.versions.length > 1 ? d.versions.length + ' versions' : 'First version', by: v.by, modified: rel(v.at), ...apInfo(d),
+        slotImage: k === 'image' && !v.url && d.state === 'ok', blobImage: k === 'image' && !!v.url, fileTile: k !== 'image' || d.state !== 'ok', url: v.url || '', bgImage: v.url ? 'url("' + v.url + '")' : 'none', slotId: 'doc-' + d.id,
+        selected, bg: selected || s.flashId === d.id ? 'var(--sage-50)' : 'transparent', cardBg: s.flashId === d.id ? 'var(--sage-50)' : 'var(--surface-inset)', outline: s.flashId === d.id ? '1.5px solid var(--border-accent)' : 'none',
+        aria: d.name + ', ' + CAT[d.cat][1] + ', ' + v.id, open, stop, onKey: e => { if (e.target !== e.currentTarget) return; if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } },
+        toggleSel: () => this.setState(x => ({ sel: x.sel.includes(d.id) ? x.sel.filter(y => y !== d.id) : x.sel.concat(d.id) })),
+        popKey: 'row:' + d.id, menuOpen: s.pop === 'row:' + d.id, menuAria: 'Actions for ' + d.name, toggleMenu: () => this.setState(x => ({ pop: x.pop === 'row:' + d.id ? null : 'row:' + d.id })),
+        menu: fileMenu.map(m => ({ ...m, color: m.danger ? 'var(--status-negative)' : 'var(--text-strong)' })) }; });
+    const pageIds = pageList.map(d => d.id); const pageAllSel = pageIds.length > 0 && pageIds.every(id => s.sel.includes(id));
+
+    const uploaders = Array.from(new Set(all.map(d => latest(d).by))).sort();
+    const DATE = [['', 'Any time'], ['7', 'Last 7 days'], ['30', 'Last 30 days'], ['older', 'Over 90 days ago']];
+    const APF = [['', 'Any'], ['none', 'Not submitted']].concat(Object.keys(AP).map(k => [k, AP[k][0]]));
+    const filterFields = [
+      { label: 'Project', value: F.project, options: [{ value: '', label: 'Any project' }].concat(Object.keys(PROJ).map(k => ({ value: k, label: PROJ[k][0] })), edit ? [{ value: '__none', label: 'No project' }] : []), onChange: v => this.setF({ project: v }) },
+      { label: 'Category', value: CAT[s.cat] ? s.cat : '', options: [{ value: '', label: 'All categories' }].concat(CATS.map(c => ({ value: c[0], label: c[1] }))), onChange: v => this.setState({ cat: v || 'all', page: 0 }) },
+      { label: 'File type', value: F.type, options: [{ value: '', label: 'Any type' }].concat(Object.keys(KIND_LABEL).map(k => ({ value: k, label: KIND_LABEL[k] }))), onChange: v => this.setF({ type: v }) },
+      { label: 'Uploaded by', value: F.by, options: [{ value: '', label: 'Anyone' }].concat(uploaders.map(u => ({ value: u, label: u }))), onChange: v => this.setF({ by: v }) },
+      { label: 'Modified', value: F.date, options: DATE.map(([v, l]) => ({ value: v, label: l })), onChange: v => this.setF({ date: v }) },
+      { label: 'Approval', value: F.approval, options: APF.map(([v, l]) => ({ value: v, label: l })), onChange: v => this.setF({ approval: v }) },
+    ];
+    const chips = [];
+    if (s.q.trim()) chips.push({ key: 'Search', value: '“' + s.q.trim() + '”', remove: () => this.setState({ q: '', page: 0 }) });
+    if (F.project) chips.push({ key: 'Project', value: F.project === '__none' ? 'None' : PROJ[F.project][0], remove: () => { this.setF({ project: '' }); if (location.hash) history.replaceState(null, '', location.pathname); } });
+    if (F.type) chips.push({ key: 'Type', value: KIND_LABEL[F.type], remove: () => this.setF({ type: '' }) });
+    if (F.by) chips.push({ key: 'Uploaded by', value: F.by, remove: () => this.setF({ by: '' }) });
+    if (F.date) chips.push({ key: 'Modified', value: DATE.find(x => x[0] === F.date)[1], remove: () => this.setF({ date: '' }) });
+    if (F.approval) chips.push({ key: 'Approval', value: APF.find(x => x[0] === F.approval)[1], remove: () => this.setF({ approval: '' }) });
+    if (s.kpi === 'recent') chips.push({ key: '', value: 'Updated in the last 7 days', remove: () => this.setState({ kpi: null }) });
+    chips.forEach(c => { c.aria = 'Remove filter ' + (c.key ? c.key + ' ' : '') + c.value; });
+    const nFilters = chips.filter(c => c.key !== 'Search').length;
+
+    const plain = !q && !F.project && !F.type && !F.by && !F.date && s.cat === 'all';
+    const kSel = plain && !F.approval && !s.kpi ? 'total' : plain && s.kpi === 'recent' && !F.approval ? 'recent' : plain && F.approval === 'review' && !s.kpi ? 'awaiting' : null;
+    const KPI_EXTRA = { total: edit ? [{ label: 'Upload document', icon: 'upload', run: () => this.openUpload() }] : [], recent: [], awaiting: [{ label: 'Open approvals', icon: 'arrow-up-right', run: () => { window.location.href = 'Approvals.dc.html'; } }] };
+    const kpi = (id, label, value, note, icon, onClick) => { const on = kSel === id && id !== 'total'; const pk = 'kpi:' + id;
+      return { label, value: loading ? '–' : String(value), note: loading ? 'Loading…' : note, icon, selected: on,
+      iconBg: on ? 'var(--surface-inverse)' : 'var(--surface-muted)', iconFg: on ? '#fff' : 'var(--text-strong)', aria: label + ': ' + value + '. Show these documents', onClick,
+      onKey: e => { if (e.target !== e.currentTarget) return; if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } },
+      popKey: pk, menuOpen: s.pop === pk, menuAria: label + ' options', stop: e => e.stopPropagation(),
+      toggleMenu: () => this.setState(x => ({ pop: x.pop === pk ? null : pk })),
+      menu: [{ label: 'Show these documents', icon: 'eye', run: onClick }].concat(KPI_EXTRA[id]).map(m => ({ ...m, onClick: () => { this.setState({ pop: null }); m.run(); } })) }; };
+    const reset = { project: '', type: '', by: '', date: '', approval: '' };
+    const verCount = live.reduce((a, d) => a + d.versions.length, 0);
+    const kpis = [
+      kpi('total', 'Total documents', live.length, verCount + ' versions kept', 'file-text', () => this.setState({ cat: 'all', q: '', f: reset, kpi: null, page: 0 })),
+      kpi('recent', 'Recently updated', recent.length, 'In the last 7 days', 'clock', () => this.setState({ cat: 'all', q: '', f: reset, kpi: 'recent', sort: { key: 'modified', dir: 'desc' }, page: 0 })),
+      kpi('awaiting', 'Awaiting approval', awaiting.length, awaiting.filter(d => d.state !== 'ok').length ? awaiting.filter(d => d.state !== 'ok').length + ' with a missing file' : 'All files reachable', 'stamp', () => this.setState({ cat: 'all', q: '', f: { ...reset, approval: 'review' }, kpi: null, page: 0 })),
+    ];
+
+    const stateKind = dsProp === 'error' && !s.retrying ? 'error' : loading ? 'loading' : all.length === 0 ? 'empty' : list.length === 0 ? 'none' : 'ok';
+    const noResults = (q || nFilters) ? { title: q && !nFilters ? 'No documents match “' + s.q.trim() + '”' : 'No documents match these filters', body: 'Search covers names, projects, clients, file types and tags.' + (s.cat !== 'all' ? ' You’re only looking in ' + catTitle + '.' : ''), cta: s.cat !== 'all' ? 'Search all documents' : 'Clear all', action: s.cat !== 'all' ? () => this.setState({ cat: 'all' }) : this.clearAll, icon: 'search' }
+      : s.cat === 'archived' ? { title: 'Nothing archived', body: 'Archived documents are kept here with all their versions.', cta: 'Show all documents', action: () => this.setState({ cat: 'all' }), icon: 'box' }
+      : s.cat === 'unfiled' ? { title: 'Every document has a project', body: 'Files uploaded without a project show up here so they don’t get lost.', cta: 'Show all documents', action: () => this.setState({ cat: 'all' }), icon: 'circle-check' }
+      : { title: 'Nothing in ' + catTitle + ' yet', body: 'Upload a file and choose this category.', cta: edit ? 'Upload document' : 'Show all documents', action: edit ? () => this.openUpload() : () => this.setState({ cat: 'all' }), icon: CAT[s.cat] ? CAT[s.cat][2] : 'files' };
+
+    const selV = s.sel.filter(id => all.some(d => d.id === id)); const selArch = selV.length && selV.every(id => this.byId(id).archived);
+
+    const D = s.docId && all.find(d => d.id === s.docId);
+    let dk = {};
+    if (D) { const v = latest(D); const k = KIND(D.ext); const es = EXT_STYLE[k]; const P = D.project ? PROJ[D.project] : null;
+      const facts = [
+        { label: 'Project', value: P ? P[0] : 'No project — move it to one', href: 'Projects.dc.html', isLink: !!P, isText: !P, color: 'var(--status-negative)' },
+        { label: 'Client', value: P ? P[1] : '—', href: 'Clients.dc.html', isLink: !!P, isText: !P, color: 'var(--text-subtle)' },
+        { label: 'Latest version', value: v.id + ' · ' + v.size, isText: true, isLink: false, color: 'var(--text-strong)' },
+        { label: 'Uploaded by', value: v.by + ', ' + fmt(v.at), isText: true, isLink: false, color: 'var(--text-strong)' },
+        { label: 'File type', value: D.ext.toUpperCase() + ' · ' + KIND_LABEL[k], isText: true, isLink: false, color: 'var(--text-strong)' },
+        { label: 'Visible to', value: D.access === 'client' ? 'Studio and ' + (P ? P[1] : 'client') : 'Studio only', isText: true, isLink: false, color: 'var(--text-strong)' },
+      ];
+      const menu = D.archived ? [{ label: 'Restore', icon: 'refresh-cw', onClick: () => this.restore([D.id]) }] : [{ label: 'Rename', icon: 'square-pen', onClick: () => this.openDlg('rename', D.id) }, { label: 'Move', icon: 'folder-kanban', onClick: () => this.openDlg('move', D.id) }, { label: 'Archive', icon: 'box', onClick: () => this.askArchive([D.id]), danger: true }];
+      const ap = D.approval;
+      dk = { aria: 'Document: ' + D.name, name: D.name, category: CAT[D.cat][1], archived: D.archived, canEdit: edit, restore: () => this.restore([D.id]),
+        menuOpen: s.pop === 'dmenu', toggleMenu: () => this.setState(x => ({ pop: x.pop === 'dmenu' ? null : 'dmenu' })), menu: menu.map(m => ({ ...m, color: m.danger ? 'var(--status-negative)' : 'var(--text-strong)' })),
+        slotImage: k === 'image' && !v.url && D.state === 'ok', blobImage: k === 'image' && !!v.url, fileTile: k !== 'image' && D.state === 'ok', unavailable: D.state !== 'ok', url: v.url || '', bgImage: v.url ? 'url("' + v.url + '")' : 'none', slotId: 'doc-' + D.id,
+        ext: D.ext.toUpperCase(), extBg: es[0], extFg: es[1], version: v.id,
+        previewNote: v.url ? (k === 'pdf' ? 'Open shows the PDF in a new tab.' : 'This file type opens in its own app. Download it to view.') : 'Inline previews aren’t available for ' + D.ext.toUpperCase() + ' files. This sample has no stored content.',
+        facts, tags: D.tags.map(t => ({ t })), hasTags: D.tags.length > 0, description: D.description, hasDesc: !!D.description,
+        hasApproval: !!ap, apHref: ap ? 'Approvals.dc.html#approval=' + ap.id : '', apTitle: ap ? AP[ap.status][0] + ' · ' + ap.ver : '', apMeta: ap ? (ap.ver !== v.id ? v.id + ' is newer and hasn’t been submitted. ' : '') + 'Open the approval request' : '',
+        versions: D.versions.slice().reverse().map(x => { const tags = []; if (x === v) tags.push({ label: 'Latest', tone: 'neutral' }); if (ap && ap.ver === x.id) tags.push({ label: ap.status === 'approved' ? 'Approved' : ap.status === 'review' ? 'In review' : AP[ap.status][0], tone: AP[ap.status][1] });
+          return { id: x.id, meta: x.by + ' · ' + fmt(x.at) + ' · ' + x.size, note: x.note || (x.url ? 'Uploaded in this tab' : ' '), tags, bg: x === v ? 'var(--surface-inset)' : 'var(--surface-card)' }; }),
+        fileDisabled: D.state !== 'ok', openFile: () => this.openFile(D), download: () => this.openFile(D, true), replace: () => this.openDlg('replace', D.id) };
+    }
+
+    const U = s.up; let up = {}, uv = {}, ue = {}, us = {};
+    if (U) { uv = U.v; ue = U.e; ['name', 'version', 'tags', 'description'].forEach(k => { us[k] = e => this.setUv(k, e.target.value); }); ['cat', 'project', 'access'].forEach(k => { us[k] = v => this.setUv(k, v); });
+      const dup = U.dupId && this.byId(U.dupId); const isVer = U.mode === 'version';
+      up = { title: isVer ? 'Upload a new version' : 'Upload document', desc: isVer && dup ? dup.name + ' · after ' + latest(dup).id : 'PDF, DWG, DXF, IFC, images and Office files up to ' + MAX_MB + ' MB.',
+        dropTitle: U.file ? U.file.name : U.over ? 'Drop to attach' : 'Drop a file here or choose one', dropSub: U.file ? mb(U.file.size) + ' · ' + KIND_LABEL[KIND(extOf(U.file.name))] : 'One file per upload',
+        dropBorder: U.over ? 'var(--border-accent)' : ue.file ? 'var(--status-negative)' : 'var(--border-default)', dropBg: U.over ? 'var(--sage-50)' : 'var(--surface-inset)', fileErr: ue.file || '',
+        onPick: e => { const f = e.target.files && e.target.files[0]; e.target.value = ''; this.pickUpload(f); },
+        onDragOver: e => { e.preventDefault(); if (!U.over) this.setState(x => ({ up: { ...x.up, over: true } })); }, onDragLeave: () => this.setState(x => x.up ? { up: { ...x.up, over: false } } : null),
+        onDrop: e => { e.preventDefault(); const f = e.dataTransfer.files && e.dataTransfer.files[0]; this.pickUpload(f); },
+        dup: !!dup && !isVer, dupText: dup ? '“' + dup.name + '” already exists in ' + (dup.project ? PROJ[dup.project][0] : 'documents without a project') + ' (' + latest(dup).id + '). Add this file as its next version, or keep both under a different name.' : '',
+        asVersion: () => this.setState(x => ({ up: { ...x.up, mode: 'version' } })), keepBoth: () => this.setState(x => ({ up: { ...x.up, dupId: null, v: { ...x.up.v, name: x.up.v.name.trim() + ' (2)' } } })),
+        projHint: uv.project ? 'Client: ' + PROJ[uv.project][1] : 'Leave empty only if it truly has no project. It will show under No project.', projHintColor: uv.project ? 'var(--text-subtle)' : 'var(--status-warning)',
+        accessHint: uv.access === 'client' ? 'The project’s client can open it from their portal.' : 'Only the studio team can see it.',
+        showProgress: U.busy || U.failed || U.pct > 0, pct: Math.round(U.pct), pctLabel: Math.round(U.pct) + '%', pctTone: U.failed ? 'negative' : 'graphite', progLabel: U.failed ? 'Upload failed' : U.pct >= 100 ? 'Finishing…' : 'Uploading ' + (U.file ? U.file.name : ''),
+        hasError: !!U.error, error: U.error, busy: U.busy, close: this.closeUpload, submit: this.submitUpload,
+        submitLabel: U.busy ? 'Uploading…' : U.failed ? 'Retry upload' : isVer && dup ? 'Upload ' + nextVer(latest(dup).id) : 'Upload' };
+    }
+
+    const G = s.dlg; let dl = {};
+    if (G) { const d = this.byId(G.id); const setD = k => e => { const val2 = e && e.target ? e.target.value : e; this.setState(x => ({ dlg: { ...x.dlg, [k]: val2, errs: { ...x.dlg.errs, [k]: undefined } } })); };
+      const pick = f => { if (!f) return; const err = this.validateFile(f); this.setState(x => ({ dlg: { ...x.dlg, file: err ? null : f, errs: { ...x.dlg.errs, file: err || undefined } } })); };
+      const ap = d.approval; const lv = latest(d).id;
+      const warn = G.kind === 'replace' ? (ap && ap.status === 'review' && ap.ver === lv ? lv + ' is with the reviewer. They’ll keep seeing ' + lv + ' until you submit the new version from Approvals.' : ap && ap.status === 'approved' ? ap.ver + ' stays the approved version. The new upload becomes the latest working copy.' : 'Nothing is overwritten. ' + lv + ' and earlier versions stay in the history.')
+        : G.kind === 'move' ? (ap ? 'The approval request stays linked after the move.' : 'Moving changes where the file is listed. Its versions don’t change.') : '';
+      dl = { title: G.kind === 'rename' ? 'Rename document' : G.kind === 'move' ? 'Move document' : 'Upload a new version', desc: G.kind === 'replace' ? d.name + ' · after ' + lv : d.name,
+        isRename: G.kind === 'rename', isMove: G.kind === 'move', isReplace: G.kind === 'replace',
+        name: G.name, setName: setD('name'), nameErr: G.errs.name, cat: G.cat, setCat: setD('cat'), project: G.project, setProject: setD('project'),
+        version: G.version, setVersion: setD('version'), versionErr: G.errs.version, note: G.note, setNote: setD('note'),
+        fileLabel: G.file ? G.file.name : 'Choose the new file', fileSub: G.file ? mb(G.file.size) : 'Drop it here or click to choose', fileErr: G.errs.file || '',
+        onPick: e => { const f = e.target.files && e.target.files[0]; e.target.value = ''; pick(f); }, onDragOver: e => e.preventDefault(), onDrop: e => { e.preventDefault(); pick(e.dataTransfer.files && e.dataTransfer.files[0]); },
+        showProgress: G.busy || G.failed, pct: Math.round(G.pct || 0), pctLabel: Math.round(G.pct || 0) + '%', pctTone: G.failed ? 'negative' : 'graphite', progLabel: G.failed ? 'Upload failed' : 'Uploading',
+        hasWarn: !!warn, warn, hasError: !!G.error, error: G.error, busy: G.busy, cancel: () => !G.busy && this.setState({ dlg: null }), ok: this.submitDlg,
+        okLabel: G.kind === 'rename' ? 'Rename' : G.kind === 'move' ? 'Move' : G.busy ? 'Uploading…' : G.failed ? 'Retry upload' : 'Upload ' + (G.version || 'version') };
+    }
+
+    const c = s.confirm; const confirm = c ? { ...c, cancel: () => this.setState({ confirm: null }), cancelLabel: c.cancelLabel || 'Cancel' } : {};
+
+    return {
+      nav: [{ value: 'overview', label: 'Overview' }, { value: 'projects', label: 'Projects' }, { value: 'clients', label: 'Clients' }, { value: 'approvals', label: 'Approvals' }, { value: 'tasks', label: 'Tasks & Team' }, { value: 'documents', label: 'Documents' }, { value: 'reports', label: 'Reports' }],
+      rail: [
+        { items: [{ value: 'light', icon: 'sun', label: 'Light theme' }, { value: 'dark', icon: 'moon', label: 'Dark theme' }] },
+        { items: [{ value: 'overview', icon: 'layout-grid', label: 'Overview' }, { value: 'projects', icon: 'folder-kanban', label: 'Projects' }, { value: 'clients', icon: 'building-2', label: 'Clients' }, { value: 'approvals', icon: 'stamp', label: 'Approvals' }, { value: 'tasks', icon: 'list-todo', label: 'Tasks & Team' }, { value: 'documents', icon: 'files', label: 'Documents' }, { value: 'reports', icon: 'chart-column', label: 'Reports' }] },
+        { bottom: true, items: [{ value: 'settings', icon: 'settings', label: 'Settings' }, { value: 'help', icon: 'circle-help', label: 'Help' }, { value: 'out', icon: 'log-out', label: 'Sign out' }] },
+      ],
+      onNav: v => { const go = { overview: 'Overview Dashboard.dc.html', projects: 'Projects.dc.html', clients: 'Clients.dc.html', approvals: 'Approvals.dc.html', tasks: 'Tasks.dc.html', reports: 'Reports.dc.html' }[v];
+        if (go) { location.href = go; return; } if (v === 'documents') return this.setState({ docId: null, cat: 'all' }); if (v === 'light' || v === 'dark') { if (window.ModulTheme) window.ModulTheme.set(v); return; }
+        const N = { dark: 'Dark theme', reports: 'Reports', settings: 'Settings', help: 'Help', out: 'Sign out' }; this.toast((N[v] || v) + ' isn’t part of this prototype yet', { icon: 'info' }); },
+      me: role === 'client' ? { name: 'Client preview', email: 'Shared files only' } : { name: ME, email: 'elena@marsh-studio.com' },
+      wide, showRail: true, shellCols: 'auto minmax(0,1fr)', frameM: narrow ? 8 : 24, frameM2: narrow ? 16 : 48, searchW: narrow ? 200 : 300, drawerW: narrow ? '100%' : '460px',
+      showCatSelect: false,
+      catOpts: cats.map((ct, i) => ({ value: i === 0 ? 'all' : i <= CATS.length ? CATS[i - 1][0] : i === CATS.length + 1 ? 'unfiled' : 'archived', label: ct.label + ' · ' + ct.count })), cat: s.cat, setCat: v => this.setState({ cat: v, page: 0, sel: [] }),
+      subtitle: loading ? 'Loading documents…' : awaiting.length ? awaiting.length + ' files are with reviewers, and ' + recent.length + ' changed this week.' : 'Every brief, drawing and contract, with its versions.',
+      readOnly: !edit, roleNote: !edit, roleNoteText: 'Client preview: only files shared with the client are listed, and they can’t be changed.',
+      openUpload: () => this.openUpload(), kpis, kTile, kGap, kIcon, kShowTile, kWs, kNoteWrap, cats, catTitle, countLabel: stateKind === 'ok' || stateKind === 'none' ? total + (total === 1 ? ' document' : ' documents') : '',
+      q: s.q, hasQ: !!s.q, setQ: e => this.setState({ q: e.target.value, page: 0 }), clearQ: () => this.setState({ q: '', page: 0 }),
+      filtersOpen: s.pop === 'filters', toggleFilters: () => this.setState(x => ({ pop: x.pop === 'filters' ? null : 'filters' })), filterBtnLabel: nFilters ? 'Filters · ' + nFilters : 'Filters', filterBtnVariant: nFilters ? 'primary' : 'outline',
+      filterFields, clearAll: this.clearAll, showResultsLabel: 'Show ' + total + (total === 1 ? ' document' : ' documents'),
+      listMode: s.view === 'list' && !narrow, columnsOpen: s.pop === 'columns', toggleColumns: () => this.setState(x => ({ pop: x.pop === 'columns' ? null : 'columns' })),
+      columnToggles: [['category', 'Category'], ['project', 'Project'], ['version', 'Version'], ['by', 'Uploaded by'], ['modified', 'Modified'], ['approval', 'Approval']].map(([k, l]) => ({ label: l + (autoHide[k] ? ' (hidden here)' : ''), on: s.cols[k], toggle: v => this.setState(x => ({ cols: { ...x.cols, [k]: v } })) })),
+      views: [['list', 'List', 'layout-dashboard'], ['grid', 'Grid', 'layout-grid']].map(([v, l, ic]) => { const on = (narrow ? 'grid' : s.view) === v; return { value: v, label: l, icon: ic, on, bg: on ? 'var(--surface-muted)' : 'transparent', fg: on ? 'var(--text-strong)' : 'var(--text-muted)', weight: on ? 600 : 500, hover: on ? 'var(--surface-muted)' : 'var(--surface-inset)', pick: () => this.setState({ view: v, pop: null }) }; }), view: narrow ? 'grid' : s.view, setView: v => this.setState({ view: v, pop: null }),
+      chips, hasChips: chips.length > 0,
+      hasSelection: selV.length > 0 && stateKind === 'ok' && edit, selLabel: selV.length + ' selected', clearSel: () => this.setState({ sel: [] }),
+      moveCatOpts: CATS.map(c2 => ({ value: c2[0], label: c2[1] })), bulkMove: v => { this.mutate(selV, d => ({ ...d, cat: v }), this.label(selV) + ' moved to ' + CAT[v][1]); this.setState({ sel: [] }); },
+      bulkArchive: () => selArch ? (this.restore(selV), this.setState({ sel: [] })) : this.askArchive(selV), bulkArchiveLabel: selArch ? 'Restore' : 'Archive',
+      isLoading: stateKind === 'loading', isError: stateKind === 'error', isEmpty: stateKind === 'empty', isNoResults: stateKind === 'none', noResults,
+      retry: () => { this.setState({ retrying: true }); setTimeout(() => this.setState({ retrying: false }), 800); }, skeleton: [1, 2, 3, 4, 5, 6],
+      showList: stateKind === 'ok' && s.view === 'list' && !narrow, showGrid: stateKind === 'ok' && (s.view === 'grid' || narrow), showPager: stateKind === 'ok',
+      tableCols: tpl.join(' '), headers, rows, cols, pageAllSel,
+      togglePageSel: v => this.setState(x => ({ sel: v ? Array.from(new Set(x.sel.concat(pageIds))) : x.sel.filter(id => !pageIds.includes(id)) })),
+      pagerLabel: total ? 'Showing ' + (page * PAGE + 1) + '–' + Math.min(total, page * PAGE + PAGE) + ' of ' + total : '', pageLabel: 'Page ' + (page + 1) + ' of ' + pages,
+      prevDisabled: page === 0, nextDisabled: page >= pages - 1, prevPage: () => this.setState({ page: Math.max(0, page - 1) }), nextPage: () => this.setState({ page: Math.min(pages - 1, page + 1) }),
+      drawerOpen: !!D, dk, closeDoc: () => this.setState({ docId: null, pop: null }),
+      upOpen: !!U, up, uv, ue, us, dlgOpen: !!G, dl,
+      catChoice: CATS.map(c2 => ({ value: c2[0], label: c2[1] })), projOpts: [{ value: '', label: 'No project' }].concat(Object.keys(PROJ).map(k => ({ value: k, label: PROJ[k][0] }))),
+      accessOpts: [{ value: 'studio', label: 'Studio only' }, { value: 'client', label: 'Studio and client' }],
+      confirmOpen: !!c, confirm, toast: s.toast || {}, hasToast: !!s.toast, closeToast: () => this.setState({ toast: null }),
+    };
+  }
+}
+</script>
+</body>
+</html>

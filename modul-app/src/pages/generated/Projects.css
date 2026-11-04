@@ -1,0 +1,8 @@
+/* GENERATED from the <helmet> of "Projects.dc.html" (shared rules removed) */
+
+    image-slot[data-thumb]::part(empty){color:transparent;padding:0}
+    div[style*="var(--scrim)"][style*="inset: 0px"][style*="z-index: 100"]{overflow-y:auto;align-items:flex-start !important}
+    div[style*="var(--scrim)"][style*="inset: 0px"][style*="z-index: 100"]>[role="dialog"]{margin:auto 0}
+    @keyframes atl-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+      @container kpi (max-width: 811px){[data-kpi]>:last-child:nth-child(odd)>*{grid-column:1 / -1}}
+  

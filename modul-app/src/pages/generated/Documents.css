@@ -1,0 +1,8 @@
+/* GENERATED from the <helmet> of "Documents.dc.html" (shared rules removed) */
+
+    div[style*="inset: 0px"][style*="z-index: 100"]{overflow-y:auto;align-items:flex-start !important}
+    div[style*="inset: 0px"][style*="z-index: 100"]>[role="dialog"]{margin:auto 0}
+    aside[role="dialog"] > div:first-child > *{flex-shrink:0}
+    @keyframes atl-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+      @container kpi (max-width: 811px){[data-kpi]>:last-child:nth-child(odd)>*{grid-column:1 / -1}}
+  
